@@ -86,7 +86,7 @@ const Advantages = () => {
             </div>
 
             {/* -----------------------------------------------button---------------------------------------------- */}
-            <Button href="#gratis-scan" variant="primary" className="lg:pl-[25px] lg:pr-[12px] lg:py-[13px]" icon>
+            <Button href="#gratis-scan" variant="primary" className="lg:pl-[25px] lg:pr-[12px] lg:py-[13px] " icon>
                 Ontdek Jouw Lead-Lekken — Gratis Scan
             </Button>
 
