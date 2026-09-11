@@ -34,7 +34,7 @@ export default function Button({
 
   const variants: Record<Variant, string> = {
     primary:
-      "rounded-full bg-accent pl-[20px] pr-[8px] py-[10px] text-[12px] pl-[20px] md:text-[16px] text-white hover:bg-accent/90",
+      "rounded-full bg-accent pl-[20px] pr-[8px] py-[10px] text-[12px] pl-[20px] md:text-[16px] xl:text-[18px] text-white hover:bg-accent/90",
     link: "text-white underline decoration-2 decoration-white/60 underline-offset-2 hover:text-accent pl-4 md:pl-0 text-[13px] md:text-[16px]",
   };
 
