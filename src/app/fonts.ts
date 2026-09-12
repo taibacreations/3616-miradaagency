@@ -10,7 +10,7 @@ export const monumentExtended = localFont({
 
 export const gotham = localFont({
   src: [
-    { path: "../../public/fonts/Gotham-Book.ttf", weight: "350", style: "normal" },
+    { path: "../../public/fonts/Gotham-Book.ttf", weight: "300", style: "normal" },
     { path: "../../public/fonts/Gotham-Regular.ttf", weight: "400", style: "normal" },
     { path: "../../public/fonts/Gotham-Medium.ttf", weight: "500", style: "normal" },
     { path: "../../public/fonts/Gotham-Bold.ttf", weight: "700", style: "normal" },

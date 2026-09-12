@@ -9,6 +9,8 @@ import Benefits from "@/components/Benefits";
 import FAQ from "@/components/FAQ";
 import HowWeWork from "@/components/HowWeWork";
 import AboutMirada from "@/components/AboutMirada";
+import Contact from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -23,7 +25,9 @@ export default function Home() {
       <HowWeWork />
       <AboutMirada />
       <Cta />
-      <Guarantee /> 
+      <Guarantee />
+      <Contact />
+      <Footer /> 
     </main>
   );
 }

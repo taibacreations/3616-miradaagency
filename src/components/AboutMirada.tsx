@@ -12,7 +12,7 @@ const AboutMirada = () => {
     <section className='w-full bg-white overflow-hidden pt-10 lg:pt-22'>
      
       <div className='max-w-content z-10 mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex flex-col lg:flex-row justify-around items-center gap-10 lg:gap-25'>
+        <div className='flex flex-col lg:flex-row justify-around items-start gap-10 lg:gap-25'>
 
           <div className='w-full lg:max-w-[670px]'>
             <p className='font-gotham text-[16px] sm:text-[18px] text-black mb-3'>
@@ -82,7 +82,7 @@ const AboutMirada = () => {
             <img
               src="/CEO.webp"
               alt=""
-              className="rounded-2xl w-full h-auto lg:h-[700px] object-center lg:object-right xl:object-center xl:h-auto object-cover"
+              className="w-full h-auto object-cover"
             />
           </div>
 
