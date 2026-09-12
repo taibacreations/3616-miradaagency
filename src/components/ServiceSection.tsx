@@ -5,12 +5,12 @@ const ServiceSection = () => {
     <section className="w-full bg-[#F5F9FC] lg:min-h-[90vh]">
       <div className="max-w-content mx-auto px-6 pt-16 sm:px-8 sm:pt-20 lg:pt-29">
         <div className="mb-10 flex flex-col gap-6 md:flex-row md:items-start md:justify-between md:gap-8">
-          <h2 className="max-w-[500px] font-monument text-[28px] capitalize leading-9 tracking-wide text-[#012549] sm:text-[32px] sm:leading-10 lg:text-[40px] lg:leading-12">
+          <h2 className="max-w-[500px] font-monument font-extrabold text-[28px] capitalize leading-9 tracking-wide text-[#012549] sm:text-[32px] sm:leading-10 lg:text-[40px] lg:leading-12">
             Waar we jouw bedrijf mee laten groeien
           </h2>
-          <p className="max-w-[540px] font-gotham text-[16px] leading-6 sm:text-[18px] sm:leading-5">
+          <p className="max-w-[540px] font-gotham font-light text-[16px] leading-6 sm:text-[18px] sm:leading-5">
             Geen vage marketingpraat, wel keiharde systemen die voor regionaal rendement werken.
-          </p>
+          </p> 
         </div>
 
         <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3 lg:gap-9">
@@ -36,7 +36,7 @@ const ServiceSection = () => {
               <h5 className="mb-1.5 font-gotham text-[17px] font-bold leading-6 xl:text-[20px]">
                 High-Converting Websites
               </h5>
-              <p className="font-gotham text-[15px] leading-snug xl:text-[18px] sm:leading-none">
+              <p className="font-gotham font-light text-[15px] leading-snug xl:text-[18px] sm:leading-none">
                 Wij bouwen loeistrakke, pixel-perfecte websites die specifiek zijn ontworpen...
               </p>
             </div>
@@ -64,7 +64,7 @@ const ServiceSection = () => {
               <h5 className="mb-1.5 font-gotham text-[17px] font-bold leading-6 xl:text-[20px]">
                 AI &amp; Workflow Automation
               </h5>
-              <p className="font-gotham text-[15px] leading-snug xl:text-[18px] sm:leading-none">
+              <p className="font-gotham font-light  text-[15px] leading-snug xl:text-[18px] sm:leading-none">
                 Eliminate repetitive manual work in your business. We build smart AI workflows and...
               </p>
             </div>
@@ -92,7 +92,7 @@ const ServiceSection = () => {
               <h5 className="mb-1.5 font-gotham text-[17px] font-bold leading-6  xl:text-[20px]">
                 Regional Marketing &amp; Retargeting
               </h5>
-              <p className="font-gotham text-[15px] leading-snug xl:text-[18px] sm:leading-none">
+              <p className="font-gotham font-light text-[15px] leading-snug xl:text-[18px] sm:leading-none">
                 We drive targeted traffic to your business via strategic...
               </p>
             </div>

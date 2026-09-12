@@ -11,10 +11,10 @@ const Advantages = () => {
 
           {/* ---------------------------------------text box------------------------------------------------- */}
           <div>
-            <h2 className='font-monument pb-[15px] max-w-[500px] text-[28px] capitalize leading-9 tracking-wider text-[#012549] sm:text-[32px] sm:leading-10 lg:text-[40px] lg:leading-12'>
+            <h2 className='font-monument font-extrabold pb-[15px] max-w-[500px] text-[28px] capitalize leading-9 tracking-wider text-[#012549] sm:text-[32px] sm:leading-10 lg:text-[40px] lg:leading-12'>
               Waarom Lokale Ondernemers Ons Kiezen
             </h2>
-            <p className='pb-[25px] font-gotham text-[15px] lg:text-[18px] text-black max-w-[540px] leading-[24px]'>
+            <p className='pb-[25px] font-gotham font-light text-[15px] lg:text-[18px] text-black max-w-[540px] leading-[24px]'>
               15+ jaar IT-expertise, vertaald naar concrete groei voor jouw bedrijf — zonder jargon, met meetbare resultaten.
             </p>
             {/* ------------------------------------------------4 lines------------------------------------ */}
@@ -91,7 +91,7 @@ const Advantages = () => {
             </Button>
 
             {/* --------------------------------------------------one line----------------------------------------- */}
-              <p className='font-gotham text-[15px] lg:text-[18px] text-black max-w-[540px] pt-[20px]'>
+              <p className='font-gotham font-light text-[15px] lg:text-[18px] text-black max-w-[540px] pt-[20px]'>
                 Geen verplichtingen · Resultaat binnen 24 uur
               </p>
           </div>
@@ -115,7 +115,7 @@ const Advantages = () => {
                   <h3 className='font-gotham font-bold text-[16px] lg:text-[20px] text-[#0A192F] pb-[8px]'>
                       Snelle Implementatie
                   </h3>
-                  <p className='font-gotham text-[13px] lg:text-[18px] text-black leading-[20px] lg:leading-[22px]'>
+                  <p className='font-gotham font-light text-[13px] lg:text-[18px] text-black leading-[20px] lg:leading-[22px]'>
                       Websites live in 2–4 weken, AI-workflows operationeel binnen 1–2 weken — geen maanden wachten.
                   </p>
                 </div>
@@ -127,7 +127,7 @@ const Advantages = () => {
                   <h3 className='font-gotham font-bold text-[16px] lg:text-[20px] text-white pb-[8px]'>
                       Technisch Waterdicht
                   </h3>
-                  <p className='font-gotham text-[13px] lg:text-[18px] text-white leading-[20px] lg:leading-[22px]'>
+                  <p className='font-gotham font-light text-[13px] lg:text-[18px] text-white leading-[20px] lg:leading-[22px]'>
                       15+ jaar ervaring in complexe IT-omgevingen — je systemen draaien stabiel, veilig en schaalbaar.
                   </p>
                 </div>
@@ -139,7 +139,7 @@ const Advantages = () => {
                   <h3 className='font-gotham font-bold text-[16px] lg:text-[20px] text-[#0A192F] pb-[8px]'>
                       Meetbare Resultaten
                   </h3>
-                  <p className='font-gotham text-[13px] lg:text-[18px] text-black leading-[20px] lg:leading-[22px]'>
+                  <p className='font-gotham font-light text-[13px] lg:text-[18px] text-black leading-[20px] lg:leading-[22px]'>
                       Transparante tracking en rapportages in begrijpelijk Nederlands — je weet precies wat je investering oplevert.
                   </p>
                 </div>

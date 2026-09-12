@@ -8,7 +8,7 @@ const Contact = () => {
 
         {/* Heading */}
         <div className='max-w-[850px] mx-auto text-center mb-5 lg:mb-9'>
-          <h2 className='font-monument text-[28px] sm:text-[34px] lg:text-[40px] text-[#012549] capitalize mb-4'>
+          <h2 className='font-monument font-extrabold tracking-wide text-[28px] sm:text-[34px] lg:text-[40px] text-[#012549] capitalize mb-4'>
             Laten We Kennismaken
           </h2>
           <p className='font-gotham font-[350] text-[15px] sm:text-[17px] lg:text-[18px] text-black  capitalize'>
@@ -20,13 +20,13 @@ const Contact = () => {
 
           {/* Contact form card */}
           <div className='w-full lg:max-w-[450px] xl:max-w-[630px] bg-white border border-black/10 rounded-3xl px-6 py-8 sm:px-9 sm:pt-10'>
-            <h3 className='font-monument text-[18px] sm:text-[20px] font-bold text-[#012549] mb-6'>
+            <h3 className='font-monument tracking-wide text-[18px] sm:text-[20px] font-bold text-[#0A192F] mb-6'>
               Stuur een Bericht
             </h3>
 
             <form className='flex flex-col gap-5'>
               <div>
-                <label htmlFor='name' className='block font-monument text-[14px] sm:text-[15px] text-black mb-2'>
+                <label htmlFor='name' className='block font-monument font-normal text-[14px] sm:text-[15px] text-black mb-2'>
                   Naam
                 </label>
                 <input
@@ -39,7 +39,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor='email' className='block font-monument text-[14px] sm:text-[15px] font-bold text-black mb-2'>
+                <label htmlFor='email' className='block font-monument font-normal text-[14px] sm:text-[15px] font-bold text-black mb-2'>
                   Email
                 </label>
                 <input
@@ -52,7 +52,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor='phone' className='block font-monument text-[14px] sm:text-[15px] font-bold text-black mb-2'>
+                <label htmlFor='phone' className='block font-monument font-normal text-[14px] sm:text-[15px] font-bold text-black mb-2'>
                   Telefoon (optioneel)
                 </label>
                 <input
@@ -65,7 +65,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor='message' className='block font-monument text-[14px] sm:text-[15px] text-black mb-2'>
+                <label htmlFor='message' className='block font-monument font-normal text-[14px] sm:text-[15px] text-black mb-2'>
                   Bericht
                 </label>
                 <textarea

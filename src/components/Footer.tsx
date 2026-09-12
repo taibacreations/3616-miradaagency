@@ -57,7 +57,7 @@ export const Footer = () => {
 
             {/* MIDDLE */}
             <div className=''>
-              <h3 className="font-monument text-[18px] sm:text-[20px] xl:text-[24px]  font-bold text-white lg:pt-6 xl:pt-7">
+              <h3 className="font-monument font-normal tracking-wide text-[18px] sm:text-[20px] xl:text-[24px]  font-bold text-white lg:pt-6 xl:pt-7">
                 Diensten
               </h3>
 
@@ -75,7 +75,7 @@ export const Footer = () => {
 
             {/* RIGHT */}
             <div>
-              <h3 className="font-monument text-[18px] sm:text-[20px] xl:text-[24px] font-bold text-white lg:pt-6 xl:pt-7">
+              <h3 className="font-monument font-normal tracking-wide text-[18px] sm:text-[20px] xl:text-[24px] font-bold text-white lg:pt-6 xl:pt-7">
                 Contact
               </h3>
 
@@ -105,7 +105,7 @@ export const Footer = () => {
 
         {/* Bottom bar */}
         <div className="relative z-10 bg-[#0CC1FA] py-4 text-center px-4">
-          <p className="font-gotham text-[12px] sm:text-[14px] text-white">
+          <p className="font-gotham font-light text-[12px] sm:text-[14px] xl:text-[18px] text-white">
             © 2026 Mirada Management B.V. Alle Rechten Voorbehouden. | KvK: 42084347
           </p>
         </div>

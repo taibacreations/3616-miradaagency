@@ -124,6 +124,7 @@ const Benefits = () => {
                   className="
                     font-gotham
                     text-[18px]
+                    tracking-tight
                     font-bold
                     leading-[1.3]
                     text-[#012549]
@@ -138,6 +139,7 @@ const Benefits = () => {
                     mt-2
                     max-w-[230px]
                     font-gotham
+                    font-light
                     text-[15px]
                     leading-[1.5]
                     text-[#1D2939]

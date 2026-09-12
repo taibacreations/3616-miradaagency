@@ -29,11 +29,11 @@ export default function HeroSection() {
           <div className="flex items-center-safe gap-2 md:gap-6">
             <span className="w-1 h-[100px] md:h-[120px] lg:h-[155px] shrink-0 rounded-full bg-white/80" />
             <div>
-              <p className="md:mb-3 lg:mb-5 font-gotham text-[16px] text-white/90 md:text-[20px]">
+              <p className="md:mb-3 lg:mb-5 font-gotham font-light text-[16px] text-white/90 md:text-[20px]">
                 Slimme AI-Workflows &amp; Converterende Websites
               </p>
 
-              <h1 className="font-monument tracking-widest md:leading-14 lg:leading-16 text-white text-[clamp(25px,4.5vw,60px)]">
+              <h1 className="font-monument font-extrabold tracking-widest md:leading-14 lg:leading-16 text-white text-[clamp(25px,4.5vw,60px)]">
                 Voor Lokale
                 <br />
                 Ondernemers.
@@ -42,12 +42,12 @@ export default function HeroSection() {
           </div>
 
           {/* Subheading */}
-          <p className="mt-3 mb-3 font-gotham text-base font-normal text-white sm:text-[20px]">
+          <p className="mt-3 mb-3 font-gotham text-base font-light text-white sm:text-[20px]">
             AI &amp; Marketing Voor Lokale Ondernemers
           </p>
 
           {/* Paragraph */}
-          <p className="mb-[28px] max-w-[620px] font-gotham text-sm leading-relaxed text-white/90 sm:text-[18px] capitalize">
+          <p className="mb-[28px] max-w-[620px] font-gotham font-light text-sm leading-relaxed text-white/90 sm:text-[18px] capitalize">
             Wij dichten de online lead-lekken van ambitieuze bedrijven, automatiseren
             handmatig werk en transformeren websiteverkeer in loyale klanten uit de regio.
           </p>
@@ -79,7 +79,7 @@ export default function HeroSection() {
                     </clipPath>
                   </defs>
                 </svg>
-                <span className="font-gotham font-normal md:text-[18px] text-white">{feature}</span>
+                <span className="font-gotham font-light md:text-[18px] text-white">{feature}</span>
               </div>
             ))}
           </div>

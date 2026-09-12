@@ -4,8 +4,8 @@ const HowWeWork = () => {
   return (
     <section className='w-full py-[60px] sm:py-[80px] lg:py-8'>
 
-      <div className='max-w-[90%] sm:max-w-[640px] mx-auto xl:translate-y-10 2xl:translate-y-18 '>
-        <h2 className='capitalize font-monument text-[26px] sm:text-[32px] xl:text-[clamp(28px,2.2vw,40px)] text-[#012549] text-center'>
+      <div className='max-w-[90%] sm:max-w-[670px] mx-auto xl:translate-y-10 2xl:translate-y-18 '>
+        <h2 className='capitalize font-monument font-extrabold tracking-wide text-[26px] sm:text-[32px] xl:text-[clamp(28px,2.2vw,40px)] text-[#012549] text-center'>
           Hoe We Samenwerken
         </h2>
         <p className='capitalize font-gotham text-[15px] sm:text-[16px] xl:text-[clamp(14px,1vw,18px)] text-black text-center'>
@@ -34,7 +34,7 @@ const HowWeWork = () => {
               <span className='absolute z-50 top-[3px] right-[15px] sm:right-[20px] lg:right-[clamp(12px,1.2vw,20px)] font-gotham font-bold text-black/10 text-[40px] sm:text-[55px] lg:text-[clamp(38px,3.6vw,70px)]'>
                 01
               </span>
-              <h3 className='font-gotham font-bold max-w-[80%] sm:max-w-[200px] lg:max-w-[85%] text-[18px] sm:text-[20px] lg:text-[clamp(17px,1.25vw,24px)]'>
+              <h3 className='font-gotham font-bold max-w-[80%] sm:max-w-[200px] lg:max-w-[75%] text-[18px] sm:text-[20px] lg:text-[clamp(17px,1.25vw,24px)]'>
                 Kennismaking (30 min, gratis)
               </h3>
               <p className='font-gotham text-[14px] sm:text-[16px] lg:text-[clamp(13px,0.94vw,18px)] max-w-full sm:max-w-[270px] lg:max-w-full mt-2 leading-[1.5]'>
