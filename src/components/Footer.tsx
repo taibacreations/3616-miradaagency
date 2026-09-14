@@ -50,14 +50,14 @@ export const Footer = () => {
             <div className="md:max-w-[480px]">
               <img src="/flogo.webp" alt="Mirada Agency" className="h-auto w-[160px] sm:w-[180px] lg:w-[294px]" />
 
-              <p className="mt-5 font-gotham text-[14px] font-[325] sm:text-[15px] md:text-[12px] xl:text-[18px] leading-[1.6] text-white capitalize">
+              <p className="mt-5 font-gotham  font-[325] text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] leading-[1.6] text-white capitalize">
                 AI-Oplossingen, Automatiseringen en Online Marketing voor lokale ondernemers. Meer tijd, meer klanten, meer groei.
               </p>
             </div>
 
             {/* MIDDLE */}
             <div className=''>
-              <h3 className="font-monument font-normal tracking-wide text-[18px] sm:text-[20px] xl:text-[24px]  font-bold text-white lg:pt-6 xl:pt-7">
+              <h3 className="font-monument font-normal tracking-wide text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px]  font-bold text-white lg:pt-6 xl:pt-7">
                 Diensten
               </h3>
 
@@ -65,7 +65,7 @@ export const Footer = () => {
                 {services.map((service) => (
                   <li key={service} className="flex items-center gap-2">
                     {chevron}
-                    <span className="font-gotham text-[14px] sm:text-[15px] md:text-[12px] xl:text-[18px] text-white">
+                    <span className="font-gotham text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-white">
                       {service}
                     </span>
                   </li>
@@ -75,7 +75,7 @@ export const Footer = () => {
 
             {/* RIGHT */}
             <div>
-              <h3 className="font-monument font-normal tracking-wide text-[18px] sm:text-[20px] xl:text-[24px] font-bold text-white lg:pt-6 xl:pt-7">
+              <h3 className="font-monument font-normal tracking-wide text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px]  font-bold text-white lg:pt-6 xl:pt-7">
                 Contact
               </h3>
 
@@ -84,7 +84,7 @@ export const Footer = () => {
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center">
                     <MailIcon />
                   </span>
-                  <span className="font-gotham xl:text-[18px] text-[14px] sm:text-[15px] md:text-[12px] text-white break-all">
+                  <span className="font-gotham text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-white break-all">
                     Info@Miradaintelligence.NL
                   </span>
                 </a>
@@ -93,7 +93,7 @@ export const Footer = () => {
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center">
                     <PhoneIcon />
                   </span>
-                  <span className="font-gotham text-[14px] sm:text-[15px] md:text-[12px] xl:text-[18px] text-white">
+                  <span className="font-gotham text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-white">
                     +31 6 4135 3424
                   </span>
                 </a>
@@ -105,7 +105,7 @@ export const Footer = () => {
 
         {/* Bottom bar */}
         <div className="relative z-10 bg-[#0CC1FA] py-4 text-center px-4">
-          <p className="font-gotham font-light text-[12px] sm:text-[14px] xl:text-[18px] text-white">
+          <p className="font-gotham font-light  text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-white">
             © 2026 Mirada Management B.V. Alle Rechten Voorbehouden. | KvK: 42084347
           </p>
         </div>

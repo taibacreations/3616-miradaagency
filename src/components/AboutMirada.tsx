@@ -9,26 +9,26 @@ import {
 
 const AboutMirada = () => {
   return (
-    <section className='w-full bg-white overflow-hidden pt-10 lg:pt-22'>
+    <section id='over-mij' className='w-full bg-white overflow-hidden pt-10 lg:pt-22'>
      
       <div className='max-w-content z-10 mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex flex-col lg:flex-row justify-around items-start gap-10 lg:gap-25'>
 
           <div className='w-full lg:max-w-[670px]'>
-            <p className='font-gotham font-light text-[16px] sm:text-[18px] text-black mb-3'>
+            <p className='font-gotham font-light text-[15px] md:text-[17px] lg:text-[18px] lg:text-[20px] text-black mb-3'>
               Over Mirada Intelligence
             </p>
-            <h2 className='font-monument font-extrabold text-[28px] sm:text-[34px] lg:text-[40px] leading-[1.1] text-[#012549] capitalize mb-5.5 max-w-[400px]'>
+            <h2 className='font-monument font-extrabold text-[20px] md:text-[25px] lg:text-[30px] xl:text-[40px] leading-[1.1] text-[#012549] capitalize mb-5.5 max-w-[400px]'>
               Het gezicht <br /> achter Mirada
             </h2>
-            <p className='font-gotham text-[16px] sm:text-[18px] text-black mb-5.5'>
+            <p className='font-gotham text-[13px] md:text-[15px] lg:text-[16px] lg:text-[18px] text-black mb-5.5'>
               Achter Mirada Intelligence staat Virgil Ippel. Met meer dan 15 jaar diepgaande expertise in het leiden van complexe IT-omgevingen, systeemtransities en procesoptimalisaties, breng ik het beste van twee werelden samen naar de lokale ondernemer: hardcore IT-structuur en resultaatgerichte online marketing.
             </p>
-            <p className='font-gotham text-[16px] sm:text-[18px] text-black mb-5'>
+            <p className='font-gotham text-[13px] md:text-[15px] lg:text-[16px] lg:text-[18px] text-black mb-5'>
               Bij Mirada geloven we niet in ingewikkelde marketingtermen, wel in transparantie, korte lijnen en meetbaar resultaat in de regio. We introduceren nu tijdelijk exclusieve AI-pilotprojecten voor een geselecteerd aantal ambitieuze lokale bedrijven om de keiharde kracht van onze geautomatiseerde workflows te bewijzen.
               </p>
 
-            <h3 className='font-gotham text-[16px] sm:text-[18px] text-[#012549] mb-3.5 font-bold'>
+            <h3 className='font-gotham text-[13px] md:text-[15px] lg:text-[16px] lg:text-[18px] text-[#012549] mb-3.5 font-bold'>
                Veelgestelde vragen: 
             </h3>
             
@@ -39,11 +39,11 @@ const AboutMirada = () => {
                 value="item-1"
                 className="group rounded-xl bg-[#F5F9FC] px-5 sm:px-6 hover:bg-[#012549] data-[state=open]:bg-[#012549] transition-colors duration-300"
               >
-                <AccordionTrigger className="py-[18px] font-gotham font-bold text-[15px] sm:text-[16px] text-black group-hover:text-white data-[state=open]:text-white hover:no-underline [&_svg]:text-black [&_svg]:transition-colors [&_svg]:duration-300 group-hover:[&_svg]:text-white data-[state=open]:[&_svg]:text-white">
+                <AccordionTrigger className="py-[18px] font-gotham font-extrabold text-[13px] md:text-[15px] lg:text-[16px] lg:text-[18px] text-black group-hover:text-white data-[state=open]:text-white hover:no-underline [&_svg]:text-black [&_svg]:transition-colors [&_svg]:duration-300 group-hover:[&_svg]:text-white data-[state=open]:[&_svg]:text-white">
                   Werken jullie voor specifieke branches?
                 </AccordionTrigger>
-                <AccordionContent className="text-[#D1D5DB] font-gotham text-[14px] sm:text-[15px]">
-                  Hier komt het antwoord op deze vraag.
+                <AccordionContent className="text-[#D1D5DB] font-gotham text-[11px] md:text-[13px] lg:text-[15px] lg:text-[16px]">
+                  Mirada Agency helpt lokale ondernemers, high-ticket dienstverleners en regionale bedrijven die willen opschalen. Of je nu een exclusieve praktijk runt, een high-end servicebedrijf of een lokaal autobedrijf — onze systemen en AI-workflows zijn flexibel en worden volledig op maat ingericht voor jouw specifieke bedrijfsproces.
                 </AccordionContent>
               </AccordionItem>
 
@@ -51,11 +51,11 @@ const AboutMirada = () => {
                 value="item-2"
                 className="group  rounded-xl bg-[#F5F9FC] px-5 sm:px-6 hover:bg-[#012549] data-[state=open]:bg-[#012549] transition-colors duration-300"
               >
-                <AccordionTrigger className="py-[18px] font-gotham font-bold text-[15px] sm:text-[16px] text-black group-hover:text-white data-[state=open]:text-white hover:no-underline [&_svg]:text-black [&_svg]:transition-colors [&_svg]:duration-300 group-hover:[&_svg]:text-white data-[state=open]:[&_svg]:text-white">
+                <AccordionTrigger className="py-[18px] font-gotham font-extrabold text-[13px] md:text-[15px] lg:text-[16px] lg:text-[18px] text-black group-hover:text-white data-[state=open]:text-white hover:no-underline [&_svg]:text-black [&_svg]:transition-colors [&_svg]:duration-300 group-hover:[&_svg]:text-white data-[state=open]:[&_svg]:text-white">
                   Wat houdt de gratis scan precies in?
                 </AccordionTrigger>
-                <AccordionContent className="text-[#D1D5DB] font-gotham text-[14px] sm:text-[15px]">
-                  Ja, Mirada kan ook helpen met bestaande websites.
+                <AccordionContent className="text-[#D1D5DB] font-gotham text-[11px] md:text-[13px] lg:text-[15px] lg:text-[16px]">
+                  We controleren de website van jouw bedrijf op de drie belangrijkste conversie-pijlers: de aanwezigheid en correcte installatie van tracking-pixels (zoals de Meta Pixel), de mobiele gebruiksvriendelijkheid in de praktijk, en technische lead-lekken (zoals SSL-beveiliging en laadsnelheid). Je ontvangt een concreet actieplan om dit direct te dichten.
                 </AccordionContent>
               </AccordionItem>
 
@@ -63,11 +63,11 @@ const AboutMirada = () => {
                 value="item-3"
                 className="group rounded-xl bg-[#F5F9FC] px-5 sm:px-6 hover:bg-[#012549] data-[state=open]:bg-[#012549] transition-colors duration-300"
               >
-                <AccordionTrigger className="py-[18px] font-gotham font-bold text-[15px] sm:text-[16px] text-black group-hover:text-white data-[state=open]:text-white hover:no-underline [&_svg]:text-black [&_svg]:transition-colors [&_svg]:duration-300 group-hover:[&_svg]:text-white data-[state=open]:[&_svg]:text-white">
+                <AccordionTrigger className="py-[18px] font-gotham font-extrabold text-[13px] md:text-[15px] lg:text-[16px] lg:text-[18px] text-black group-hover:text-white data-[state=open]:text-white hover:no-underline [&_svg]:text-black [&_svg]:transition-colors [&_svg]:duration-300 group-hover:[&_svg]:text-white data-[state=open]:[&_svg]:text-white">
                   Wat is een AI-pilotproject?
                 </AccordionTrigger>
-                <AccordionContent className="text-[#D1D5DB] font-gotham text-[14px] sm:text-[15px]">
-                  Nee, technische kennis is niet nodig.
+                <AccordionContent className="text-[#D1D5DB] font-gotham text-[11px] md:text-[13px] lg:text-[15px] lg:text-[16px]">
+                  Omdat we geloven in het bewijzen van waarde aan ondernemers in de regio, starten we met een aantal geselecteerde bedrijven een kortstondig pilotproject. Hierin automatiseren we één specifiek knelpunt in je organisatie (bijvoorbeeld de automatische opvolging van lokale leads) tegen een gereduceerd tarief, zodat je direct de ROI ervaart.
                 </AccordionContent>
               </AccordionItem>
 

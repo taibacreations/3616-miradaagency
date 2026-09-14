@@ -40,8 +40,8 @@ export default function Button({
 
   const variants: Record<Variant, string> = {
     primary:
-      "rounded-full bg-[#0CC1FA] pl-[16px] pr-[8px] py-[8px] text-[12px] whitespace-normal sm:whitespace-nowrap sm:pl-[20px] sm:pr-[8px] sm:py-[10px] md:text-[16px] xl:text-[18px] text-white hover:bg-accent/90",
-    link: "text-white underline decoration-2 decoration-white/60 underline-offset-2 hover:text-accent pl-4 md:pl-0 text-[13px] md:text-[16px]",
+      "rounded-full bg-[#0CC1FA] pl-[16px] pr-[8px] py-[8px] whitespace-normal sm:whitespace-nowrap sm:pl-[20px] sm:pr-[8px] sm:py-[10px] text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-white hover:bg-[#0cc2fad2]",
+    link: "text-white underline decoration-2 decoration-white/60 underline-offset-2 hover:text-accent pl-4 md:pl-0 text-[11px] md:text-[13px] lg:text-[14px] xl:text-[16px]",
   };
 
   const classes = `${base} ${variants[variant]} ${className}`;

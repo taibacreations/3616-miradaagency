@@ -11,10 +11,10 @@ const Advantages = () => {
 
           {/* ---------------------------------------text box------------------------------------------------- */}
           <div>
-            <h2 className='font-monument font-extrabold pb-[15px] max-w-[500px] text-[28px] capitalize leading-9 tracking-wider text-[#012549] sm:text-[32px] sm:leading-10 lg:text-[40px] lg:leading-12'>
+            <h2 className='font-monument font-extrabold pb-[15px] max-w-[500px] capitalize leading-9 tracking-wider text-[#012549] text-[20px] md:text-[25px] lg:text-[30px] xl:text-[40px] sm:leading-10 lg:leading-12'>
               Waarom Lokale Ondernemers Ons Kiezen
             </h2>
-            <p className='pb-[25px] font-gotham font-light text-[15px] lg:text-[18px] text-black max-w-[540px] leading-[24px]'>
+            <p className='pb-[25px] font-gotham font-light text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-black max-w-[540px] leading-[24px]'>
               15+ jaar IT-expertise, vertaald naar concrete groei voor jouw bedrijf — zonder jargon, met meetbare resultaten.
             </p>
             {/* ------------------------------------------------4 lines------------------------------------ */}
@@ -31,7 +31,7 @@ const Advantages = () => {
                     </clipPath>
                   </defs>
                 </svg>
-                <p className='font-gotham text-[15px] sm:text-[18px] font-medium'>
+                <p className='font-gotham text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] font-medium'>
                   Vast aanspreekpunt — geen doorverwijzingen
                 </p>
               </div>
@@ -47,7 +47,7 @@ const Advantages = () => {
                     </clipPath>
                   </defs>
                 </svg>
-                <p className='font-gotham text-[15px] sm:text-[18px] font-medium'>
+                <p className='font-gotham text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] font-medium'>
                   Transparante prijzen — geen verborgen kosten
                 </p>
               </div>
@@ -63,7 +63,7 @@ const Advantages = () => {
                     </clipPath>
                   </defs>
                 </svg>
-                <p className='font-gotham text-[15px] sm:text-[18px] font-medium'>
+                <p className='font-gotham text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] font-medium'>
                   Korte lijnen — directe toegang tot expertise
                 </p>
               </div>
@@ -79,19 +79,19 @@ const Advantages = () => {
                     </clipPath>
                   </defs>
                 </svg>
-                <p className='font-gotham text-[15px] sm:text-[18px] font-medium'>
+                <p className='font-gotham text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] font-medium'>
                   Flexibele contracten — schaalbaar met je groei
                 </p>
               </div>
             </div>
 
             {/* -----------------------------------------------button---------------------------------------------- */}
-            <Button href="#gratis-scan" variant="primary" className="lg:pl-[25px] lg:pr-[12px] lg:py-[13px] " icon>
+            <Button href="/scan" variant="primary" className="lg:pl-[25px] lg:pr-[12px] lg:py-[13px] " icon>
                 Ontdek Jouw Lead-Lekken — Gratis Scan
             </Button>
 
             {/* --------------------------------------------------one line----------------------------------------- */}
-              <p className='font-gotham font-light text-[15px] lg:text-[18px] text-black max-w-[540px] pt-[20px]'>
+              <p className='font-gotham font-light text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-black max-w-[540px] pt-[20px]'>
                 Geen verplichtingen · Resultaat binnen 24 uur
               </p>
           </div>
@@ -109,13 +109,13 @@ const Advantages = () => {
         {/* -----------------------------------------------3 box grid---------------------------------------------- */}
         <div className='grid grid-cols-1 gap-4 sm:gap-6 md:gap-[52px] px-3.5 -mt-10 sm:-mt-14 md:-mt-1 lg:-mt-5 xl:mt-0 xl:-translate-y-5'>
             {/* ---------------------card 1---------------------- */}
-            <div className='flex min-h-[90px] sm:min-h-[100px] md:min-h-0 gap-4 md:gap-6 bg-white shadow-md border-accent border-l-[5px] rounded-2xl px-4 py-4 md:px-5 md:py-6 items-center'>
+            <div className='flex min-h-[90px] sm:min-h-[100px] md:min-h-0 gap-4 md:gap-6 bg-white shadow-md border-[#0CC1FA] border-l-[5px] rounded-2xl px-4 py-4 md:px-5 md:py-6 items-center'>
                 <img src="/b1.svg" alt="" className="w-10 md:w-auto shrink-0" />
                 <div className='xl:max-w-[350px]'>
-                  <h3 className='font-gotham font-bold text-[16px] lg:text-[20px] text-[#0A192F] pb-[8px]'>
+                  <h3 className='font-gotham font-bold text-[15px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-[#0A192F] pb-[8px]'>
                       Snelle Implementatie
                   </h3>
-                  <p className='font-gotham font-light text-[13px] lg:text-[18px] text-black leading-[20px] lg:leading-[22px]'>
+                  <p className='font-gotham font-light text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-black leading-[20px] lg:leading-[22px]'>
                       Websites live in 2–4 weken, AI-workflows operationeel binnen 1–2 weken — geen maanden wachten.
                   </p>
                 </div>
@@ -124,22 +124,22 @@ const Advantages = () => {
             <div className='flex min-h-[90px] sm:min-h-[100px] md:min-h-0 gap-4 md:gap-6 bg-[#012549] rounded-2xl px-4 py-4 md:px-5 md:py-6 items-center md:translate-x-[35px]'>
                 <img src="/b2.svg" alt="" className="w-10 md:w-auto shrink-0" />
                 <div className='xl:max-w-[350px]'>
-                  <h3 className='font-gotham font-bold text-[16px] lg:text-[20px] text-white pb-[8px]'>
+                  <h3 className='font-gotham font-bold text-[15px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-white pb-[8px]'>
                       Technisch Waterdicht
                   </h3>
-                  <p className='font-gotham font-light text-[13px] lg:text-[18px] text-white leading-[20px] lg:leading-[22px]'>
+                  <p className='font-gotham font-light text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-white leading-[20px] lg:leading-[22px]'>
                       15+ jaar ervaring in complexe IT-omgevingen — je systemen draaien stabiel, veilig en schaalbaar.
                   </p>
                 </div>
             </div>
             {/* -----------------------card 3-------------------- */}
-            <div className='flex min-h-[90px] sm:min-h-[100px] md:min-h-0 gap-4 md:gap-6 bg-white shadow-md border-accent border-l-[5px] rounded-2xl px-4 py-4 md:px-5 md:py-6 items-center'>
+            <div className='flex min-h-[90px] sm:min-h-[100px] md:min-h-0 gap-4 md:gap-6 bg-white shadow-md border-[#0CC1FA] border-l-[5px] rounded-2xl px-4 py-4 md:px-5 md:py-6 items-center'>
                 <img src="/b3.svg" alt="" className="w-10 md:w-auto shrink-0" />
                 <div className='xl:max-w-[350px]'>
-                  <h3 className='font-gotham font-bold text-[16px] lg:text-[20px] text-[#0A192F] pb-[8px]'>
+                  <h3 className='font-gotham font-bold text-[15px] md:text-[17px] lg:text-[18px] xl:text-[20px] text-[#0A192F] pb-[8px]'>
                       Meetbare Resultaten
                   </h3>
-                  <p className='font-gotham font-light text-[13px] lg:text-[18px] text-black leading-[20px] lg:leading-[22px]'>
+                  <p className='font-gotham font-light text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-black leading-[20px] lg:leading-[22px]'>
                       Transparante tracking en rapportages in begrijpelijk Nederlands — je weet precies wat je investering oplevert.
                   </p>
                 </div>

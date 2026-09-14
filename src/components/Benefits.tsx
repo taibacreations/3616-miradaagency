@@ -123,12 +123,11 @@ const Benefits = () => {
                 <h3
                   className="
                     font-gotham
-                    text-[18px]
                     tracking-tight
-                    font-bold
+                    font-extrabold
                     leading-[1.3]
                     text-[#012549]
-                    lg:text-[20px]
+                    text-[15px] md:text-[17px] lg:text-[18px] xl:text-[20px]
                   "
                 >
                   {benefit.title}
@@ -140,10 +139,10 @@ const Benefits = () => {
                     max-w-[230px]
                     font-gotham
                     font-light
-                    text-[15px]
+                    
                     leading-[1.5]
                     text-[#1D2939]
-                    lg:text-[16px]
+                    text-[11px] md:text-[13px] lg:text-[14px] xl:text-[16px]
                   "
                 >
                   {benefit.description}

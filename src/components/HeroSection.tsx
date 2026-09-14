@@ -10,8 +10,8 @@ const features = [
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[105vh] w-full overflow-hidden">
-      
+    <section id="hero" className="relative h-[105vh] w-full overflow-hidden">
+
       <div className="absolute inset-0 z-0">
         <Image
           src="/banner.webp"
@@ -25,15 +25,15 @@ export default function HeroSection() {
 
       <div className="relative mt-[60px] z-10 mx-auto flex h-full max-w-content flex-col justify-center px-6 lg:px-8">
         <div className="max-w-full sm:max-w-full lg:max-w-[700px]">
-          {/* Eyebrow + Heading  */}
-          <div className="flex items-center-safe gap-2 md:gap-6">
+          {/* Eyebrow + Heading */}
+          <div className="animate-fade-in-left flex items-center-safe gap-2 md:gap-6">
             <span className="w-1 h-[100px] md:h-[120px] lg:h-[155px] shrink-0 rounded-full bg-white/80" />
             <div>
-              <p className="md:mb-3 lg:mb-5 font-gotham font-light text-[16px] text-white/90 md:text-[20px]">
+              <p className="md:mb-3 lg:mb-5 font-gotham font-light text-white/90 text-[15px] md:text-[17px] lg:text-[18px] xl:text-[20px]">
                 Slimme AI-Workflows &amp; Converterende Websites
               </p>
 
-              <h1 className="font-monument font-extrabold tracking-widest md:leading-14 lg:leading-16 text-white text-[clamp(25px,4.5vw,60px)]">
+              <h1 className="font-monument font-extrabold tracking-widest md:leading-14 lg:leading-16 text-white text-[28px] md:text-[40px] lg:text-[50px] xl:text-[60px]">
                 Voor Lokale
                 <br />
                 Ondernemers.
@@ -42,19 +42,19 @@ export default function HeroSection() {
           </div>
 
           {/* Subheading */}
-          <p className="mt-3 mb-3 font-gotham text-base font-light text-white sm:text-[20px]">
+          <p className="animate-fade-in-left [animation-delay:150ms] mt-3 mb-3 font-gotham font-light text-white text-[15px] md:text-[17px] lg:text-[18px]  xl:text-[20px]">
             AI &amp; Marketing Voor Lokale Ondernemers
           </p>
 
           {/* Paragraph */}
-          <p className="mb-[28px] max-w-[620px] font-gotham font-light text-sm leading-relaxed text-white/90 sm:text-[18px] capitalize">
+          <p className="animate-fade-in-left [animation-delay:300ms] mb-[28px] max-w-[620px] font-gotham font-light leading-relaxed text-white/90 text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] capitalize">
             Wij dichten de online lead-lekken van ambitieuze bedrijven, automatiseren
             handmatig werk en transformeren websiteverkeer in loyale klanten uit de regio.
           </p>
 
           {/* CTAs */}
-          <div className="mb-12 flex flex-wrap items-center gap-2 lg:gap-6 lg:mb-[51px]">
-            <Button href="#gratis-scan" variant="primary" className="lg:pl-[25px] lg:pr-[12px] lg:py-[13px]" icon>
+          <div className="animate-fade-in-left [animation-delay:450ms] mb-12 flex flex-wrap items-center gap-2 lg:gap-6 lg:mb-[51px]">
+            <Button href="/scan" variant="primary" className="lg:pl-[25px] lg:pr-[12px] lg:py-[13px]" icon>
               Claim Jouw Gratis Scan
             </Button>
             <Button href="#diensten" variant="link">
@@ -63,8 +63,8 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Feature checklist card*/}
-        <div className="w-full rounded-[20px] border border-white/80 bg-white/[0.10] px-4 py-7.5 backdrop-blur-md sm:max-w-[530px]">
+        {/* Feature checklist card */}
+        <div className="animate-fade-in-left [animation-delay:600ms] w-full rounded-[20px] border border-white/80 bg-white/[0.10] px-4 py-7.5 backdrop-blur-md sm:max-w-[530px]">
           <div className="w-fit mx-auto grid grid-cols-1 gap-x-[20px] gap-y-[8px] sm:grid-cols-2">
             {features.map((feature) => (
               <div key={feature} className="flex items-center gap-[9px]">
@@ -79,7 +79,7 @@ export default function HeroSection() {
                     </clipPath>
                   </defs>
                 </svg>
-                <span className="font-gotham font-light md:text-[18px] text-white">{feature}</span>
+                <span className="font-gotham font-light text-[13px] md:text-[15px] lg:text-[16px] xl:text-[18px] text-white">{feature}</span>
               </div>
             ))}
           </div>
