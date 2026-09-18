@@ -1,15 +1,29 @@
-import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import ServiceSection from "@/components/ServiceSection";
-import Advantages from "@/components/Advantages";
+import Banner from "@/components/banner";
+import Choose from "@/components/choose";
+import Contact from "@/components/contact";
+import Faq from "@/components/faq";
+import Founder from "@/components/founder";
+import Gurantee from "@/components/gurantee";
+import Offers from "@/components/offers";
+import Points from "@/components/points";
+import Result from "@/components/result";
+import Services from "@/components/services";
+import Work from "@/components/work";
 
 export default function Home() {
   return (
-    <main className="relative">
-      <Navbar />
-      <HeroSection />
-      <ServiceSection />
-      <Advantages />
-    </main>
+    <div>
+      <Banner />
+      <Services />
+      <Choose />
+      <Points />
+      <Offers />
+      <Faq />
+      <Work />
+      <Founder />
+      <Result />
+      <Gurantee />
+      <Contact />
+    </div>
   );
 }
