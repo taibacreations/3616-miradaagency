@@ -1,9 +1,45 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
 const Result = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="bg-white pt-[6vh]">
-      <div className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4">
-        <div className="bg-[url(/result.png)] bg-cover bg-center bg-no-repeat w-full h-[380px] rounded-[19px] flex items-center px-[4.5%]">
-          <div className="max-w-[636px]">
+      <div
+        ref={ref}
+        className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4"
+      >
+        <div
+          className={`bg-[url(/result.png)] bg-cover bg-center bg-no-repeat w-full h-[380px] rounded-[19px] flex items-center px-[4.5%] transition-all duration-700 ease-out ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+          style={{ transitionDelay: visible ? "0ms" : "0ms" }}
+        >
+          <div
+            className={`max-w-[636px] transition-all duration-700 ease-out ${
+              visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+            style={{ transitionDelay: visible ? "200ms" : "0ms" }}
+          >
             <h3 className="font-gotham text-[20px] sm:text-[22px] xl:text-[24px] font-bold text-white">
               Klaar voor meetbaar resultaat?
             </h3>
@@ -13,7 +49,7 @@ const Result = () => {
               verplichtingen.
             </p>
 
-            <button className="group relative overflow-hidden mt-[2.5vh] flex justify-center items-center gap-3 font-gotham font-medium text-[15px] xl:text-[16px] text-white bg-[#0CC1FA] w-[236px] h-[53px] rounded-[319px] transition-all duration-500 ease-out hover:shadow-[0_10px_30px_rgba(12,193,250,0.5)] active:scale-95">
+            <button className="group relative overflow-hidden mt-[2.5vh] flex justify-center items-center gap-3 font-gotham font-medium text-[15px] md:text-[13px] xl:text-[16px] text-white bg-[#0CC1FA] w-[236px] h-[53px] rounded-[319px] transition-all duration-500 ease-out hover:shadow-[0_10px_30px_rgba(12,193,250,0.5)] active:scale-95">
               <span className="absolute inset-0 bg-gradient-to-r from-[#0aa8dd] to-[#0CC1FA] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
               <span className="relative z-10">Stel je vraag direct</span>
               <div className="relative z-10 bg-white rounded-full w-[24px] h-[24px] flex justify-center items-center transition-transform duration-500 ease-out group-hover:scale-110">

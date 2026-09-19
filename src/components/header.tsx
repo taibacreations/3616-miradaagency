@@ -5,10 +5,10 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const navLinks = [
-  { label: "Diensten", href: "#" },
-  { label: "Werkwijze", href: "#" },
-  { label: "Gratis Scan", href: "#" },
-  { label: "Over Mij", href: "#" },
+  { label: "Diensten", href: "#service" },
+  { label: "Werkwijze", href: "#work" },
+  { label: "Gratis Scan", href: "/scan" },
+  { label: "Over Mij", href: "#founder" },
 ];
 
 const Header = () => {
@@ -194,7 +194,7 @@ const ContactButton = ({ full = false }: { full?: boolean }) => {
   return (
     <Link href={"#"}
       className={`group relative overflow-hidden flex justify-center items-center gap-3 font-gotham font-medium text-[16px] text-white h-[50px] rounded-[319px] transition-all duration-500 ease-out bg-[#0CC1FA] hover:shadow-[0_8px_30px_rgba(12,193,250,0.55)] active:scale-95 ${
-        full ? "w-full" : "w-[134px]"
+        full ? "w-[134px]" : "w-[134px]"
       }`}
     >
       {/* sliding color layer on hover */}

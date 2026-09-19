@@ -33,7 +33,7 @@ const Choose = () => {
   return (
     <section
       ref={sectionRef}
-      className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 2xl:pt-[7vh] md:pb-[15vh] xl:pt-[100px] md:pt-[80px] pt-[50px] overflow-hidden relative"
+      className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 2xl:pt-[7vh] md:pb-[50vh] lg:pb-[15vh] xl:pt-[100px] md:pt-[1px] pt-[50px] overflow-hidden relative"
     >
       <div>
         <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-0">
@@ -46,7 +46,7 @@ const Choose = () => {
             <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[32px] sm:leading-[38px] xl:leading-[46px] max-w-full xl:max-w-[449px]">
               Waarom Lokale Ondernemers Ons Kiezen
             </h2>
-            <p className="text-[15px] sm:text-[16px] xl:text-[18px] font-gotham leading-[20px] sm:leading-[22px] text-black mt-[2.2vh]">
+            <p className="text-[14px] sm:text-[16px] xl:text-[18px] font-gotham leading-[20px] sm:leading-[22px] text-black mt-[2.2vh]">
               15+ jaar IT-expertise, vertaald naar concrete groei voor jouw
               bedrijf — zonder jargon, met meetbare resultaten.
             </p>
@@ -70,7 +70,7 @@ const Choose = () => {
                     alt="tick"
                     className="w-[16px] sm:w-[19px] h-auto shrink-0"
                   />
-                  <h3 className="font-gotham font-medium text-[15px] xl:text-[18px] leading-[20px] sm:leading-[24px] text-black">
+                  <h3 className="font-gotham font-medium text-[14px] sm:text-[16px] xl:text-[18px] leading-[20px] sm:leading-[24px] text-black">
                     {text}
                   </h3>
                 </div>
@@ -79,7 +79,7 @@ const Choose = () => {
 
             <Link
               href={"#"}
-              className={`mt-[2.5vh] group relative overflow-hidden flex justify-center items-center xl:gap-4 font-gotham font-medium text-[13px] xl:text-[16px] text-white bg-[#0CC1FA] w-full sm:w-[340px] xl:w-[418px] h-[50px] sm:h-[52px] xl:h-[56px] rounded-[319px] transition-all duration-500 ease-out hover:shadow-[0_10px_35px_rgba(12,193,250,0.55)] active:scale-95 ${
+              className={`mt-[2.5vh] group relative overflow-hidden flex justify-center items-center xl:gap-4 font-gotham font-medium text-[15px] md:text-[13px] xl:text-[16px] text-white bg-[#0CC1FA] w-full sm:w-[340px] xl:w-[418px] h-[50px] sm:h-[52px] xl:h-[56px] rounded-[319px] transition-all duration-500 ease-out hover:shadow-[0_10px_35px_rgba(12,193,250,0.55)] active:scale-95 ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
               style={{ transitionDelay: visible ? "550ms" : "0ms" }}
@@ -120,7 +120,7 @@ const Choose = () => {
           <img
             src={"/hand.png"}
             alt="hand"
-            className={`block mx-auto order-last md:order-none md:mx-0 w-[180px] sm:w-[240px] xl:w-[351px] h-auto md:absolute md:left-1/2 md:-translate-x-1/2 xl:bottom-auto
+            className={`block mx-auto order-last md:order-none md:mx-0 w-[180px] sm:w-[240px] xl:w-[351px] h-auto md:absolute md:left-1/2 md:-translate-x-1/2 xl:bottom
               bottom-0 transition-all duration-1000 ease-out ${
               visible
                 ? "opacity-100 translate-y-0"
@@ -130,7 +130,7 @@ const Choose = () => {
           />
 
           {/* Right column — boxes */}
-          <div className="flex flex-col gap-6 2xl:gap-13 md:mr-[2.8%] md:mt-[10vh] relative">
+          <div className="flex flex-col gap-6 2xl:gap-13 lg:mr-[2.8%] md:mt-[10vh] relative">
             {[
               {
                 offset: "",
@@ -152,7 +152,7 @@ const Choose = () => {
                 ),
               },
               {
-                offset: "md:ml-[6.5%]",
+                offset: "lg:ml-[6.5%]",
                 title: "Technisch Waterdicht",
                 text: "15+ jaar ervaring in complexe IT-omgevingen — je systemen draaien stabiel, veilig en schaalbaar.",
                 icon: (
@@ -240,7 +240,7 @@ const Choose = () => {
             ].map((box, i) => (
               <div
                 key={box.title}
-                className={`group choose-box w-full xl:w-[510px] xl:max-w-full lg:w-[400px] h-auto xl:h-[145px] lg:h-[140px] rounded-[18px] bg-white flex flex-col lg:text-left text-center lg:flex-row items-center gap-2 xl:gap-6.5 px-4 sm:px-5 xl:px-5.5 py-4 lg:py-0 transition-colors duration-500 ease-out hover:bg-[#012549] cursor-pointer ${box.offset} ${
+                className={`group choose-box w-full xl:w-[510px] xl:max-w-full lg:w-[400px] md:w-[300px] h-auto xl:h-[145px] lg:h-[140px] rounded-[18px] bg-white flex flex-col lg:text-left text-center lg:flex-row items-center gap-2 xl:gap-6.5 px-4 sm:px-5 xl:px-5.5 py-4 lg:py-0 transition-colors duration-500 ease-out hover:bg-[#012549] cursor-pointer ${box.offset} ${
                   visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
                 }`}
                 style={{ transitionDelay: visible ? `${400 + i * 150}ms` : "0ms" }}

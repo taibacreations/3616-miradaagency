@@ -43,7 +43,7 @@ const Founder = () => {
   }, []);
 
   return (
-    <section
+    <section id="founder"
       ref={sectionRef}
       className="bg-white min-h-screen pt-[8vh] sm:pt-[10vh] xl:pt-[13vh]"
     >

@@ -7,7 +7,7 @@ const services = [
     image: "/services1.png",
     title: "High-Converting Websites",
     description:
-      "Wij bouwen loeistrakke, pixel-perfecte websites die specifiek zijn ontworpen...",
+      "Wij bouwen loeistrakke, pixel-perfecte websites die...",
     fullDescription:
       "Wij bouwen loeistrakke, pixel-perfecte websites die specifiek zijn ontworpen om lokale bezoekers om te zetten in betalende klanten. Volledig geoptimaliseerd voor mobiel, razendsnel en technisch waterdicht zodat je geen klant meer misloopt.",
     bullets: [
@@ -21,7 +21,7 @@ const services = [
     image: "/services2.png",
     title: "AI & Workflow Automation",
     description:
-      "Eliminate repetitive manual work in your business. We build smart AI workflows and...",
+      "Eliminate repetitive manual work in your business. We...",
     fullDescription:
       "Elimineer repetitief handmatig werk in je onderneming. Wij bouwen slimme AI-workflows en koppelingen die je leadopvolging, administratie of klantbeheer 24/7 automatisch laten draaien. Meer rust, minder overhead.",
     bullets: [
@@ -35,7 +35,7 @@ const services = [
     image: "/services4.webp",
     title: "AI Chatbots",
     description:
-      "Een slimme chatbot op je website die bezoekers direct antwoord geeft, ook 's avonds en...",
+      "Een slimme chatbot op je website die bezoekers direct antwoord geeft, ook 's...",
     fullDescription:
       "Een slimme chatbot op je website die bezoekers direct antwoord geeft — ook 's avonds en in het weekend. Hij vangt terugkerende vragen over openingstijden, tarieven en beschikbaarheid automatisch op, en schakelt door naar jou zodra er een echte aanvraag binnenkomt.",
     bullets: [
@@ -69,6 +69,7 @@ const ServiceCard = ({
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
@@ -89,16 +90,27 @@ const ServiceCard = ({
   return (
     <div
       ref={ref}
-className={`group relative w-full h-[430px] transition-all duration-700 ease-out ${
-  visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-}`}
+      data-open={open}
+      role="button"
+      tabIndex={0}
+      aria-expanded={open}
+      onClick={() => setOpen((prev) => !prev)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          setOpen((prev) => !prev);
+        }
+      }}
+      className={`group relative w-full h-[430px] cursor-pointer transition-all duration-700 ease-out ${
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
       style={{ transitionDelay: visible ? `${index * 120}ms` : "0ms" }}
     >
-      {/* Arrow — hides on hover; image is untouched */}
+      {/* Arrow — hides on hover/click; image is untouched */}
       <img
         src="/arrow.png"
         alt="arrow"
-        className="absolute w-[29px] h-auto right-3 top-3 z-10 transition-all duration-300 ease-out group-hover:opacity-0 group-hover:scale-50 group-hover:rotate-45"
+        className="absolute w-[29px] h-auto right-3 top-3 z-10 transition-all duration-300 ease-out group-hover:opacity-0 group-hover:scale-50 group-hover:rotate-45 group-data-[open=true]:opacity-0 group-data-[open=true]:scale-50 group-data-[open=true]:rotate-45"
       />
 
       {/* Image — completely static, no scale/move on hover */}
@@ -108,19 +120,19 @@ className={`group relative w-full h-[430px] transition-all duration-700 ease-out
         className="absolute inset-0 w-full h-full object-cover rounded-[24px]"
       />
 
-      {/* White box — moves from bottom-overlap to top of the image on hover */}
-      <div className="absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[376px] top-[335px] group-hover:top-[20px] bg-white xl:rounded-[22px] rounded-[18px] xl:px-7 px-4 py-[2.2vh] service-shadow transition-all duration-500 ease-out overflow-hidden z-20">
+      {/* White box — moves from bottom-overlap to top of the image on hover/click */}
+      <div className="absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[376px] top-[335px] group-hover:top-[20px] group-data-[open=true]:top-[20px] bg-white xl:rounded-[22px] rounded-[18px] xl:px-7 px-4 py-[2.2vh] service-shadow transition-all duration-500 ease-out overflow-hidden z-20">
         <h3 className="xl:text-[20px] text-[16px] font-gotham font-bold xl:leading-[28px] text-[#0A192F]">
           {service.title}
         </h3>
 
-        <p className="font-gotham text-[14px] xl:text-[18px] text-black xl:leading-[22px] mt-[.8vh] transition-all duration-300 ease-out group-hover:opacity-0 group-hover:h-0 group-hover:mt-0 group-hover:overflow-hidden">
+        <p className="font-gotham text-[14px] xl:text-[18px] text-black xl:leading-[22px] mt-[.8vh] transition-all duration-300 ease-out group-hover:opacity-0 group-hover:h-0 group-hover:mt-0 group-hover:overflow-hidden group-data-[open=true]:opacity-0 group-data-[open=true]:h-0 group-data-[open=true]:mt-0 group-data-[open=true]:overflow-hidden">
           {service.description}
         </p>
 
-        <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
+        <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] group-data-[open=true]:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
           <div className="overflow-hidden">
-            <p className="font-gotham text-[16px] xl:text-[18px] text-black leading-[22px] mt-[.8vh]">
+            <p className="font-gotham text-[16px] lg:text-[14px] xl:text-[18px] text-black leading-[18px]  xl:leading-[22px] mt-[.8vh]">
               {service.fullDescription}
             </p>
             <ul className="flex flex-col gap-2 mt-[1.4vh] pt-[.4vh] border-t border-black/10">
@@ -162,7 +174,7 @@ const Services = () => {
   }, []);
 
   return (
-    <section className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 2xl:py-[12.5vh] lg:py-[100px] md:py-[80px] py-[50px]">
+    <section id="service" className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 2xl:py-[12.5vh] lg:py-[100px] md:py-[80px] py-[50px]">
       <div>
         <div>
           <div

@@ -146,7 +146,7 @@ const Faq = () => {
               Staat jouw vraag er niet bij?
             </h4>
 
-            <button className="group relative overflow-hidden mt-[2.5vh] flex justify-center items-center gap-3 font-gotham font-medium ext-[15px] xl:text-[16px] text-white bg-[#0CC1FA] w-full sm:w-[233px] h-[52px] sm:h-[56px] rounded-[319px] transition-all duration-500 ease-out hover:shadow-[0_10px_30px_rgba(12,193,250,0.5)] active:scale-95">
+            <button className="group relative overflow-hidden mt-[2.5vh] flex justify-center items-center gap-3 font-gotham font-medium text-[15px] md:text-[13px] xl:text-[16px] text-white bg-[#0CC1FA] w-[220px] sm:w-[233px] h-[52px] sm:h-[56px] rounded-[319px] transition-all duration-500 ease-out hover:shadow-[0_10px_30px_rgba(12,193,250,0.5)] active:scale-95">
               <span className="absolute inset-0 bg-gradient-to-r from-[#0aa8dd] to-[#0CC1FA] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
               <span className="relative z-10">Stel je vraag direct</span>
               <div className="relative z-10 bg-white rounded-full w-[24px] h-[24px] flex justify-center items-center transition-transform duration-500 ease-out group-hover:scale-110">
