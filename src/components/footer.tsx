@@ -29,6 +29,7 @@ const ArrowIcon = () => (
 const contacts = [
   {
     label: "info@miradaintelligence.nl",
+    href: "mailto:info@miradaintelligence.nl",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -46,6 +47,7 @@ const contacts = [
   },
   {
     label: "+31 6 4135 3424",
+    href: "tel:+31641353424",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -94,8 +96,11 @@ const Footer = () => {
     "font-monument text-[20px] sm:text-[22px] xl:text-[24px] text-white";
 
   return (
-    <section ref={sectionRef} className="text-white pt-[8vh] sm:pt-[10vh] xl:pt-[12.8vh]">
-      <div className="xl:px-15 md:px-6 px-4">
+    <section
+      ref={sectionRef}
+      className="text-white pt-[8vh] sm:pt-[10vh] xl:pt-[12.8vh] overflow-hidden"
+    >
+      <div className="2xl:px-15 xl:px-10 md:px-6 px-4">
         {/* Image + bar dono isi wrapper mein => width hamesha barabar */}
         <div className="max-w-[1800px] mx-auto">
           {/* Card: <lg gradient (work jaisa) | lg+ footer.png */}
@@ -108,13 +113,13 @@ const Footer = () => {
             <img
               src="/footer.png"
               alt="footer background"
-              className="hidden lg:block w-full h-auto"
+              className="hidden lg:block w-full h-auto lg:pb-[30px] xl:pb-0"
             />
 
             {/* Content: <lg normal flow | lg+ image ke upar centered */}
             <div
               className="px-5 sm:px-8 md:px-12 lg:px-[6%] xl:px-[8%] 2xl:px-[9.7%]
-              lg:absolute lg:inset-x-0 lg:top-[10%] lg:bottom-[45px] lg:flex lg:items-center"
+              lg:absolute lg:inset-x-0 lg:top-[10%] lg:bottom-[40px] lg:flex lg:items-center"
             >
               <div className="w-full flex flex-col lg:flex-row lg:justify-between lg:items-center gap-8 md:gap-10 lg:gap-6">
                 {/* ROW 1 (md): Logo + description */}
@@ -122,11 +127,13 @@ const Footer = () => {
                   className={`flex flex-col md:flex-row md:items-center gap-4 md:gap-8 lg:flex-col lg:items-start lg:gap-3 xl:gap-4 lg:w-[35%] 2xl:max-w-[486px] ${anim(visible)}`}
                   style={{ transitionDelay: visible ? "0ms" : "0ms" }}
                 >
-                  <img
-                    src="/logo.svg"
-                    alt="logo"
-                    className="w-[200px] md:w-[200px] md:shrink-0 lg:w-[170px] xl:w-[clamp(220px,15.3vw,294px)] h-auto"
-                  />
+                  <Link href={"/#home"}>
+                    <img
+                      src="/logo.svg"
+                      alt="logo"
+                      className="w-[200px] md:w-[200px] md:shrink-0 lg:w-[170px] xl:w-[clamp(220px,15.3vw,294px)] h-auto"
+                    />
+                  </Link>
                   <p
                     className={`${linkText} md:flex-1 md:max-w-[340px] lg:flex-none lg:max-w-none text-white capitalize`}
                   >
@@ -147,7 +154,7 @@ const Footer = () => {
                       {services.map((label) => (
                         <div key={label} className="flex items-center gap-3">
                           <ArrowIcon />
-                          <Link href={"#"} className={linkText}>
+                          <Link href={"/#service"} className={linkText}>
                             {label}
                           </Link>
                         </div>
@@ -163,12 +170,15 @@ const Footer = () => {
                     <h3 className={headingText}>Contact</h3>
                     <div className="flex flex-col gap-3 xl:gap-4 mt-3 xl:mt-4">
                       {contacts.map((item) => (
-                        <div key={item.label} className="flex items-center gap-3">
+                        <div
+                          key={item.label}
+                          className="flex items-center gap-3"
+                        >
                           <div className="bg-white rounded-full w-[25px] h-[25px] flex justify-center items-center shrink-0">
                             {item.icon}
                           </div>
                           <Link
-                            href={"#"}
+                            href={item.href}
                             className={`${linkText} break-words`}
                           >
                             {item.label}

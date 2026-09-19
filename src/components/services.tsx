@@ -121,7 +121,7 @@ const ServiceCard = ({
       />
 
       {/* White box — moves from bottom-overlap to top of the image on hover/click */}
-      <div className="absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[376px] top-[335px] group-hover:top-[20px] group-data-[open=true]:top-[20px] bg-white xl:rounded-[22px] rounded-[18px] xl:px-7 px-4 py-[2.2vh] service-shadow transition-all duration-500 ease-out overflow-hidden z-20">
+            <div className="absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[376px] top-[335px] group-hover:top-[20px] lg:group-hover:top-[150px] group-data-[open=true]:top-[20px] lg:group-data-[open=true]:top-[150px] bg-white xl:rounded-[22px] rounded-[18px] xl:px-7 px-4 py-[2.2vh] service-shadow transition-all duration-500 ease-out overflow-hidden z-20">
         <h3 className="xl:text-[20px] text-[16px] font-gotham font-bold xl:leading-[28px] text-[#0A192F]">
           {service.title}
         </h3>
@@ -139,7 +139,7 @@ const ServiceCard = ({
               {service.bullets.map((bullet) => (
                 <li
                   key={bullet}
-                  className="flex items-center gap-2 font-gotham text-[14px] text-[#0A192F]"
+                  className="flex gap-2 font-gotham text-[14px] text-[#0A192F]"
                 >
                   <span className="text-[#0CC1FA] font-bold">—</span>
                   {bullet}
@@ -188,13 +188,13 @@ const Services = () => {
             <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] 2xl:max-w-[511px] max-w-[480px] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
               Waar we jouw bedrijf mee laten groeien
             </h2>
-            <h4 className="font-gotham font-normal text-[14px] xl:text-[18px] max-w-[546px] leading-[22.8px]">
+            <h4 className="font-gotham font-normal text-[16px] xl:text-[18px] max-w-[546px] leading-[22.8px]">
               Geen vage marketingpraat, wel keiharde systemen die voor regionaal
               rendement werken.
             </h4>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-24 gap-x-6 mt-[5vh]">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-y-12 gap-x-6 md:mt-[5vh] mt-[2vh]">
             {services.map((service, i) => (
               <ServiceCard service={service} index={i} key={service.title} />
             ))}

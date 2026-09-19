@@ -102,9 +102,9 @@ const card4 = useInView<HTMLDivElement>();
           className="work-bg relative rounded-[28px] lg:rounded-none overflow-hidden lg:overflow-visible 
           bg-gradient-to-br from-[#01152b] via-[#0a2f52] to-[#124a7d] 
           lg:bg-[url(/work.png)] lg:bg-cover lg:bg-center lg:bg-no-repeat 
-          px-5 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-50 
-          pt-10 sm:pt-14 md:pt-16 lg:pt-20 xl:pt-24 2xl:pt-[17vh] 
-          pb-10 sm:pb-14 md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-[15vh] 
+          px-8 sm:px-8 md:px-12 lg:px-16 xl:px-10 2xl:px-50 
+          pt-10 sm:pt-14 md:pt-16 lg:pt-28 xl:pt-24 2xl:pt-[17vh] 
+          pb-10 sm:pb-14 md:pb-16 lg:pb-24 xl:pb-24 2xl:pb-[15vh] 
           mt-8 md:mt-10 2xl:mt-0"
         >
           <img
@@ -223,7 +223,7 @@ const card4 = useInView<HTMLDivElement>();
           </div>
 
           <p
-            className={`font-gotham text-[14px] xl:text-[18px] text-white mt-8 sm:mt-10 2xl:mt-[5vh] max-w-[960px] mx-auto text-center capitalize leading-[22.8px] transition-all duration-700 ease-out ${
+            className={`font-gotham text-[14px] xl:text-[18px] text-white mt-8 md:mt-4 xl:mt-10 2xl:mt-[5vh] max-w-[960px] mx-auto text-center capitalize leading-[22.8px] transition-all duration-700 ease-out ${
               cardsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
             style={{ transitionDelay: cardsVisible ? "480ms" : "0ms" }}

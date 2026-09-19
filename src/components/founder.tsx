@@ -6,17 +6,17 @@ const founderFaqs = [
   {
     question: "Werken jullie voor specifieke branches?",
     answer:
-      "Wij werken voornamelijk met lokale dienstverleners en MKB-bedrijven, maar onze aanpak is branche-onafhankelijk. Of je nu in de bouw, zorg, retail of dienstverlening zit — de basis van websites, automatisering en meetbare marketing werkt overal hetzelfde.",
+      "Mirada Agency helpt lokale ondernemers, high-ticket dienstverleners en regionale bedrijven die willen opschalen. Of je nu een exclusieve praktijk runt, een high-end servicebedrijf of een lokaal autobedrijf — onze systemen en AI-workflows zijn flexibel en worden volledig op maat ingericht voor jouw specifieke bedrijfsproces.",
   },
   {
     question: "Wat houdt de gratis scan precies in?",
     answer:
-      "In de gratis scan analyseren we je huidige website, technische prestaties en online zichtbaarheid. Je ontvangt binnen 24 uur een helder overzicht van kansen en knelpunten — zonder verplichtingen.",
+      "We controleren de website van jouw bedrijf op de drie belangrijkste conversie-pijlers: de aanwezigheid en correcte installatie van tracking-pixels (zoals de Meta Pixel), de mobiele gebruiksvriendelijkheid in de praktijk, en technische lead-lekken (zoals SSL-beveiliging en laadsnelheid). Je ontvangt een concreet actieplan om dit direct te dichten.",
   },
   {
     question: "Wat is een AI-pilotproject?",
     answer:
-      "Een AI-pilotproject is een tijdelijk, exclusief traject waarin we een geautomatiseerde AI-workflow op maat bouwen en implementeren voor jouw bedrijf, zodat je zelf de impact op leadopvolging en efficiëntie kunt ervaren voordat je verder opschaalt.",
+      "Omdat we geloven in het bewijzen van waarde aan ondernemers in de regio, starten we met een aantal geselecteerde bedrijven een kortstondig pilotproject. Hierin automatiseren we één specifiek knelpunt in je organisatie (bijvoorbeeld de automatische opvolging van lokale leads) tegen een gereduceerd tarief, zodat je direct de ROI ervaart.",
   },
 ];
 
@@ -97,7 +97,7 @@ const Founder = () => {
                 >
                   <button
                     onClick={() => setOpenIndex(isOpen ? -1 : i)}
-                    className="w-full flex items-center justify-between gap-4 pl-6 sm:pl-8 xl:pl-10 pr-5 py-4 text-left"
+                    className="w-full flex items-center justify-between gap-4 pl-6 sm:pl-8 xl:pl-5 pr-5 py-4 text-left"
                   >
                     <span
                       className={`font-gotham font-bold text-[14px] sm:text-[16px] xl:text-[18px] transition-colors duration-300 ${
@@ -131,7 +131,7 @@ const Founder = () => {
                     style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
                   >
                     <div className="overflow-hidden">
-                      <p className="font-gotham text-[14px] sm:text-[15px] xl:text-[16px] leading-[22px] xl:leading-[24px] text-white/85 pl-6 sm:pl-8 xl:pl-10 pr-5 pb-5">
+                      <p className="font-gotham text-[14px] sm:text-[15px] xl:text-[16px] leading-[22px] xl:leading-[24px] text-white/85 pl-6 sm:pl-8 xl:pl-5 pr-5 pb-5">
                         {faq.answer}
                       </p>
                     </div>
@@ -143,7 +143,7 @@ const Founder = () => {
         </div>
 
         <div
-          className={`bg-[#012549] w-full md:w-[320px] lg:w-[460px] xl:w-[560px] 2xl:w-[682px] h-[300px] sm:h-[420px] md:h-[420px] lg:h-[540px] xl:h-[620px] 2xl:h-[681px] rounded-[24px] relative flex justify-center items-center shrink-0 transition-all duration-700 ease-out ${
+          className={`bg-[#012549] w-full md:w-[320px] lg:w-[460px] xl:w-[560px] 2xl:w-[682px] h-[300px] sm:h-[420px] md:h-[420px] lg:h-[540px] xl:h-[620px] 2xl:h-[681px] rounded-[24px] sticky top-20 flex justify-center items-center shrink-0 transition-all duration-700 ease-out ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
           style={{ transitionDelay: visible ? "200ms" : "0ms" }}

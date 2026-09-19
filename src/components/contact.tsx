@@ -68,7 +68,7 @@ const Contact = () => {
   };
 
   return (
-    <section ref={sectionRef} className=" pt-[8vh] sm:pt-[10vh] xl:pt-[12.8vh]">
+    <section id="contact" ref={sectionRef} className=" pt-[8vh] sm:pt-[10vh] lg:pt-[7vh] xl:pt-[12.8vh]">
       <div>
         <div className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4">
           <div
@@ -87,7 +87,7 @@ const Contact = () => {
 
           <div className="flex flex-col md:flex-row lg:justify-between gap-8 lg:gap-6 xl:gap-8 mt-[4vh]">
             <div
-              className={`bg-white rounded-[24px] w-full lg:w-[480px] xl:w-[560px] 2xl:w-[629px] min-h-[560px] sm:min-h-[600px] xl:min-h-[624px] py-[3vh] px-[6%] sm:px-[5%] lg:px-[3%] xl:px-[2.3%] border border-[#E5E7EB] transition-all duration-700 ease-out ${
+              className={`bg-white rounded-[24px] w-full lg:w-[480px] xl:w-[560px] 2xl:w-[750px] min-h-[560px] sm:min-h-[600px] xl:min-h-[624px] py-[3vh] px-[6%] sm:px-[5%] lg:px-[3%] xl:px-[2.3%] border border-[#E5E7EB] transition-all duration-700 ease-out ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
               style={{ transitionDelay: visible ? "150ms" : "0ms" }}
@@ -215,7 +215,7 @@ const Contact = () => {
               <img
                 src="/contact.png"
                 alt="contact"
-                className="rounded-[24px] w-full h-auto"
+                className="rounded-[24px] w-full xl:h-auto h-full object-cover"
               />
             </div>
           </div>

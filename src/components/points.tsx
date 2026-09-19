@@ -56,7 +56,7 @@ const Points = () => {
         </div>
 
         {/* mobile: column | md+: row | 2xl: original */}
-        <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-4 xl:gap-6 2xl:gap-0 max-w-[1430px] xl:px-10 md:px-6 px-4 mx-auto mt-[6vh] md:mt-[8vh] xl:mt-[11.5vh]">
+        <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-4 xl:gap-6 2xl:gap-0 max-w-[1430px] xl:px-10 md:px-6 px-4 mx-auto mt-[3vh] md:mt-[8vh] xl:mt-[11.5vh]">
           {/* Nu (herkenbaar?) card */}
           <div
             className={`relative w-full max-w-[340px] sm:max-w-[420px] mx-auto md:mx-0 md:max-w-none md:flex-1 md:min-w-0 2xl:flex-none 2xl:w-auto mt-[25px] md:mt-0 transition-all duration-700 ease-out ${

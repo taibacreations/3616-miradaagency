@@ -23,13 +23,13 @@ const Gurantee = () => {
   }, []);
 
   return (
-    <section className="bg-white pt-[7vh] pb-[8vh] xl:pb-[13vh]">
+    <section className="bg-white pt-[5vh] pb-[8vh] xl:pb-[13vh]">
       <div
         ref={ref}
-        className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 flex flex-col md:flex-row justify-between items-center gap-8 lg:gap-6 xl:gap-10"
+        className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 flex flex-col md:flex-row justify-between gap-8 lg:gap-6 xl:gap-10"
       >
         <div
-          className={`w-full lg:w-[500px] xl:w-[540px] 2xl:w-[678px] transition-all duration-700 ease-out ${
+          className={`w-full lg:w-[700px] xl:w-[540px] 2xl:w-[678px] transition-all duration-700 ease-out ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
           style={{ transitionDelay: visible ? "0ms" : "0ms" }}
@@ -37,11 +37,11 @@ const Gurantee = () => {
           <img
             src="/gurantee.png"
             alt="gurantee"
-            className="rounded-[24px] w-full h-auto"
+            className="rounded-[24px] w-full lg:h-auto h-full object-cover"
           />
         </div>
         <div
-          className={`bg-[#F5F9FC] rounded-[24px] w-full lg:w-[600px] xl:w-[700px] 2xl:w-[725px] h-auto lg:min-h-[340px] xl:min-h-[365px] px-[6%] sm:px-[5.5%] py-[4%] lg:py-[3.5%] lg:pt-[3.5%] transition-all duration-700 ease-out ${
+          className={`bg-[#F5F9FC] rounded-[24px] w-full lg:w-[600px] xl:w-[700px] 2xl:w-[725px] flex flex-col justify-center h-auto lg:min-h-[340px] xl:min-h-[365px] px-[6%] md:px-[3%] xl:px-[5.5%] py-[4%] lg:py-[3.5%] lg:pt-[3.5%] transition-all duration-700 ease-out ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
           style={{ transitionDelay: visible ? "150ms" : "0ms" }}
@@ -50,12 +50,12 @@ const Gurantee = () => {
             Wat wij garanderen
           </h3>
 
-          <div className="flex flex-col gap-4 mt-[1vh]">
-            <div className="flex items-center gap-3">
+          <div className="flex flex-col gap-4 mt-[3vh]">
+            <div className="flex items-start gap-3">
               <img
                 src="/gurantee-check.png"
                 alt="check"
-                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
+                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto lg:mt-[5px] xl:mt-0"
               />
               <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px]">
                 Technisch waterdichte implementatie
@@ -65,7 +65,7 @@ const Gurantee = () => {
               <img
                 src="/gurantee-check.png"
                 alt="check"
-                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
+                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto lg:mt-[5px] xl:mt-0"
               />
               <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px]">
                 Wekelijks contact over de voortgang
@@ -75,7 +75,7 @@ const Gurantee = () => {
               <img
                 src="/gurantee-check.png"
                 alt="check"
-                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
+                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto lg:mt-[-25px] xl:mt-0"
               />
               <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px]">
                 Transparante rapportages in begrijpelijk Nederlands
@@ -85,7 +85,7 @@ const Gurantee = () => {
               <img
                 src="/gurantee-check.png"
                 alt="check"
-                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
+                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto lg:mt-[-25px] xl:mt-0"
               />
               <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px]">
                 Meetbare resultaten binnen de afgesproken termijn
@@ -95,7 +95,7 @@ const Gurantee = () => {
               <img
                 src="/gurantee-check.png"
                 alt="check"
-                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
+                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto lg:mt-[-25px] xl:mt-0"
               />
               <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px]">
                 Geen lange contracten — flexibel en schaalbaar

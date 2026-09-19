@@ -70,7 +70,7 @@ const Choose = () => {
                     alt="tick"
                     className="w-[16px] sm:w-[19px] h-auto shrink-0"
                   />
-                  <h3 className="font-gotham font-medium text-[14px] sm:text-[16px] xl:text-[18px] leading-[20px] sm:leading-[24px] text-black">
+                  <h3 className="font-gotham font-medium text-[16px] xl:text-[18px] leading-[20px] sm:leading-[24px] text-black">
                     {text}
                   </h3>
                 </div>
@@ -79,12 +79,12 @@ const Choose = () => {
 
             <Link
               href={"#"}
-              className={`mt-[2.5vh] group relative overflow-hidden flex justify-center items-center xl:gap-4 font-gotham font-medium text-[15px] md:text-[13px] xl:text-[16px] text-white bg-[#0CC1FA] w-full sm:w-[340px] xl:w-[418px] h-[50px] sm:h-[52px] xl:h-[56px] rounded-[319px] transition-all duration-500 ease-out hover:shadow-[0_10px_35px_rgba(12,193,250,0.55)] active:scale-95 ${
+              className={`mt-[2.5vh] group relative overflow-hidden flex justify-center items-center xl:gap-4 font-gotham font-medium text-[13px] xl:text-[16px] text-white bg-[#0CC1FA] w-full sm:w-[340px] xl:w-[418px] h-[50px] sm:h-[52px] xl:h-[56px] rounded-[319px] transition-all duration-500 ease-out ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
               style={{ transitionDelay: visible ? "550ms" : "0ms" }}
             >
-              <span className="absolute inset-0 bg-gradient-to-r from-[#0aa8dd] to-[#0CC1FA] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+              <span className="absolute inset-0 bg-[#012549] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
               <span className="relative z-10 text-center px-2 transition-transform duration-300 ease-out">
                 Ontdek Jouw Lead-Lekken — Gratis Scan
               </span>
@@ -96,7 +96,7 @@ const Choose = () => {
                   viewBox="0 0 10 10"
                   fill="none"
                   xmlnsXlink="http://www.w3.org/1999/xlink"
-                  className="transition-transform duration-500 ease-out group-hover:rotate-[45deg]"
+                  className="transition-transform duration-500 ease-out group-hover:rotate-[45deg] group-hover:stroke-[#012549]"
                 >
                   <path
                     d="M9.28027 0.750001C9.28027 0.335787 8.94449 4.2594e-07 8.53027 5.73454e-07L1.78027 1.51986e-07C1.36606 1.51986e-07 1.03027 0.335786 1.03027 0.75C1.03027 1.16421 1.36606 1.5 1.78027 1.5H7.78027V7.5C7.78027 7.91421 8.11606 8.25 8.53027 8.25C8.94449 8.25 9.28027 7.91421 9.28027 7.5L9.28027 0.750001ZM0.530273 8.75L1.0606 9.28033L9.0606 1.28033L8.53027 0.75L7.99994 0.21967L-5.66393e-05 8.21967L0.530273 8.75Z"
@@ -120,7 +120,7 @@ const Choose = () => {
           <img
             src={"/hand.png"}
             alt="hand"
-            className={`block mx-auto order-last md:order-none md:mx-0 w-[180px] sm:w-[240px] xl:w-[351px] h-auto md:absolute md:left-1/2 md:-translate-x-1/2 xl:bottom
+            className={`block mx-auto order-last md:order-none md:mx-0 w-[180px] md:w-[210px] lg:w-[240px] xl:w-[351px] h-auto md:absolute md:left-1/2 md:-translate-x-1/2 xl:bottom
               bottom-0 transition-all duration-1000 ease-out ${
               visible
                 ? "opacity-100 translate-y-0"
@@ -130,7 +130,7 @@ const Choose = () => {
           />
 
           {/* Right column — boxes */}
-          <div className="flex flex-col gap-6 2xl:gap-13 lg:mr-[2.8%] md:mt-[10vh] relative">
+          <div className="flex flex-col gap-6 2xl:gap-13 lg:mr-[2.8%] md:mt-[10vh] lg:mt-[22vh] xl:mt-[10vh] relative">
             {[
               {
                 offset: "",
@@ -240,7 +240,7 @@ const Choose = () => {
             ].map((box, i) => (
               <div
                 key={box.title}
-                className={`group choose-box w-full xl:w-[510px] xl:max-w-full lg:w-[400px] md:w-[300px] h-auto xl:h-[145px] lg:h-[140px] rounded-[18px] bg-white flex flex-col lg:text-left text-center lg:flex-row items-center gap-2 xl:gap-6.5 px-4 sm:px-5 xl:px-5.5 py-4 lg:py-0 transition-colors duration-500 ease-out hover:bg-[#012549] cursor-pointer ${box.offset} ${
+                className={`group choose-box w-full xl:w-[510px] xl:max-w-full lg:w-[400px] md:w-[300px] h-auto xl:h-[145px] lg:h-[140px] rounded-[18px] bg-white flex flex-col md:text-left text-center lg:flex-row lg:items-center gap-2 xl:gap-6.5 px-4 sm:px-5 xl:px-5.5 py-4 lg:py-0 transition-colors duration-500 ease-out hover:bg-[#012549] cursor-pointer ${box.offset} ${
                   visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
                 }`}
                 style={{ transitionDelay: visible ? `${400 + i * 150}ms` : "0ms" }}

@@ -16,7 +16,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <section className='relative w-full min-h-screen bg-cover md:bg-center bg-no-repeat bg-[url("/banner.png")] bg-position-[70%] pb-[5vh]'>
+    <section id="home" className='relative w-full min-h-screen bg-cover md:bg-center bg-no-repeat bg-[url("/banner.png")] bg-position-[70%] pb-[5vh]'>
   {/* Dark overlay — mobile only, so text stays readable over the image */}
   <div className="absolute inset-0 bg-black/30 xl:hidden pointer-events-none" />
       <div className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 pt-[22vh] sm:pt-[25vh] xl:pt-[28vh]">
@@ -61,14 +61,14 @@ const Banner = () => {
             style={{ transitionDelay: mounted ? "420ms" : "0ms" }}
           >
             <Link
-              href={"#"}
-              className="group relative overflow-hidden flex justify-center items-center gap-4 font-gotham font-medium text-[15px] md:text-[13px] xl:text-[16px] text-white bg-[#0CC1FA] w-[250px] sm:w-[240px] xl:w-[274px] h-[52px] xl:h-[56px] rounded-[319px] transition-all duration-500 ease-out hover:shadow-[0_10px_35px_rgba(12,193,250,0.55)] active:scale-95"
+              href={"/scan"}
+              className="group relative overflow-hidden flex justify-center items-center gap-4 font-gotham font-medium text-[15px] md:text-[13px] xl:text-[16px] text-white hover:text-[#0CC1FA] bg-[#0CC1FA] w-[250px] sm:w-[240px] xl:w-[274px] h-[52px] xl:h-[56px] rounded-[319px] transition-all duration-500 ease-out"
             >
-              <span className="absolute inset-0 bg-gradient-to-r from-[#0aa8dd] to-[#0CC1FA] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+              <span className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
               <span className="relative z-10 transition-transform duration-300 ease-out">
                 Claim Jouw Gratis Scan
               </span>
-              <div className="relative z-10 bg-white rounded-full w-[30px] h-[30px] flex justify-center items-center transition-transform duration-500 ease-out">
+              <div className="relative z-10 bg-white group-hover:bg-[#0CC1FA] rounded-full w-[30px] h-[30px] flex justify-center items-center transition-transform duration-500 ease-out">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="10"
@@ -76,7 +76,7 @@ const Banner = () => {
                   viewBox="0 0 10 10"
                   fill="none"
                   xmlnsXlink="http://www.w3.org/1999/xlink"
-                  className="transition-transform duration-500 ease-out group-hover:rotate-[45deg]"
+                  className="transition-transform duration-500 ease-out group-hover:rotate-[45deg] group-hover:stroke-white"
                 >
                   <path
                     d="M9.28027 0.750001C9.28027 0.335787 8.94449 4.2594e-07 8.53027 5.73454e-07L1.78027 1.51986e-07C1.36606 1.51986e-07 1.03027 0.335786 1.03027 0.75C1.03027 1.16421 1.36606 1.5 1.78027 1.5H7.78027V7.5C7.78027 7.91421 8.11606 8.25 8.53027 8.25C8.94449 8.25 9.28027 7.91421 9.28027 7.5L9.28027 0.750001ZM0.530273 8.75L1.0606 9.28033L9.0606 1.28033L8.53027 0.75L7.99994 0.21967L-5.66393e-05 8.21967L0.530273 8.75Z"
@@ -87,7 +87,7 @@ const Banner = () => {
             </Link>
 
             <Link
-              href="#"
+              href="#service"
               className="group relative w-fit font-gotham font-medium text-[14px] md:text-[13px] xl:text-[16px] text-white underline-offset-4 decoration-white/60 transition-all duration-300 ease-out hover:text-[#0CC1FA] hover:decoration-[#0CC1FA]"
             >
               <span className="relative">

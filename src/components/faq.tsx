@@ -6,32 +6,32 @@ const faqs = [
   {
     question: "Wat is die gratis scan precies?",
     answer:
-      "De gratis scan is een korte analyse van je website en online aanwezigheid. Wij bekijken waar je bezoekers afhaken, welke technische problemen er spelen en welke kansen je momenteel laat liggen. Binnen 24 uur ontvang je een helder overzicht — geen verkooppraatje, gewoon feiten.",
+      "We analyseren jouw huidige online aanwezigheid: waar verlies je potentiële klanten? Denk aan tracking-fouten, trage laadtijden, ontbrekende pixels, of campagnes die niet optimaal draaien. Je krijgt binnen 24 uur een concreet rapport — zonder verplichtingen.",
   },
   {
     question: "Ik heb al een website. Kan Mirada toch helpen?",
     answer:
-      "Zeker. Veel van onze klanten hebben al een website, maar zien niet de resultaten die ze verwachten. Wij optimaliseren bestaande sites, bouwen automatiseringen erbovenop, of adviseren een gerichte vernieuwing — afhankelijk van wat het meeste oplevert.",
+      "Absoluut. We werken ook met bestaande websites. We kunnen je huidige site optimaliseren, er automatiseringen op aansluiten, of gerichte advertenties inzetten om meer bezoekers aan te trekken. We starten altijd met de scan om te zien wat de grootste kansen zijn.",
   },
   {
     question: "Moet ik al technisch onderlegd zijn?",
     answer:
-      "Nee, helemaal niet. Wij leggen alles uit in helder Nederlands, zonder jargon. Jij hoeft niets te bouwen of te beheren — wij regelen de techniek en houden je op de hoogte in taal die je begrijpt.",
+      "Nee, helemaal niet. Wij regelen alles technisch. Jij hoeft alleen te vertellen wat je wil bereiken — wij zorgen dat het werkt. We leggen alles uit in gewone taal, zonder jargon.",
   },
   {
     question: "Hoe snel zie ik resultaten?",
     answer:
-      "Dat verschilt per traject. Websites staan meestal binnen 2–4 weken live, AI-workflows zijn vaak binnen 1–2 weken operationeel. Meetbare resultaten in leads en conversies zie je doorgaans binnen de eerste maand.",
+      "Dat verschilt per dienst. Een website is live in 2–4 weken. Automatiseringen draaien vaak binnen 1–2 weken. Bij advertenties zie je doorgaans de eerste leads binnen de eerste maand. We stellen altijd een realistisch tijdpad op bij de start.",
   },
   {
     question: "Zit ik vast aan een lang contract?",
     answer:
-      "Nee. Wij werken met flexibele contracten die meeschalen met jouw groei. Geen verborgen looptijden of opzegtermijnen die je verrassen — transparantie staat voorop.",
+      "Nee. Maandelijkse diensten zijn per maand opzegbaar. Projecten (website, automatisering) worden met een vaste prijs afgesproken zonder langlopend contract. Flexibel en eerlijk — zo hoort het.",
   },
   {
     question: "Werken jullie alleen lokaal of ook nationaal?",
     answer:
-      "Ons hart ligt bij lokale ondernemers, maar we werken door heel Nederland. Of je nu in de regio zit of landelijk actief bent, wij bouwen systemen die overal werken.",
+      "Onze focus ligt op lokale en regionale ondernemers in Nederland. Maar we helpen ook bedrijven die nationaal actief zijn. Zolang je ambitieus bent en meetbaar wil groeien, kunnen we samenwerken.",
   },
 ];
 
@@ -58,12 +58,14 @@ const Faq = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-white relative overflow-hidden">
-      <img
-        src="/faq-vector.png"
-        alt="vector"
-        className="hidden xl:block absolute bottom-[24%] right-[-2%] w-[300px] 2xl:w-auto"
-      />
+    <section ref={sectionRef} className="bg-white relative">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <img
+          src="/faq-vector.png"
+          alt="vector"
+          className="hidden xl:block absolute bottom-[24%] right-[-2%] w-auto"
+        />
+      </div>
       <div className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 pt-[8vh] sm:pt-[10vh] xl:pt-[13vh]">
         <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-8 xl:gap-10">
           {/* Left column */}
@@ -96,7 +98,7 @@ const Faq = () => {
                   >
                     <button
                       onClick={() => setOpenIndex(isOpen ? -1 : i)}
-                      className="w-full flex items-center justify-between gap-4 pl-6 sm:pl-8 xl:pl-10 pr-5 py-4 text-left"
+                      className="w-full flex items-center justify-between gap-4 pl-6 sm:pl-8 xl:pl-5 pr-5 py-4 text-left"
                     >
                       <span
                         className={`font-gotham font-bold text-[14px] sm:text-[16px] xl:text-[18px] transition-colors duration-300 ${
@@ -132,7 +134,7 @@ const Faq = () => {
                       }}
                     >
                       <div className="overflow-hidden">
-                        <p className="font-gotham text-[14px] sm:text-[15px] xl:text-[16px] leading-[22px] xl:leading-[24px] text-white/85 pl-6 sm:pl-8 xl:pl-10 pr-5 pb-5">
+                        <p className="font-gotham text-[14px] sm:text-[15px] xl:text-[16px] leading-[22px] xl:leading-[24px] text-white/85 pl-6 sm:pl-8 xl:pl-5 pr-5 pb-5">
                           {faq.answer}
                         </p>
                       </div>
@@ -177,7 +179,7 @@ const Faq = () => {
             <img
               src="/faq.png"
               alt="team working"
-              className="w-full object-cover rounded-[24px]"
+              className="w-full object-cover rounded-[24px] sticky top-20"
             />
           </div>
         </div>

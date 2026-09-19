@@ -48,7 +48,7 @@ const Offers = () => {
   return (
     <section ref={sectionRef} className="bg-white">
       <div>
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:flex lg:justify-between lg:items-center gap-y-10 gap-x-4 md:gap-x-6 lg:gap-x-4 xl:gap-x-6 max-w-[1530px] xl:px-10 md:px-6 px-4 mx-auto pt-[10vh] md:pt-[14vh] xl:pt-[18vh]">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:flex lg:justify-between lg:items-center gap-y-10 md:gap-y-17 lg:gap-y-10 gap-x-4 md:gap-x-6 lg:gap-x-4 xl:gap-x-6 max-w-[1530px] xl:px-10 md:px-6 px-4 mx-auto pt-[10vh] md:pt-[14vh] xl:pt-[18vh]">
           {offers.map((offer, i) => (
             <div
               key={offer.title}
@@ -66,7 +66,7 @@ const Offers = () => {
                 <h3 className="font-gotham font-bold text-[16px] sm:text-[18px] xl:text-[20px] text-[#0A192F]">
                   {offer.title}
                 </h3>
-                <p className="font-gotham text-[15px] xl:text-[16px] text-black leading-[18px] md:leading-[20px] lg:leading-[19px] xl:leading-[24px] mt-[.8vh]">
+                <p className="font-gotham text-[15px] lg:text-[16px] xl:text-[16px] text-black leading-[18px] md:leading-[20px] lg:leading-[19px] xl:leading-[24px] mt-[.8vh]">
                   {offer.description}
                 </p>
               </div>

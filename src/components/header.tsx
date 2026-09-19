@@ -2,19 +2,27 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
 
 const navLinks = [
-  { label: "Diensten", href: "#service" },
-  { label: "Werkwijze", href: "#work" },
+  { label: "Diensten", href: "/#service" },
+  { label: "Werkwijze", href: "/#work" },
   { label: "Gratis Scan", href: "/scan" },
-  { label: "Over Mij", href: "#founder" },
+  { label: "Over Mij", href: "/#founder" },
 ];
+
+const SCROLL_OFFSET_RATIO = 0.1; // top se space
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
+
+  const router = useRouter();
+  const pathname = usePathname();
+  const pendingScrollId = useRef<string | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -33,6 +41,111 @@ const Header = () => {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
+
+  // Scrollspy: scroll position ke hisaab se current visible section detect karo
+  useEffect(() => {
+    if (pathname !== "/") return;
+
+    const sectionIds = navLinks
+      .filter((link) => link.href.includes("#"))
+      .map((link) => link.href.split("#")[1]);
+
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    if (sections.length === 0) return;
+
+    let ticking = false;
+
+    const updateActive = () => {
+      const scrollPos = window.scrollY + window.innerHeight * 0.3;
+
+      let current = ""; // top par, jab tak koi section reach nahi hota, koi link active nahi
+      for (const section of sections) {
+        if (section.offsetTop <= scrollPos) {
+          current = section.id;
+        } else {
+          break;
+        }
+      }
+
+      setActiveSection(current);
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateActive);
+        ticking = true;
+      }
+    };
+
+    updateActive();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [pathname]);
+
+  // Home page par navigate hone ke baad pending section tak scroll karo
+  useEffect(() => {
+    if (pathname === "/" && pendingScrollId.current) {
+      const id = pendingScrollId.current;
+      const timer = setTimeout(() => {
+        scrollToSection(id);
+        pendingScrollId.current = null;
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [pathname]);
+
+  // Home se hat kar kisi aur page (jaise /scan) par jao to koi link active na dikhe
+  useEffect(() => {
+    if (pathname !== "/") {
+      setActiveSection("");
+    }
+  }, [pathname]);
+
+  const scrollToSection = (id: string) => {
+    const target = document.getElementById(id);
+    if (!target) return false;
+
+    const offset = window.innerHeight * SCROLL_OFFSET_RATIO;
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({ top, behavior: "smooth" });
+    setActiveSection(id);
+    return true;
+  };
+
+  // Click par offset ke sath smooth scroll; doosre page par ho to pehle home navigate karo
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    if (!href.includes("#")) return;
+
+    const id = href.split("#")[1];
+
+    if (pathname !== "/") {
+      e.preventDefault();
+      pendingScrollId.current = id;
+      router.push(`/#${id}`);
+      setIsOpen(false);
+      return;
+    }
+
+    e.preventDefault();
+    scrollToSection(id);
+    setIsOpen(false);
+  };
+
+  const isActive = (href: string) =>
+    href.includes("#") && activeSection === href.split("#")[1];
 
   return (
     <section>
@@ -61,7 +174,9 @@ const Header = () => {
               width={100}
               alt="Logo"
               className={`h-auto transition-all duration-500 ease-out ${
-                scrolled ? "w-[90px] lg:w-[120px]" : "w-[120px] xl:w-[140px] 2xl:w-[168px]"
+                scrolled
+                  ? "w-[90px] lg:w-[120px]"
+                  : "w-[120px] xl:w-[140px] 2xl:w-[168px]"
               }`}
             />
           </Link>
@@ -71,23 +186,31 @@ const Header = () => {
             {navLinks.map((link, i) => (
               <Link
                 key={link.label}
-                className="group relative font-gotham font-light text-[18px] leading-[100%] text-white transition-all duration-700 ease-out"
+                className={`group relative font-gotham font-light text-[18px] leading-[100%] transition-all duration-700 ease-out ${
+                  isActive(link.href) ? "text-[#0CC1FA]" : "text-white"
+                }`}
                 style={{
                   transitionDelay: mounted ? `${150 + i * 80}ms` : "0ms",
                   opacity: mounted ? 1 : 0,
                   transform: mounted ? "translateY(0)" : "translateY(-10px)",
                 }}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.label}
-                <span className="absolute left-0 -bottom-1 h-[1px] w-0 bg-white transition-all duration-300 ease-out group-hover:w-full" />
+                <span
+                  className={`absolute left-0 -bottom-1 h-[1px] bg-[#0CC1FA] transition-all duration-300 ease-out ${
+                    isActive(link.href) ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
               </Link>
             ))}
           </nav>
 
           {/* Right side: hamburger (below xl) / contact button (xl+) */}
           <div className="relative z-10">
-            <Link href={"#"}
+            <Link
+              href={"#"}
               aria-label={isOpen ? "Close menu" : "Open menu"}
               onClick={() => setIsOpen((prev) => !prev)}
               className={`xl:hidden relative flex items-center justify-center w-10 h-10 shrink-0 transition-all duration-700 ease-out ${
@@ -160,8 +283,10 @@ const Header = () => {
               <Link
                 key={link.label}
                 href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="font-gotham font-light text-[22px] text-white transition-all duration-500 ease-out hover:pl-2 hover:text-[#0CC1FA]"
+                onClick={(e) => handleNavClick(e, link.href)}
+                className={`font-gotham font-light text-[22px] transition-all duration-500 ease-out hover:pl-2 hover:text-[#0CC1FA] ${
+                  isActive(link.href) ? "text-[#0CC1FA] pl-2" : "text-white"
+                }`}
                 style={{
                   transitionDelay: isOpen ? `${150 + i * 80}ms` : "0ms",
                   opacity: isOpen ? 1 : 0,
@@ -192,13 +317,13 @@ const Header = () => {
 
 const ContactButton = ({ full = false }: { full?: boolean }) => {
   return (
-    <Link href={"#"}
-      className={`group relative overflow-hidden flex justify-center items-center gap-3 font-gotham font-medium text-[16px] text-white h-[50px] rounded-[319px] transition-all duration-500 ease-out bg-[#0CC1FA] hover:shadow-[0_8px_30px_rgba(12,193,250,0.55)] active:scale-95 ${
+    <Link
+      href={"/#contact"}
+      className={`group relative overflow-hidden flex justify-center items-center gap-3 font-gotham font-medium text-[16px] text-white h-[50px] rounded-[319px] transition-all duration-500 ease-out bg-[#0CC1FA] ${
         full ? "w-[134px]" : "w-[134px]"
       }`}
     >
-      {/* sliding color layer on hover */}
-      <span className="absolute inset-0 bg-gradient-to-r from-[#0aa8dd] to-[#0CC1FA] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+      <span className="absolute inset-0 bg-[#012549] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
 
       <span className="relative z-10 transition-transform duration-300 ease-out">
         Contact
@@ -212,7 +337,7 @@ const ContactButton = ({ full = false }: { full?: boolean }) => {
           viewBox="0 0 10 10"
           fill="none"
           xmlnsXlink="http://www.w3.org/1999/xlink"
-          className="transition-transform duration-500 ease-out group-hover:rotate-[45deg]"
+          className="transition-transform duration-500 ease-out group-hover:rotate-[45deg] group-hover:stroke-[#012549]"
         >
           <path
             d="M9.28027 0.750001C9.28027 0.335787 8.94449 4.2594e-07 8.53027 5.73454e-07L1.78027 1.51986e-07C1.36606 1.51986e-07 1.03027 0.335786 1.03027 0.75C1.03027 1.16421 1.36606 1.5 1.78027 1.5H7.78027V7.5C7.78027 7.91421 8.11606 8.25 8.53027 8.25C8.94449 8.25 9.28027 7.91421 9.28027 7.5L9.28027 0.750001ZM0.530273 8.75L1.0606 9.28033L9.0606 1.28033L8.53027 0.75L7.99994 0.21967L-5.66393e-05 8.21967L0.530273 8.75Z"
