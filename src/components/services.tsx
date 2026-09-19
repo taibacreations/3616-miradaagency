@@ -121,7 +121,7 @@ const ServiceCard = ({
       />
 
       {/* White box — moves from bottom-overlap to top of the image on hover/click */}
-            <div className="absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[376px] top-[335px] group-hover:top-[20px] lg:group-hover:top-[150px] group-data-[open=true]:top-[20px] lg:group-data-[open=true]:top-[150px] bg-white xl:rounded-[22px] rounded-[18px] xl:px-7 px-4 py-[2.2vh] service-shadow transition-all duration-500 ease-out overflow-hidden z-20">
+            <div className="absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[376px] top-[335px] group-hover:top-[20px] lg:group-hover:top-[150px] xl:group-hover:top-[20px] group-data-[open=true]:top-[20px] lg:group-data-[open=true]:top-[150px] xl:group-data-[open=true]:top-[20px] bg-white xl:rounded-[22px] rounded-[18px] xl:px-7 px-4 py-[2.2vh] service-shadow transition-all duration-500 ease-out overflow-hidden z-20">
         <h3 className="xl:text-[20px] text-[16px] font-gotham font-bold xl:leading-[28px] text-[#0A192F]">
           {service.title}
         </h3>
