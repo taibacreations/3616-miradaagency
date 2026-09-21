@@ -144,8 +144,15 @@ const Header = () => {
     setIsOpen(false);
   };
 
-  const isActive = (href: string) =>
-    href.includes("#") && activeSection === href.split("#")[1];
+  const isActive = (href: string) => {
+  // Section links (/#service etc.) -> scrollspy se
+  if (href.includes("#")) {
+    return pathname === "/" && activeSection === href.split("#")[1];
+  }
+
+  // Alag pages (/scan) -> current page se
+  return pathname === href || pathname.startsWith(`${href}/`);
+};
 
   return (
     <section>

@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -49,25 +50,30 @@ const Result = () => {
               verplichtingen.
             </p>
 
-            <button className="group relative overflow-hidden mt-[2.5vh] flex justify-center items-center gap-3 font-gotham font-medium text-[15px] md:text-[13px] xl:text-[16px] text-white hover:text-[#0CC1FA] bg-[#0CC1FA] w-[236px] h-[53px] rounded-[319px] transition-all duration-500 ease-out">
-              <span className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
-              <span className="relative z-10">Claim Gratis Scan</span>
-              <div className="relative z-10 bg-white group-hover:bg-[#0CC1FA] rounded-full w-[24px] h-[24px] flex justify-center items-center transition-transform duration-500 ease-out group-hover:scale-110">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="9"
-                  height="9"
-                  viewBox="0 0 10 10"
-                  fill="none"
-                  className="transition-transform duration-500 ease-out group-hover:rotate-[45deg] group-hover:stroke-white"
-                >
-                  <path
-                    d="M9.28027 0.750001C9.28027 0.335787 8.94449 4.2594e-07 8.53027 5.73454e-07L1.78027 1.51986e-07C1.36606 1.51986e-07 1.03027 0.335786 1.03027 0.75C1.03027 1.16421 1.36606 1.5 1.78027 1.5H7.78027V7.5C7.78027 7.91421 8.11606 8.25 8.53027 8.25C8.94449 8.25 9.28027 7.91421 9.28027 7.5L9.28027 0.750001ZM0.530273 8.75L1.0606 9.28033L9.0606 1.28033L8.53027 0.75L7.99994 0.21967L-5.66393e-05 8.21967L0.530273 8.75Z"
-                    fill="#0CC1FA"
-                  ></path>
-                </svg>
-              </div>
-            </button>
+            
+
+          <Link
+            href="/scan"
+            className="group relative overflow-hidden mt-[2.5vh] flex justify-center items-center gap-3 font-gotham font-medium text-[15px] md:text-[13px] xl:text-[16px] text-white hover:text-[#0CC1FA] bg-[#0CC1FA] w-[236px] h-[53px] rounded-[319px] transition-all duration-500 ease-out"
+          >
+            <span className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+            <span className="relative z-10">Claim Gratis Scan</span>
+            <div className="relative z-10 bg-white group-hover:bg-[#0CC1FA] rounded-full w-[24px] h-[24px] flex justify-center items-center transition-transform duration-500 ease-out group-hover:scale-110">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="9"
+                height="9"
+                viewBox="0 0 10 10"
+                fill="none"
+                className="transition-transform duration-500 ease-out group-hover:rotate-[45deg] group-hover:stroke-white"
+              >
+                <path
+                  d="M9.28027 0.750001C9.28027 0.335787 8.94449 4.2594e-07 8.53027 5.73454e-07L1.78027 1.51986e-07C1.36606 1.51986e-07 1.03027 0.335786 1.03027 0.75C1.03027 1.16421 1.36606 1.5 1.78027 1.5H7.78027V7.5C7.78027 7.91421 8.11606 8.25 8.53027 8.25C8.94449 8.25 9.28027 7.91421 9.28027 7.5L9.28027 0.750001ZM0.530273 8.75L1.0606 9.28033L9.0606 1.28033L8.53027 0.75L7.99994 0.21967L-5.66393e-05 8.21967L0.530273 8.75Z"
+                  fill="#0CC1FA"
+                ></path>
+              </svg>
+            </div>
+          </Link>
           </div>
         </div>
       </div>

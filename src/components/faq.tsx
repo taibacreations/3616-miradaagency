@@ -150,7 +150,7 @@ const Faq = () => {
             </h4>
 
             <Link
-              href={"#"}
+              href={"#contact"}
               className={`mt-[2.5vh] group relative overflow-hidden flex justify-center items-center xl:gap-4 font-gotham font-medium text-[13px] xl:text-[16px] text-white bg-[#0CC1FA] w-full sm:w-[200px] xl:w-[250px] h-[50px] sm:h-[52px] xl:h-[56px] rounded-[319px] transition-all duration-500 ease-out ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
