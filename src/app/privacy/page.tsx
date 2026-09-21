@@ -76,7 +76,7 @@ function Reveal({
 const innerCardClass =
   "rounded-2xl border border-black/5 bg-white shadow-[0px_4px_20px_0px_#0000000d]";
 const bodyClass =
-  "font-gotham font-normal text-[14px] leading-[170%] text-[#012549]/80 xl:text-[16px]";
+  "font-gotham font-normal text-[16px] leading-[170%] text-[#012549]/80 md:text-[16px] xl:text-[18px]";
 const linkClass =
   "text-[#0CC1FA] underline-offset-4 transition-colors hover:text-[#0A93C4] hover:underline";
 
@@ -251,7 +251,7 @@ export default function PrivacyPage() {
                     <li key={item.id}>
                       <a
                         href={`#${item.id}`}
-                        className="flex items-start gap-3 rounded-xl px-3 py-2 font-gotham text-[14px] leading-[140%] text-[#012549]/80 transition-colors hover:bg-[#0CC1FA]/10 hover:text-[#012549]"
+                        className="flex items-start gap-3 rounded-xl px-3 py-2 font-gotham text-[14px] xl:text-[16px] leading-[140%] text-[#012549]/80 transition-colors hover:bg-[#0CC1FA]/10 hover:text-[#012549]"
                       >
                         <span className="font-bold text-[#0CC1FA]">{item.n}.</span>
                         {item.title}
@@ -349,7 +349,7 @@ export default function PrivacyPage() {
                     <li key={p.title} className="flex items-start gap-3">
                       <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#0CC1FA]" />
                       <div>
-                        <p className="font-gotham text-[15px] font-bold text-[#012549] xl:text-[17px]">
+                        <p className="font-gotham text-[16px] font-bold text-[#012549] xl:text-[18px]">
                           {p.title}
                         </p>
                         <p className={`mt-1 ${bodyClass}`}>{p.text}</p>
@@ -373,10 +373,10 @@ export default function PrivacyPage() {
                         i !== retention.length - 1 ? "border-b border-black/10" : ""
                       } ${i === 0 ? "pt-0" : ""}`}
                     >
-                      <span className="font-gotham text-[14px] font-bold text-[#012549] xl:text-[16px]">
+                      <span className="font-gotham text-[16px] font-bold text-[#012549] xl:text-[18px]">
                         {row.label}
                       </span>
-                      <span className="font-gotham text-[13px] text-[#012549]/60 sm:text-right xl:text-[15px]">
+                      <span className="font-gotham text-[14px] text-[#012549]/60 sm:text-right xl:text-[16px]">
                         {row.value}
                       </span>
                     </div>
