@@ -15,6 +15,21 @@ const Banner = () => {
     setMounted(true);
   }, []);
 
+
+  const handleServiceClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  e.preventDefault();
+
+  const target = document.getElementById("service");
+  if (!target) return;
+
+  const offset = window.innerHeight * 0.1; // header/nav wala hi 10% offset
+  const top = target.getBoundingClientRect().top + window.scrollY - offset;
+
+  window.scrollTo({ top, behavior: "smooth" });
+};
+
+
+
   return (
     <section id="home" className='relative w-full min-h-screen bg-cover md:bg-center bg-no-repeat bg-[url("/banner.png")] bg-position-[70%] pb-[5vh]'>
   {/* Dark overlay — mobile only, so text stays readable over the image */}
@@ -87,7 +102,8 @@ const Banner = () => {
             </Link>
 
             <Link
-              href="#service"
+              href="/#service"
+              onClick={handleServiceClick}
               className="group relative w-fit font-gotham font-medium text-[14px] md:text-[13px] xl:text-[16px] text-white underline-offset-4 decoration-white/60 transition-all duration-300 ease-out hover:text-[#0CC1FA] hover:decoration-[#0CC1FA]"
             >
               <span className="relative">

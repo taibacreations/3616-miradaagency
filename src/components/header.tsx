@@ -134,7 +134,7 @@ const Header = () => {
     if (pathname !== "/") {
       e.preventDefault();
       pendingScrollId.current = id;
-      router.push(`/#${id}`);
+      router.push("/");
       setIsOpen(false);
       return;
     }
@@ -253,7 +253,7 @@ const Header = () => {
               }`}
               style={{ transitionDelay: mounted ? "450ms" : "0ms" }}
             >
-              <ContactButton />
+              <ContactButton onClick={(e) => handleNavClick(e, "/#contact")} />
             </div>
           </div>
         </div>
@@ -313,7 +313,7 @@ const Header = () => {
                 transform: isOpen ? "translateY(0)" : "translateY(12px)",
               }}
             >
-              <ContactButton full />
+              <ContactButton full onClick={(e) => handleNavClick(e, "/#contact")} />
             </div>
           </nav>
         </div>
@@ -322,10 +322,17 @@ const Header = () => {
   );
 };
 
-const ContactButton = ({ full = false }: { full?: boolean }) => {
+const ContactButton = ({
+  full = false,
+  onClick,
+}: {
+  full?: boolean;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+}) => {
   return (
     <Link
       href={"/#contact"}
+      onClick={onClick}
       className={`group relative overflow-hidden flex justify-center items-center gap-3 font-gotham font-medium text-[16px] text-white h-[50px] rounded-[319px] transition-all duration-500 ease-out bg-[#0CC1FA] ${
         full ? "w-[134px]" : "w-[134px]"
       }`}
