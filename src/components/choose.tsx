@@ -249,10 +249,10 @@ const Choose = () => {
                   {box.icon}
                 </div>
                 <div>
-                  <h3 className="font-gotham font-extrabold text-[16px] sm:text-[18px] xl:text-[20px] text-[#0A192F] group-hover:text-white transition-colors duration-500 ease-out">
+                  <h3 className="font-gotham font-extrabold text-left text-[16px] sm:text-[18px] xl:text-[20px] text-[#0A192F] group-hover:text-white transition-colors duration-500 ease-out">
                     {box.title}
                   </h3>
-                  <p className="font-gotham text-[14px] sm:text-[16px] xl:text-[18px] leading-[18px] sm:leading-[20px] xl:leading-[22px] mt-[.8vh] text-black group-hover:text-white transition-colors duration-500 ease-out">
+                  <p className="font-gotham text-left text-[14px] sm:text-[16px] xl:text-[18px] leading-[18px] sm:leading-[20px] xl:leading-[22px] mt-[.8vh] text-black group-hover:text-white transition-colors duration-500 ease-out">
                     {box.text}
                   </p>
                 </div>

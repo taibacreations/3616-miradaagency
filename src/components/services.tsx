@@ -174,7 +174,7 @@ const Services = () => {
   }, []);
 
   return (
-    <section id="service" className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 2xl:py-[12.5vh] lg:py-[100px] md:py-[80px] py-[50px]">
+    <section id="service" className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 2xl:py-[12.5vh] lg:py-[10px] xl:py-[160px] 2xl:py-[100px] md:py-[80px] py-[50px]">
       <div>
         <div>
           <div

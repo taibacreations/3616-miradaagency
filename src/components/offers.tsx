@@ -62,7 +62,7 @@ const Offers = () => {
                 alt="vector"
                 className="w-[50px] md:w-[65px] lg:w-[70px] xl:w-[100px] h-auto absolute left-1/2 -translate-x-1/2 top-[-20%] md:top-[-25%] lg:top-[-30%]"
               />
-              <div className="w-full lg:w-[220px] xl:w-[314px] h-[150px] md:h-[165px] lg:h-[150px] xl:h-[176px] rounded-[24px] bg-[#F5F9FC] text-center px-4 lg:px-5 xl:px-7 pt-[5vh] md:pt-[5.5vh] lg:pt-[5.5vh] xl:pt-[6.5vh]">
+              <div className="w-full lg:w-[220px] xl:w-[300px] 2xl:w-[314px] h-[165px] md:h-[165px] lg:h-[150px] xl:h-[176px] rounded-[24px] bg-[#F5F9FC] text-center px-4 lg:px-5 xl:px-7 pt-[5vh] md:pt-[5.5vh] lg:pt-[5.5vh] xl:pt-[6.5vh]">
                 <h3 className="font-gotham font-bold text-[16px] sm:text-[18px] xl:text-[20px] text-[#0A192F]">
                   {offer.title}
                 </h3>

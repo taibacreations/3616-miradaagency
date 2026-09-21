@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 
 // TODO: contact section wala AJAX endpoint yahan daalo
 const ENDPOINT = "/api/scan";
@@ -149,6 +150,7 @@ const fadeUp = (show: boolean, distance = "translate-y-10") =>
 
 export default function ScanPage() {
   const [status, setStatus] = useState<Status>("idle");
+  const router = useRouter();
 
   const hero = useInView<HTMLDivElement>(0.1);
   const heading = useInView<HTMLHeadingElement>(0.2);
@@ -182,8 +184,15 @@ export default function ScanPage() {
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error("Request failed");
-      setStatus("success");
+
+      const query = new URLSearchParams({
+        naam: payload.firstName,
+        email: payload.email,
+        website: payload.website,
+      });
+
       form.reset();
+      router.push(`/scan/bedankt?${query.toString()}`);
     } catch {
       setStatus("error");
     }
@@ -300,14 +309,6 @@ export default function ScanPage() {
                     )}
                   </button>
 
-                  {status === "success" && (
-                    <p
-                      role="status"
-                      className="rounded-xl bg-[#0CC1FA]/10 px-4 py-3 text-center font-gotham text-[13px] text-[#012549] sm:text-[14px]"
-                    >
-                      Bedankt! We starten je analyse en je hoort binnen 24 uur van ons.
-                    </p>
-                  )}
                   {status === "error" && (
                     <p
                       role="alert"

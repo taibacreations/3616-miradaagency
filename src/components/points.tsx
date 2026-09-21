@@ -70,13 +70,13 @@ const Points = () => {
             </div>
             <div className="bg-[#F5F9FC] rounded-[18px] xl:rounded-[24px] w-full 2xl:w-[648px] md:h-full xl:min-h-[291px] 2xl:h-[291px] h-auto flex justify-center flex-col gap-3 sm:gap-4 xl:gap-5 px-4 sm:px-5 xl:pl-8.5 xl:pr-0 py-6 sm:py-7 xl:py-6 2xl:py-0 z-10 relative">
               {nowPoints.map((text) => (
-                <div key={text} className="flex items-center gap-2">
+                <div key={text} className="flex items-start gap-2">
                   <img
                     src="/cross.png"
                     alt="cross"
                     className="w-[14px] xl:w-[17px] h-auto shrink-0"
                   />
-                  <h3 className="font-gotham text-[14px] sm:text-[16px] xl:text-[18px] leading-[20px] xl:leading-normal  text-[#333333]">
+                  <h3 className="font-gotham text-[14px] sm:text-[16px] xl:text-[18px] leading-[20px] xl:leading-normal  text-[#333333] -mt-[3px] xl:-mt-[4px]">
                     {text}
                   </h3>
                 </div>
@@ -98,13 +98,13 @@ const Points = () => {
             </div>
             <div className="bg-[#F5F9FC] rounded-[18px] xl:rounded-[24px] w-full 2xl:w-[648px] md:h-full xl:min-h-[291px] 2xl:h-[291px] h-auto flex justify-center flex-col gap-3 sm:gap-4 xl:gap-5 px-4 sm:px-5 xl:pl-8.5 xl:pr-0 py-6 sm:py-7 xl:py-6 2xl:py-0 z-10 relative">
               {withPoints.map((text) => (
-                <div key={text} className="flex items-center gap-2">
+                <div key={text} className="flex items-start gap-2">
                   <img
                     src="/check.png"
                     alt="check"
                     className="w-[14px] xl:w-[17px] h-auto shrink-0"
                   />
-                  <h3 className="font-gotham text-[14px] sm:text-[16px] xl:text-[18px] leading-[20px] xl:leading-normal text-[#333333]">
+                  <h3 className="font-gotham text-[14px] sm:text-[16px] xl:text-[18px] leading-[20px] xl:leading-normal text-[#333333] -mt-[3px] xl:-mt-[4px]">
                     {text}
                   </h3>
                 </div>
