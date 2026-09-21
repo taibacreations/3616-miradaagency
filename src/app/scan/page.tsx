@@ -199,7 +199,7 @@ export default function ScanPage() {
   };
 
   return (
-    <main className="relative">
+    <div className="relative">
       {/* ===== Section 1: navy bg, heading + form | image ===== */}
       <section className="relative w-full overflow-hidden bg-gradient-to-br from-[#01152b] via-[#0a2f52] to-[#124a7d]">
         <div className="max-w-[1600px] mx-auto xl:px-15 md:px-6 px-4 pt-[120px] pb-[50px] md:pt-[140px] md:pb-[80px] lg:pt-50 lg:pb-[100px]">
@@ -423,6 +423,6 @@ export default function ScanPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

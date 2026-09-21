@@ -56,7 +56,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      data-scroll-behavior="smooth"
+      lang="nl"
       className={`${geistSans.variable} ${geistMono.variable} ${monument.variable} ${gotham.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col overflow-x-hidden">

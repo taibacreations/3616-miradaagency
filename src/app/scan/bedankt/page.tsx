@@ -87,7 +87,7 @@ function BedanktContent() {
   const website = (params.get("website") || "").trim();
 
   return (
-    <main className="relative min-h-screen bg-[#F5F9FC]">
+    <div className="relative min-h-screen bg-[#F5F9FC]">
       {/* ===== Hero (navy) — bottom par bohat smooth fade ===== */}
       <section className="relative w-full overflow-hidden bg-gradient-to-br from-[#01152b] via-[#0a2f52] to-[#124a7d]">
         {/* soft glows (pure CSS) */}
@@ -237,7 +237,7 @@ function BedanktContent() {
           </Link>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
 

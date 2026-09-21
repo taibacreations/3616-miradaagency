@@ -209,7 +209,7 @@ export default function PrivacyPage() {
   const hero = useInView<HTMLDivElement>(0.1);
 
   return (
-    <main className="relative">
+    <div className="relative">
       {/* ===== Hero ===== */}
       <section className="relative w-full overflow-hidden bg-gradient-to-br from-[#01152b] via-[#0a2f52] to-[#124a7d]">
         {/* soft glow (pure CSS, no image) */}
@@ -486,6 +486,6 @@ export default function PrivacyPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
