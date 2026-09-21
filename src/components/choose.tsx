@@ -60,7 +60,7 @@ const Choose = () => {
               ].map((text, i) => (
                 <div
                   key={text}
-                  className={`flex items-center gap-4 transition-all duration-500 ease-out ${
+                  className={`flex items-start gap-4 transition-all duration-500 ease-out ${
                     visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
                   }`}
                   style={{ transitionDelay: visible ? `${150 + i * 100}ms` : "0ms" }}
@@ -70,7 +70,7 @@ const Choose = () => {
                     alt="tick"
                     className="w-[16px] sm:w-[19px] h-auto shrink-0"
                   />
-                  <h3 className="font-gotham font-medium text-[16px] xl:text-[18px] leading-[20px] sm:leading-[24px] text-black">
+                  <h3 className="font-gotham font-medium text-[16px] xl:text-[18px] leading-[20px] sm:leading-[24px] text-black -mt-[3px]">
                     {text}
                   </h3>
                 </div>
@@ -78,7 +78,7 @@ const Choose = () => {
             </div>
 
             <Link
-              href={"#"}
+              href={"/scan"}
               className={`mt-[2.5vh] group relative overflow-hidden flex justify-center items-center xl:gap-4 font-gotham font-medium text-[13px] xl:text-[16px] text-white bg-[#0CC1FA] w-full sm:w-[340px] xl:w-[418px] h-[50px] sm:h-[52px] xl:h-[56px] rounded-[319px] transition-all duration-500 ease-out ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}

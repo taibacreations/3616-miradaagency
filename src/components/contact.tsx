@@ -215,7 +215,7 @@ const Contact = () => {
               <img
                 src="/contact.png"
                 alt="contact"
-                className="rounded-[24px] w-full xl:h-auto h-full object-cover"
+                className="rounded-[24px] w-full xl:h-auto h-full 2xl:h-[623px] object-cover"
               />
             </div>
           </div>

@@ -51,7 +51,7 @@ const Result = () => {
 
             <button className="group relative overflow-hidden mt-[2.5vh] flex justify-center items-center gap-3 font-gotham font-medium text-[15px] md:text-[13px] xl:text-[16px] text-white hover:text-[#0CC1FA] bg-[#0CC1FA] w-[236px] h-[53px] rounded-[319px] transition-all duration-500 ease-out">
               <span className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
-              <span className="relative z-10">Stel je vraag direct</span>
+              <span className="relative z-10">Claim Gratis Scan</span>
               <div className="relative z-10 bg-white group-hover:bg-[#0CC1FA] rounded-full w-[24px] h-[24px] flex justify-center items-center transition-transform duration-500 ease-out group-hover:scale-110">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

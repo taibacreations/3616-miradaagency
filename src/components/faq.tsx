@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -148,17 +149,26 @@ const Faq = () => {
               Staat jouw vraag er niet bij?
             </h4>
 
-            <button className="group relative overflow-hidden mt-[2.5vh] flex justify-center items-center gap-3 font-gotham font-medium text-[15px] md:text-[13px] xl:text-[16px] text-white bg-[#0CC1FA] w-[220px] sm:w-[233px] h-[52px] sm:h-[56px] rounded-[319px] transition-all duration-500 ease-out hover:shadow-[0_10px_30px_rgba(12,193,250,0.5)] active:scale-95">
-              <span className="absolute inset-0 bg-gradient-to-r from-[#0aa8dd] to-[#0CC1FA] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
-              <span className="relative z-10">Stel je vraag direct</span>
-              <div className="relative z-10 bg-white rounded-full w-[24px] h-[24px] flex justify-center items-center transition-transform duration-500 ease-out group-hover:scale-110">
+            <Link
+              href={"#"}
+              className={`mt-[2.5vh] group relative overflow-hidden flex justify-center items-center xl:gap-4 font-gotham font-medium text-[13px] xl:text-[16px] text-white bg-[#0CC1FA] w-full sm:w-[200px] xl:w-[250px] h-[50px] sm:h-[52px] xl:h-[56px] rounded-[319px] transition-all duration-500 ease-out ${
+                visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
+              style={{ transitionDelay: visible ? "550ms" : "0ms" }}
+            >
+              <span className="absolute inset-0 bg-[#012549] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+              <span className="relative z-10 text-center px-2 transition-transform duration-300 ease-out">
+                Stel je vraag direct
+              </span>
+              <div className="relative z-10 bg-white rounded-full w-[26px] h-[26px] sm:w-[30px] sm:h-[30px] flex justify-center items-center shrink-0 transition-transform duration-500 ease-out">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="9"
-                  height="9"
+                  width="10"
+                  height="10"
                   viewBox="0 0 10 10"
                   fill="none"
-                  className="transition-transform duration-500 ease-out group-hover:rotate-[45deg]"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                  className="transition-transform duration-500 ease-out group-hover:rotate-[45deg] group-hover:stroke-[#012549]"
                 >
                   <path
                     d="M9.28027 0.750001C9.28027 0.335787 8.94449 4.2594e-07 8.53027 5.73454e-07L1.78027 1.51986e-07C1.36606 1.51986e-07 1.03027 0.335786 1.03027 0.75C1.03027 1.16421 1.36606 1.5 1.78027 1.5H7.78027V7.5C7.78027 7.91421 8.11606 8.25 8.53027 8.25C8.94449 8.25 9.28027 7.91421 9.28027 7.5L9.28027 0.750001ZM0.530273 8.75L1.0606 9.28033L9.0606 1.28033L8.53027 0.75L7.99994 0.21967L-5.66393e-05 8.21967L0.530273 8.75Z"
@@ -166,7 +176,7 @@ const Faq = () => {
                   ></path>
                 </svg>
               </div>
-            </button>
+            </Link>
           </div>
 
           {/* Right column — image */}

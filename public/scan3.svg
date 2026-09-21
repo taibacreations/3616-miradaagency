@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
+  <!-- Reference-style white outer ring + cyan badge -->
+  <circle cx="60" cy="60" r="57" fill="white"/>
+  <circle cx="60" cy="60" r="50" fill="#0CC1FA"/>
+
+  <!-- Technical website / server panel -->
+  <rect x="34" y="32" width="52" height="45" rx="7"
+        stroke="white" stroke-width="3.5"/>
+
+  <!-- browser/header details -->
+  <path d="M35 45H85" stroke="white" stroke-width="3.5"/>
+  <circle cx="42" cy="39" r="2.5" fill="white"/>
+  <circle cx="50" cy="39" r="2.5" fill="white"/>
+
+  <!-- speed / loading indicator -->
+  <path d="M46 59C49 54 55 52 61 53"
+        stroke="white" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M61 53L59 59"
+        stroke="white" stroke-width="3.2" stroke-linecap="round"/>
+
+  <!-- SSL lock -->
+  <rect x="65" y="54" width="13" height="12" rx="2.5"
+        stroke="white" stroke-width="3"/>
+  <path d="M68 54V51C68 47.7 70.2 45.5 73 45.5C75.8 45.5 78 47.7 78 51V54"
+        stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="71.5" cy="60" r="1.5" fill="white"/>
+
+  <!-- conversion blockage / warning -->
+  <path d="M60 82L77 101H43L60 82Z"
+        fill="#0CC1FA" stroke="white" stroke-width="3.5"
+        stroke-linejoin="round"/>
+  <path d="M60 89V94"
+        stroke="white" stroke-width="3.2" stroke-linecap="round"/>
+  <circle cx="60" cy="97" r="1.8" fill="white"/>
+
+  <!-- subtle speed arrows -->
+  <path d="M39 84H51" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <path d="M39 90H47" stroke="white" stroke-width="3" stroke-linecap="round"/>
+</svg>

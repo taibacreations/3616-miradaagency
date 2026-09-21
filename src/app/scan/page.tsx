@@ -1,4 +1,34 @@
+"use client";
 
+import { FormEvent, useEffect, useRef, useState } from "react";
+
+// TODO: contact section wala AJAX endpoint yahan daalo
+const ENDPOINT = "/api/scan";
+
+type Status = "idle" | "loading" | "success" | "error";
+
+function useInView<T extends HTMLElement>(threshold = 0.15) {
+  const ref = useRef<T>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [threshold]);
+
+  return { ref, visible };
+}
 
 const trustStats = [
   {
@@ -24,53 +54,178 @@ const trustStats = [
   },
 ];
 
+// NOTE: icons yahan sirf inner shapes hain (viewBox 0 0 120 120).
+// Wrapper <svg> render ke waqt lagta hai — nested <svg> nahi.
 const analysisPoints = [
-  "Aanwezigheid & correcte installatie van tracking-pixels (Meta Pixel, GA4)",
-  "Mobiele gebruiksvriendelijkheid van jouw website",
-  "Technische lead-lekken (SSL, laadsnelheid, conversie-blokkades)",
+  {
+    text: "Aanwezigheid & correcte installatie van tracking-pixels (Meta Pixel, GA4)",
+    icon: (
+      <>
+        <circle cx="60" cy="60" r="57" fill="white" />
+        <circle cx="60" cy="60" r="50" fill="#0CC1FA" />
+
+        <rect x="34" y="31" width="52" height="42" rx="7" stroke="white" strokeWidth="3.5" />
+        <path d="M35 44H85" stroke="white" strokeWidth="3.5" />
+        <circle cx="42" cy="37.5" r="2.3" fill="white" />
+        <circle cx="49.5" cy="37.5" r="2.3" fill="white" />
+
+        <path d="M49 52L43 58L49 64" stroke="white" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M71 52L77 58L71 64" stroke="white" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M64 50L56 66" stroke="white" strokeWidth="3.4" strokeLinecap="round" />
+
+        <circle cx="38" cy="79" r="12" fill="#0CC1FA" stroke="white" strokeWidth="3" />
+        <path d="M32.5 83C34.5 78.5 36.5 76 39 76C42 76 43.5 80.5 46 83" stroke="white" strokeWidth="2.8" strokeLinecap="round" />
+        <path d="M32 83C34 79 35.5 77.5 37.5 77.5C40.5 77.5 42 82 44.5 82" stroke="white" strokeWidth="2.8" strokeLinecap="round" />
+
+        <circle cx="82" cy="79" r="12" fill="#0CC1FA" stroke="white" strokeWidth="3" />
+        <circle cx="76.5" cy="83" r="2.5" fill="white" />
+        <rect x="80" y="76" width="4" height="7" rx="2" fill="white" />
+        <rect x="86" y="71" width="4" height="12" rx="2" fill="white" />
+
+        <circle cx="60" cy="87" r="13" fill="#0CC1FA" stroke="white" strokeWidth="3" />
+        <path d="M53.5 87L58 91.5L67 81.5" stroke="white" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
+      </>
+    ),
+  },
+  {
+    text: "Mobiele gebruiksvriendelijkheid van jouw website",
+    icon: (
+      <>
+        <circle cx="60" cy="60" r="57" fill="white" />
+        <circle cx="60" cy="60" r="50" fill="#0CC1FA" />
+        <rect x="38" y="27" width="44" height="66" rx="8" stroke="white" strokeWidth="3.5" />
+        <path d="M53 33H67" stroke="white" strokeWidth="3.5" strokeLinecap="round" />
+        <circle cx="60" cy="86" r="2.5" fill="white" />
+        <rect x="45" y="43" width="30" height="7" rx="2.5" fill="white" />
+        <rect x="45" y="55" width="13" height="13" rx="2.5" fill="white" />
+        <rect x="62" y="55" width="13" height="13" rx="2.5" fill="white" />
+        <rect x="45" y="73" width="30" height="5" rx="2.5" fill="white" />
+        <circle cx="82" cy="77" r="12" fill="#0CC1FA" stroke="white" strokeWidth="3" />
+        <path d="M76.5 77L80.5 81L88 73" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M91 59C94 62 95 65 95 69M96 54C99 58 101 63 101 68" stroke="white" strokeWidth="2.8" strokeLinecap="round" />
+      </>
+    ),
+  },
+  {
+    text: "Technische lead-lekken (SSL, laadsnelheid, conversie-blokkades)",
+    icon: (
+      <>
+        <circle cx="60" cy="60" r="57" fill="white" />
+        <circle cx="60" cy="60" r="50" fill="#0CC1FA" />
+
+        <rect x="34" y="32" width="52" height="45" rx="7" stroke="white" strokeWidth="3.5" />
+
+        <path d="M35 45H85" stroke="white" strokeWidth="3.5" />
+        <circle cx="42" cy="39" r="2.5" fill="white" />
+        <circle cx="50" cy="39" r="2.5" fill="white" />
+
+        <path d="M46 59C49 54 55 52 61 53" stroke="white" strokeWidth="3.2" strokeLinecap="round" />
+        <path d="M61 53L59 59" stroke="white" strokeWidth="3.2" strokeLinecap="round" />
+
+        <rect x="65" y="54" width="13" height="12" rx="2.5" stroke="white" strokeWidth="3" />
+        <path d="M68 54V51C68 47.7 70.2 45.5 73 45.5C75.8 45.5 78 47.7 78 51V54" stroke="white" strokeWidth="3" strokeLinecap="round" />
+        <circle cx="71.5" cy="60" r="1.5" fill="white" />
+
+        <path d="M60 82L77 101H43L60 82Z" fill="#0CC1FA" stroke="white" strokeWidth="3.5" strokeLinejoin="round" />
+        <path d="M60 89V94" stroke="white" strokeWidth="3.2" strokeLinecap="round" />
+        <circle cx="60" cy="97" r="1.8" fill="white" />
+
+        <path d="M39 84H51" stroke="white" strokeWidth="3" strokeLinecap="round" />
+        <path d="M39 90H47" stroke="white" strokeWidth="3" strokeLinecap="round" />
+      </>
+    ),
+  },
 ];
 
+const inputClass =
+  "w-full rounded-xl border border-black/15 bg-white px-4 py-3 font-gotham font-normal text-[14px] text-black outline-none transition-colors placeholder:text-black/35 focus:border-[#0CC1FA] sm:text-[15px]";
+const labelClass =
+  "mb-2 block font-gotham font-bold text-[14px] text-[#012549] sm:text-[15px]";
+
+const fadeUp = (show: boolean, distance = "translate-y-10") =>
+  `transition-all duration-700 ease-out ${
+    show ? "opacity-100 translate-y-0" : `opacity-0 ${distance}`
+  }`;
+
 export default function ScanPage() {
+  const [status, setStatus] = useState<Status>("idle");
+
+  const hero = useInView<HTMLDivElement>(0.1);
+  const heading = useInView<HTMLHeadingElement>(0.2);
+  const cards = useInView<HTMLDivElement>(0.15);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (status === "loading") return;
+
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+
+    // "https://" hoeft niet — automatisch aanvullen
+    let website = String(fd.get("website") || "").trim();
+    if (website && !/^https?:\/\//i.test(website)) {
+      website = `https://${website}`;
+    }
+
+    const payload = {
+      firstName: String(fd.get("firstName") || "").trim(),
+      email: String(fd.get("email") || "").trim(),
+      companyName: String(fd.get("companyName") || "").trim(),
+      website,
+    };
+
+    setStatus("loading");
+    try {
+      const res = await fetch(ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error("Request failed");
+      setStatus("success");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
+  };
+
   return (
-    <main className="relative ">
-      <div className="">
+    <main className="relative">
+      {/* ===== Section 1: navy bg, heading + form | image ===== */}
+      <section className="relative w-full overflow-hidden bg-gradient-to-br from-[#01152b] via-[#0a2f52] to-[#124a7d]">
+        <div className="max-w-[1600px] mx-auto xl:px-15 md:px-6 px-4 pt-[120px] pb-[50px] md:pt-[140px] md:pb-[80px] lg:pt-50 lg:pb-[100px]">
+          <div
+            ref={hero.ref}
+            className="grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 lg:gap-10"
+          >
+            {/* Left column */}
+            <div
+              className={`flex flex-col ${fadeUp(hero.visible)}`}
+              style={{ transitionDelay: hero.visible ? "0ms" : "0ms" }}
+            >
+              <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#0CC1FA]/40 bg-[#0CC1FA]/10 px-4 py-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#0CC1FA]" />
+                <span className="font-gotham font-bold text-[12px] text-[#0CC1FA] sm:text-[13px]">
+                  100% Gratis — Geen Verplichtingen
+                </span>
+              </div>
 
-      </div>
-      
+              <h1 className="mb-6 break-words font-monument font-extrabold leading-[1.15] text-white text-[26px] sm:text-[30px] md:text-[24px] lg:text-[30px] xl:text-[36px] 2xl:text-[44px]">
+                Claim Jouw Gratis{" "}
+                <span className="text-[#0CC1FA]">Pixel- &amp; Conversiescan</span>
+              </h1>
 
-      <section className="relative w-full overflow-hidden bg-[#F5F9FC]">
-        <div className="mx-auto max-w-content px-6 pt-[120px] pb-[50px] md:pt-[140px] md:pb-[80px] lg:pt-45 lg:pb-[100px]">
+              <p className="max-w-[560px] font-gotham font-normal text-[14px] leading-relaxed text-white/80 xl:text-[18px]">
+                Ontdek binnen 24 uur waar de digitale lead-lekken van jouw lokale onderneming zitten.
+                Vul je gegevens in en ons systeem start direct de analyse van je website,
+                tracking-pixels en mobiele conversie.
+              </p>
 
-          {/* Heading block */}
-          <div className="mx-auto max-w-[720px] text-center">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#0CC1FA]/40 bg-[#0CC1FA]/10 px-4 py-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#0CC1FA]" />
-              <span className="font-gotham font-bold text-[12px] text-[#0CC1FA] sm:text-[13px]">
-                100% Gratis — Geen Verplichtingen
-              </span>
-            </div>
-
-            <h1 className="mb-6 font-monument font-extrabold leading-[1.1] text-[#012549] text-[clamp(28px,5vw,44px)]">
-              Claim Jouw Gratis{" "}
-              <span className="text-[#0CC1FA]">Pixel- &amp; Conversiescan</span>
-            </h1>
-
-            <p className="mx-auto max-w-[560px] font-gotham font-normal text-[15px] leading-relaxed text-black/70 sm:text-[17px]">
-              Ontdek binnen 24 uur waar de digitale lead-lekken van jouw lokale onderneming zitten.
-              Vul je gegevens in en ons systeem start direct de analyse van je website,
-              tracking-pixels en mobiele conversie.
-            </p>
-          </div>
-
-          {/* Form + image */}
-          <div className="mt-10 grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 md:gap-8">
-
-            {/* Left column: form + analysis card */}
-            <div className="flex flex-col gap-6">
-              <div className="w-full rounded-3xl border border-black/10 bg-[#F5F9FC] px-6 py-8 shadow-sm sm:px-9 sm:py-10">
-                <form className="flex flex-col gap-5">
+              {/* Form card */}
+              <div className="mt-8 w-full rounded-3xl border border-black/10 bg-[#F5F9FC] px-6 py-8 shadow-sm sm:px-9 sm:py-10">
+                <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                   <div>
-                    <label htmlFor="firstName" className="mb-2 block font-gotham font-bold text-[14px] text-[#012549] sm:text-[15px]">
+                    <label htmlFor="firstName" className={labelClass}>
                       Voornaam <span className="text-[#0CC1FA]">*</span>
                     </label>
                     <input
@@ -79,12 +234,12 @@ export default function ScanPage() {
                       type="text"
                       required
                       placeholder="Jan"
-                      className="w-full rounded-xl border border-black/15 bg-white px-4 py-3 font-gotham font-normal text-[14px] text-black outline-none transition-colors placeholder:text-black/35 focus:border-[#0CC1FA] sm:text-[15px]"
+                      className={inputClass}
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="mb-2 block font-gotham font-bold text-[14px] text-[#012549] sm:text-[15px]">
+                    <label htmlFor="email" className={labelClass}>
                       E-mailadres (Zakelijk) <span className="text-[#0CC1FA]">*</span>
                     </label>
                     <input
@@ -93,12 +248,12 @@ export default function ScanPage() {
                       type="email"
                       required
                       placeholder="jan@jouwbedrijf.nl"
-                      className="w-full rounded-xl border border-black/15 bg-white px-4 py-3 font-gotham font-normal text-[14px] text-black outline-none transition-colors placeholder:text-black/35 focus:border-[#0CC1FA] sm:text-[15px]"
+                      className={inputClass}
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="companyName" className="mb-2 block font-gotham font-bold text-[14px] text-[#012549] sm:text-[15px]">
+                    <label htmlFor="companyName" className={labelClass}>
                       Bedrijfsnaam <span className="text-[#0CC1FA]">*</span>
                     </label>
                     <input
@@ -107,12 +262,12 @@ export default function ScanPage() {
                       type="text"
                       required
                       placeholder="Jouw Bedrijf BV"
-                      className="w-full rounded-xl border border-black/15 bg-white px-4 py-3 font-gotham font-normal text-[14px] text-black outline-none transition-colors placeholder:text-black/35 focus:border-[#0CC1FA] sm:text-[15px]"
+                      className={inputClass}
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="website" className="mb-2 block font-gotham font-bold text-[14px] text-[#012549] sm:text-[15px]">
+                    <label htmlFor="website" className={labelClass}>
                       Website <span className="text-[#0CC1FA]">*</span>
                     </label>
                     <input
@@ -121,7 +276,7 @@ export default function ScanPage() {
                       type="text"
                       required
                       placeholder="www.jouwbedrijf.nl"
-                      className="w-full rounded-xl border border-black/15 bg-white px-4 py-3 font-gotham font-normal text-[14px] text-black outline-none transition-colors placeholder:text-black/35 focus:border-[#0CC1FA] sm:text-[15px]"
+                      className={inputClass}
                     />
                     <p className="mt-2 font-gotham font-normal text-[12px] text-black/40 sm:text-[13px]">
                       &quot;https://&quot; hoeft niet — die vullen we automatisch aan.
@@ -130,13 +285,37 @@ export default function ScanPage() {
 
                   <button
                     type="submit"
-                    className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0CC1FA] py-4 font-gotham font-bold text-[15px] text-white transition-colors hover:bg-[#0A93C4] sm:text-[16px]"
+                    disabled={status === "loading"}
+                    className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0CC1FA] py-4 font-gotham font-bold text-[15px] text-white transition-colors hover:bg-[#0A93C4] disabled:cursor-not-allowed disabled:opacity-70 sm:text-[16px]"
                   >
-                    Start Mijn Gratis Analyse
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
+                    {status === "loading" ? (
+                      "Bezig met versturen..."
+                    ) : (
+                      <>
+                        Start Mijn Gratis Analyse
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                          <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </>
+                    )}
                   </button>
+
+                  {status === "success" && (
+                    <p
+                      role="status"
+                      className="rounded-xl bg-[#0CC1FA]/10 px-4 py-3 text-center font-gotham text-[13px] text-[#012549] sm:text-[14px]"
+                    >
+                      Bedankt! We starten je analyse en je hoort binnen 24 uur van ons.
+                    </p>
+                  )}
+                  {status === "error" && (
+                    <p
+                      role="alert"
+                      className="rounded-xl bg-red-50 px-4 py-3 text-center font-gotham text-[13px] text-red-600 sm:text-[14px]"
+                    >
+                      Er ging iets mis. Probeer het opnieuw.
+                    </p>
+                  )}
                 </form>
 
                 {/* Trust stats */}
@@ -153,43 +332,70 @@ export default function ScanPage() {
                   ))}
                 </div>
               </div>
-
-              {/* Wat analyseren wij */}
-              <div className="w-full rounded-3xl border border-black/10 bg-[#F5F9FC] px-6 py-7 shadow-sm sm:px-9 sm:py-8">
-                <h3 className="mb-5 font-gotham font-bold text-[17px] text-[#012549] sm:text-[18px]">
-                  Wat analyseren wij?
-                </h3>
-                <div className="flex flex-col gap-4">
-                  {analysisPoints.map((point) => (
-                    <div key={point} className="flex items-start gap-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 17 17" fill="none" className="mt-0.5 shrink-0">
-                        <circle cx="8.5" cy="8.5" r="7.7" stroke="#0CC1FA" strokeWidth="1.2" />
-                        <path d="M5.5 8.7l2 2 4-4.4" stroke="#0CC1FA" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <p className="font-gotham font-normal text-[14px] leading-relaxed text-black/85 sm:text-[15px]">
-                        {point}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
 
-            {/* Right column: image */}
-            <div className="w-full md:sticky md:top-28 md:self-start">
+            {/* Right column: image (poori height) */}
+            <div
+              className={`relative h-[260px] w-full sm:h-[340px] md:h-auto ${fadeUp(hero.visible)}`}
+              style={{ transitionDelay: hero.visible ? "200ms" : "0ms" }}
+            >
               <img
-                src="/scan-hero.webp"
+                src="/scan.webp"
                 alt=""
-                className="h-full w-full rounded-3xl object-cover md:min-h-[600px] lg:min-h-[700px]"
+                className="absolute inset-0 h-full w-full rounded-3xl object-cover"
               />
             </div>
-
           </div>
-
         </div>
       </section>
 
-      
+      {/* ===== Section 2: 3 cards ===== */}
+      <section className="bg-[#F5F9FC] max-w-[1600px] mx-auto">
+        <div className="max-w-[1200px] mx-auto xl:px-15 md:px-6 px-4 pt-[50px] md:pt-[80px] lg:pt-[100px]">
+          <h2
+            ref={heading.ref}
+            className={`text-center font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[34px] sm:leading-[40px] xl:leading-[46px] ${fadeUp(heading.visible, "translate-y-6")}`}
+          >
+            Wat analyseren wij?
+          </h2>
+
+          {/* Mobile: column | md+: row */}
+          <div
+            ref={cards.ref}
+            className="mt-16 flex flex-col gap-14 md:mt-16 md:flex-row md:gap-6 xl:mt-20 xl:gap-8"
+          >
+            {analysisPoints.map((point, i) => (
+              <div
+                key={point.text}
+                className={`flex flex-1 md:min-w-0 ${fadeUp(cards.visible, "translate-y-8")}`}
+                style={{ transitionDelay: cards.visible ? `${i * 120}ms` : "0ms" }}
+              >
+                <div className="group relative flex w-full cursor-pointer flex-col transition-transform duration-500 ease-out hover:-translate-y-2">
+                  {/* Icon: card ke upar, beech mein (absolute) — koi shadow/blur nahi */}
+                  <div className="pointer-events-none absolute left-1/2 top-[-32px] z-10 h-16 w-16 -translate-x-1/2 transition-transform duration-500 ease-out group-hover:scale-110 md:top-[-28px] md:h-14 md:w-14 xl:top-[-40px] xl:h-20 xl:w-20">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 120 120"
+                      fill="none"
+                      className="h-full w-full"
+                      aria-hidden="true"
+                    >
+                      {point.icon}
+                    </svg>
+                  </div>
+
+                  {/* Card */}
+                  <div className="relative flex-1 overflow-hidden rounded-[24px] border border-black/5 bg-white px-6 pb-7 pt-12 text-center shadow-[0px_4px_29.8px_0px_#00000012] transition-shadow duration-500 ease-out group-hover:shadow-[0_20px_50px_rgba(12,193,250,0.18)] md:px-4 md:pb-6 md:pt-10 xl:px-8 xl:pb-9 xl:pt-14">
+                    <p className="font-gotham text-[14px] leading-[149%] text-[#012549] lg:text-[16px] xl:text-[18px]">
+                      {point.text}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

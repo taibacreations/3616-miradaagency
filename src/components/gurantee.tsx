@@ -23,10 +23,10 @@ const Gurantee = () => {
   }, []);
 
   return (
-    <section className="bg-white pt-[5vh] pb-[8vh] xl:pb-[13vh]">
+    <section className="bg-white pt-[5vh] 2xl:pt-[7vh] pb-[8vh] xl:pb-[13vh]">
       <div
         ref={ref}
-        className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 flex flex-col md:flex-row justify-between gap-8 lg:gap-6 xl:gap-10"
+        className="max-w-[1560px] mx-auto 2xl:px-4 xl:px-8 md:px-6 px-4 flex flex-col md:flex-row justify-around gap-8 lg:gap-6 xl:gap-5"
       >
         <div
           className={`w-full lg:w-[700px] xl:w-[540px] 2xl:w-[678px] transition-all duration-700 ease-out ${
@@ -55,49 +55,49 @@ const Gurantee = () => {
               <img
                 src="/gurantee-check.png"
                 alt="check"
-                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto lg:mt-[5px] xl:mt-0"
+                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
               />
-              <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px]">
+              <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
                 Technisch waterdichte implementatie
               </h4>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-start gap-3">
               <img
                 src="/gurantee-check.png"
                 alt="check"
-                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto lg:mt-[5px] xl:mt-0"
+                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
               />
-              <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px]">
+              <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
                 Wekelijks contact over de voortgang
               </h4>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-start gap-3">
               <img
                 src="/gurantee-check.png"
                 alt="check"
-                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto lg:mt-[-25px] xl:mt-0"
+                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
               />
-              <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px]">
+              <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
                 Transparante rapportages in begrijpelijk Nederlands
               </h4>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-start gap-3">
               <img
                 src="/gurantee-check.png"
                 alt="check"
-                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto lg:mt-[-25px] xl:mt-0"
+                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto "
               />
-              <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px]">
+              <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
                 Meetbare resultaten binnen de afgesproken termijn
               </h4>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-start gap-3">
               <img
                 src="/gurantee-check.png"
                 alt="check"
-                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto lg:mt-[-25px] xl:mt-0"
+                className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
               />
-              <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px]">
+              <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
                 Geen lange contracten — flexibel en schaalbaar
               </h4>
             </div>

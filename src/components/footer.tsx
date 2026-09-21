@@ -95,6 +95,27 @@ const Footer = () => {
   const headingText =
     "font-monument text-[20px] sm:text-[22px] xl:text-[24px] text-white";
 
+
+  const handleFooterClick = (
+  e: React.MouseEvent<HTMLAnchorElement>,
+  id: string,
+) => {
+  e.preventDefault();
+
+  const target = document.getElementById(id);
+  if (!target) return;
+
+  const offset = window.innerHeight * 0.1;
+
+  const top =
+    target.getBoundingClientRect().top + window.scrollY - offset;
+
+  window.scrollTo({
+    top,
+    behavior: "smooth",
+  });
+};
+
   return (
     <section
       ref={sectionRef}
@@ -143,18 +164,22 @@ const Footer = () => {
                 </div>
 
                 {/* ROW 2 (md): Diensten + Contact */}
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-6 lg:w-[55%] lg:gap-4">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-6 lg:w-[55%] lg:gap-4 ">
                   {/* Diensten */}
                   <div
                     className={`lg:max-w-[210px] xl:max-w-none ${anim(visible)}`}
                     style={{ transitionDelay: visible ? "150ms" : "0ms" }}
                   >
                     <h3 className={headingText}>Diensten</h3>
-                    <div className="flex flex-col gap-3 mt-3 xl:mt-4">
+                    <div className="flex flex-col gap-3 mt-3 xl:mt-4 ">
                       {services.map((label) => (
-                        <div key={label} className="flex items-center gap-3">
+                        <div key={label} className="flex items-center gap-3 hover:text-[#0CC1FA]">
                           <ArrowIcon />
-                          <Link href={"/#service"} className={linkText}>
+                          <Link
+                            href="/#service"
+                            onClick={(e) => handleFooterClick(e, "service")}
+                            className={linkText}
+                          >
                             {label}
                           </Link>
                         </div>
@@ -172,7 +197,7 @@ const Footer = () => {
                       {contacts.map((item) => (
                         <div
                           key={item.label}
-                          className="flex items-center gap-3"
+                          className="flex items-center gap-3 hover:text-[#0CC1FA]"
                         >
                           <div className="bg-white rounded-full w-[25px] h-[25px] flex justify-center items-center shrink-0">
                             {item.icon}
