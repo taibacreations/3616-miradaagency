@@ -11,7 +11,7 @@ declare global {
 
 /* ---------- contact (footer wale hi) ---------- */
 
-const CONTACT_EMAIL = "info@miradaintelligence.nl";
+const CONTACT_EMAIL = "info@miradaagency.nl";
 const CONTACT_EMAIL_HREF = `mailto:${CONTACT_EMAIL}`;
 const CONTACT_PHONE = "+31 6 4135 3424";
 const CONTACT_PHONE_HREF = "tel:+31641353424";
@@ -299,17 +299,17 @@ export default function PrivacyPage() {
                   <div>
                     <dt className="inline font-bold">E-mail: </dt>
                     <dd className="inline">
-                      <Link href={CONTACT_EMAIL_HREF} className={`${linkClass} break-words`}>
+                      <a href={CONTACT_EMAIL_HREF} className={`${linkClass} break-words`}>
                         {CONTACT_EMAIL}
-                      </Link>
+                      </a>
                     </dd>
                   </div>
                   <div>
                     <dt className="inline font-bold">Telefoon: </dt>
                     <dd className="inline">
-                      <Link href={CONTACT_PHONE_HREF} className={linkClass}>
+                      <a href={CONTACT_PHONE_HREF} className={linkClass}>
                         {CONTACT_PHONE}
-                      </Link>
+                      </a>
                     </dd>
                   </div>
                   <div>

@@ -30,8 +30,8 @@ const ArrowIcon = () => (
 
 const contacts = [
   {
-    label: "info@miradaintelligence.nl",
-    href: "mailto:info@miradaintelligence.nl",
+    label: "info@miradaagency.nl",
+    href: "mailto:info@miradaagency.nl",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -238,12 +238,12 @@ const Footer = () => {
                           <div className="bg-white rounded-full w-[25px] h-[25px] flex justify-center items-center shrink-0">
                             {item.icon}
                           </div>
-                          <Link
+                          <a
                             href={item.href}
                             className={`${linkText} break-words`}
                           >
                             {item.label}
-                          </Link>
+                          </a>
                         </div>
                       ))}
                     </div>
