@@ -23,10 +23,11 @@ const Gurantee = () => {
   }, []);
 
   return (
-    <section className="bg-white pt-[5vh] 2xl:pt-[7vh] pb-[8vh] xl:pb-[13vh]">
+    <section className="bg-white pt-[5vh] lg:pt-[3vh] xl:pt-[9vh] 2xl:pt-[7vh] pb-[8vh] xl:pb-[13vh]">
+      {/* md:items-stretch -> dono columns ki height hamesha barabar */}
       <div
         ref={ref}
-        className="max-w-[1560px] mx-auto 2xl:px-4 xl:px-8 md:px-6 px-4 flex flex-col md:flex-row justify-around gap-8 lg:gap-6 xl:gap-5"
+        className="max-w-[1560px] mx-auto 2xl:px-4 xl:px-2 md:px-6 px-4 flex flex-col md:flex-row md:items-stretch justify-around gap-8 lg:gap-6 xl:gap-5"
       >
         <div
           className={`w-full lg:w-[700px] xl:w-[540px] 2xl:w-[678px] transition-all duration-700 ease-out ${
@@ -34,14 +35,16 @@ const Gurantee = () => {
           }`}
           style={{ transitionDelay: visible ? "0ms" : "0ms" }}
         >
+          {/* mobile par natural height (h-auto), md+ par wrapper ki full height (md:h-full) */}
           <img
             src="/gurantee.png"
             alt="gurantee"
-            className="rounded-[24px] w-full lg:h-auto h-full object-cover"
+            className="rounded-[24px] w-full h-auto md:h-full object-cover"
           />
         </div>
+        {/* min-height hata di: ab height image ke hisaab se decide hoti hai */}
         <div
-          className={`bg-[#F5F9FC] rounded-[24px] w-full lg:w-[600px] xl:w-[700px] 2xl:w-[725px] flex flex-col justify-center h-auto lg:min-h-[340px] xl:min-h-[365px] px-[6%] md:px-[3%] xl:px-[5.5%] py-[4%] lg:py-[3.5%] lg:pt-[3.5%] transition-all duration-700 ease-out ${
+          className={`bg-[#F5F9FC] rounded-[24px] w-full lg:w-[600px] xl:w-[700px] 2xl:w-[725px] flex flex-col justify-center h-auto px-[6%] md:px-[3%] xl:px-[5.5%] py-[4%] lg:py-[3.5%] lg:pt-[3.5%] transition-all duration-700 ease-out ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
           style={{ transitionDelay: visible ? "150ms" : "0ms" }}

@@ -85,7 +85,8 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row lg:justify-between gap-8 lg:gap-6 xl:gap-8 mt-[4vh]">
+          {/* md+: items-stretch => card aur image wrapper ki height hamesha barabar */}
+          <div className="flex flex-col md:flex-row md:items-stretch lg:justify-between gap-8 lg:gap-6 xl:gap-8 mt-[4vh]">
             <div
               className={`bg-white rounded-[24px] w-full lg:w-[480px] xl:w-[560px] 2xl:w-[750px] min-h-[560px] sm:min-h-[600px] xl:min-h-[624px] py-[3vh] px-[6%] sm:px-[5%] lg:px-[3%] xl:px-[2.3%] border border-[#E5E7EB] transition-all duration-700 ease-out ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -206,8 +207,9 @@ const Contact = () => {
               </form>
             </div>
 
+            {/* Image wrapper: mobile par fixed height | md+ par card ke barabar stretch */}
             <div
-              className={`w-full lg:w-[600px] xl:w-[765px] 2xl:w-[765px] transition-all duration-700 ease-out ${
+              className={`relative w-full h-[260px] sm:h-[340px] md:h-auto lg:w-[600px] xl:w-[765px] 2xl:w-[765px] transition-all duration-700 ease-out ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
               style={{ transitionDelay: visible ? "300ms" : "0ms" }}
@@ -215,7 +217,7 @@ const Contact = () => {
               <img
                 src="/contact.png"
                 alt="contact"
-                className="rounded-[24px] w-full xl:h-auto h-full 2xl:h-[623px] object-cover"
+                className="absolute inset-0 h-full w-full rounded-[24px] object-cover md:object-[right_40%] lg:object-cover"
               />
             </div>
           </div>
