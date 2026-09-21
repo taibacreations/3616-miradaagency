@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+
 
 const services = [
   "AI Automatiseringen",
@@ -96,25 +98,59 @@ const Footer = () => {
     "font-monument text-[20px] sm:text-[22px] xl:text-[24px] text-white";
 
 
+  const router = useRouter();
+  const pathname = usePathname();
+  const pendingScrollId = useRef<string | null>(null);
+
+  const scrollToSection = (id: string) => {
+    const target = document.getElementById(id);
+    if (!target) return;
+
+    const offset = window.innerHeight * 0.1; // header wala hi 10% offset
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({ top, behavior: "smooth" });
+  };
+
+  // Home par navigate hone ke baad pending section tak scroll karo
+  useEffect(() => {
+    if (pathname === "/" && pendingScrollId.current) {
+      const id = pendingScrollId.current;
+      const timer = setTimeout(() => {
+        scrollToSection(id);
+        pendingScrollId.current = null;
+      }, 150);
+      return () => clearTimeout(timer);
+    }
+  }, [pathname]);
+
   const handleFooterClick = (
-  e: React.MouseEvent<HTMLAnchorElement>,
-  id: string,
-) => {
-  e.preventDefault();
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string,
+  ) => {
+    e.preventDefault();
 
-  const target = document.getElementById(id);
-  if (!target) return;
+    // Doosre page (/scan, /privacy...) par ho to pehle home par jao
+    if (pathname !== "/") {
+      pendingScrollId.current = id;
+      router.push("/");
+      return;
+    }
 
-  const offset = window.innerHeight * 0.1;
+    scrollToSection(id);
+  };
 
-  const top =
-    target.getBoundingClientRect().top + window.scrollY - offset;
+  // Logo: home par ho to top par scroll, warna home page par jao
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
 
-  window.scrollTo({
-    top,
-    behavior: "smooth",
-  });
-};
+    if (pathname !== "/") {
+      router.push("/");
+      return;
+    }
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <section
@@ -148,7 +184,7 @@ const Footer = () => {
                   className={`flex flex-col md:flex-row md:items-center gap-4 md:gap-8 lg:flex-col lg:items-start lg:gap-3 xl:gap-4 lg:w-[35%] 2xl:max-w-[486px] ${anim(visible)}`}
                   style={{ transitionDelay: visible ? "0ms" : "0ms" }}
                 >
-                  <Link href={"/#home"}>
+                  <Link href="/" onClick={handleLogoClick}>
                     <img
                       src="/logo.svg"
                       alt="logo"
