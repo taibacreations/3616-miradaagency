@@ -44,7 +44,7 @@ const Gurantee = () => {
         </div>
         {/* min-height hata di: ab height image ke hisaab se decide hoti hai */}
         <div
-          className={`bg-[#F5F9FC] rounded-[24px] w-full lg:w-[600px] xl:w-[700px] 2xl:w-[725px] flex flex-col justify-center h-auto px-[6%] md:px-[3%] xl:px-[5.5%] py-[4%] lg:py-[3.5%] lg:pt-[3.5%] transition-all duration-700 ease-out ${
+          className={`bg-[#F5F9FC] rounded-[24px] w-full lg:w-[600px] xl:w-[750px] 2xl:w-[725px] flex flex-col justify-center h-auto px-[6%] md:px-[3%] xl:px-[5.5%] py-[4%] lg:py-[3.5%] lg:pt-[3.5%] transition-all duration-700 ease-out ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
           style={{ transitionDelay: visible ? "150ms" : "0ms" }}
