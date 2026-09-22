@@ -213,7 +213,7 @@ const Footer = () => {
                           <ArrowIcon />
                           <Link
                             href="/#diensten"
-                            onClick={(e) => handleFooterClick(e, "service")}
+                            onClick={(e) => handleFooterClick(e, "diensten")}
                             className={linkText}
                           >
                             {label}

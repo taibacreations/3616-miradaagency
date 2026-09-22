@@ -8,6 +8,7 @@ import { useRouter, usePathname } from "next/navigation";
 const navLinks = [
   { label: "Diensten", href: "/#diensten" },
   { label: "Werkwijze", href: "/#werkwijze" },
+  { label: "GEO", href: "/geo" },
   { label: "Gratis Scan", href: "/scan" },
   { label: "Over Mij", href: "/#over" },
 ];
@@ -193,7 +194,7 @@ const Header = () => {
             {navLinks.map((link, i) => (
               <Link
                 key={link.label}
-                className={`group relative font-gotham font-light text-[18px] leading-[100%] transition-all duration-700 ease-out ${
+                className={`group relative font-gotham font-light text-[16px] 2xl:text-[18px] leading-[100%] transition-all duration-700 ease-out ${
                   isActive(link.href) ? "text-[#0CC1FA]" : "text-white"
                 }`}
                 style={{
