@@ -80,7 +80,7 @@ const Faq = () => {
           className="hidden xl:block absolute bottom-[24%] right-[-2%] w-auto"
         />
       </div>
-      <div className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 pt-[8vh] sm:pt-[10vh] xl:pt-[13vh]">
+      <div className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 pt-[8vh] sm:pt-[10vh] lg:pt-[3vh]">
         <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-8 xl:gap-10">
           {/* Left column */}
           <div

@@ -48,27 +48,29 @@ const Offers = () => {
   return (
     <section ref={sectionRef} className="bg-white">
       <div>
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:flex lg:justify-between lg:items-center gap-y-10 md:gap-y-17 lg:gap-y-10 gap-x-4 md:gap-x-6 lg:gap-x-4 xl:gap-x-6 max-w-[1530px] xl:px-10 md:px-6 px-4 mx-auto pt-[10vh] md:pt-[14vh] xl:pt-[18vh]">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:flex lg:justify-between lg:items-center gap-y-10 md:gap-y-17 lg:gap-y-10 gap-x-4 md:gap-x-6 lg:gap-x-4 xl:gap-x-6 max-w-[1530px] xl:px-10 md:px-6 px-4 mx-auto pt-[10vh] md:pt-[14vh] xl:pt-[18vh] lg:pb-[10vh]">
           {offers.map((offer, i) => (
             <div
               key={offer.title}
-              className={`relative transition-all duration-700 ease-out ${
+              className={`transition-all duration-700 ease-out ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: visible ? `${i * 120}ms` : "0ms" }}
             >
-              <img
-                src={offer.icon}
-                alt="vector"
-                className="w-[50px] md:w-[65px] lg:w-[70px] xl:w-[100px] h-auto absolute left-1/2 -translate-x-1/2 top-[-20%] md:top-[-25%] lg:top-[-30%]"
-              />
-              <div className="w-full lg:w-[220px] xl:w-[300px] 2xl:w-[314px] h-[165px] md:h-[165px] lg:h-[150px] xl:h-[176px] rounded-[24px] bg-[#F5F9FC] text-center px-4 lg:px-5 xl:px-7 pt-[5vh] md:pt-[5.5vh] lg:pt-[5.5vh] xl:pt-[6.5vh]">
-                <h3 className="font-gotham font-bold text-[16px] sm:text-[18px] xl:text-[20px] text-[#0A192F]">
-                  {offer.title}
-                </h3>
-                <p className="font-gotham text-[15px] lg:text-[16px] xl:text-[16px] text-black leading-[18px] md:leading-[20px] lg:leading-[19px] xl:leading-[24px] mt-[.8vh]">
-                  {offer.description}
-                </p>
+              <div className="group relative w-full cursor-pointer transition-transform duration-500 ease-out hover:-translate-y-2">
+                <img
+                  src={offer.icon}
+                  alt="vector"
+                  className="pointer-events-none z-10 w-[50px] md:w-[65px] lg:w-[70px] xl:w-[100px] h-auto absolute left-1/2 -translate-x-1/2 top-[-20%] md:top-[-25%] lg:top-[-30%] transition-transform duration-500 ease-out group-hover:scale-110"
+                />
+                <div className="relative w-full lg:w-[220px] xl:w-[300px] 2xl:w-[314px] h-[165px] md:h-[165px] lg:h-[150px] xl:h-[176px] rounded-[24px] bg-[#F5F9FC] text-center px-4 lg:px-5 xl:px-7 pt-[5vh] md:pt-[5.5vh] lg:pt-[5.5vh] xl:pt-[6.5vh] transition-shadow duration-500 ease-out group-hover:shadow-[0_20px_50px_rgba(12,193,250,0.18)]">
+                  <h3 className="font-gotham font-bold text-[16px] sm:text-[18px] xl:text-[20px] text-[#0A192F]">
+                    {offer.title}
+                  </h3>
+                  <p className="font-gotham text-[15px] lg:text-[16px] xl:text-[16px] text-black leading-[18px] md:leading-[20px] lg:leading-[19px] xl:leading-[24px] mt-[.8vh]">
+                    {offer.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
