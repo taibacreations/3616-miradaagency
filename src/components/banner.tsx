@@ -102,7 +102,7 @@ const Banner = () => {
             </Link>
 
             <Link
-              href="/#service"
+              href="/#diensten"
               onClick={handleServiceClick}
               className="group relative w-fit font-gotham font-medium text-[14px] md:text-[13px] xl:text-[16px] text-white underline-offset-4 decoration-white/60 transition-all duration-300 ease-out hover:text-[#0CC1FA] hover:decoration-[#0CC1FA]"
             >

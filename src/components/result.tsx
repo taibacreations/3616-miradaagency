@@ -30,7 +30,7 @@ const Result = () => {
         className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4"
       >
         <div
-          className={`bg-[url(/result.png)] bg-cover bg-center bg-no-repeat w-full lg:h-[380px] h-[380px] md:h-[250px] rounded-[19px] flex items-center px-[4.5%] transition-all duration-700 ease-out ${
+          className={`bg-[url(/result.png)] bg-cover bg-center bg-no-repeat w-full xl:h-[380px] lg:h-[300px] h-[320px] md:h-[250px] rounded-[19px] flex items-center px-[4.5%] transition-all duration-700 ease-out ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
           style={{ transitionDelay: visible ? "0ms" : "0ms" }}

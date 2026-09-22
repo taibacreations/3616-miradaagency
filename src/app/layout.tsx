@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,8 +50,9 @@ const gotham = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Mirada Agency | Websites & AI Automation",
-  description: "Mirada Agency builds high-converting websites and AI-powered workflows that help local businesses grow, automate, and scale.",
+  title: "AI-Workflows & Websites voor Lokale Ondernemers | Mirada Agency",
+  description:
+    "Dicht je online lead-lekken met slimme AI-workflows en technisch waterdichte websites. Voor ambitieuze lokale ondernemers die meetbaar willen groeien. Claim je gratis scan.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -61,11 +63,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} ${monument.variable} ${gotham.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col overflow-x-hidden">
-        <main>
-          <Header />
-          {children}
-          <Footer />
-        </main>
+        <SmoothScroll>
+          <main>
+            <Header />
+            {children}
+            <Footer />
+          </main>
+        </SmoothScroll>
       </body>
     </html>
   );

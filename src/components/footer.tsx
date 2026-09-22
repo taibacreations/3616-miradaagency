@@ -212,7 +212,7 @@ const Footer = () => {
                         <div key={label} className="flex items-center gap-3 hover:text-[#0CC1FA]">
                           <ArrowIcon />
                           <Link
-                            href="/#service"
+                            href="/#diensten"
                             onClick={(e) => handleFooterClick(e, "service")}
                             className={linkText}
                           >
@@ -269,7 +269,7 @@ const Footer = () => {
                 42084347
               </span>
 
-              <div className="flex flex-row items-center gap-3">
+              <div className="flex flex-row items-center gap-3 md:mt-0 mt-[1vh]">
                 <span className="cursor-pointer underline underline-offset-2 hover:text-[#04213D] transition-colors duration-300">
                   Cookie-instellingen
                 </span>

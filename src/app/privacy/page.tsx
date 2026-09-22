@@ -41,6 +41,48 @@ function useInView<T extends HTMLElement>(threshold = 0.1) {
   return { ref, visible };
 }
 
+function useActiveSection(ids: string[]) {
+  const [activeId, setActiveId] = useState<string>(ids[0] ?? "");
+  const intersecting = useRef<Map<string, number>>(new Map());
+
+  useEffect(() => {
+    const elements = ids
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => !!el);
+
+    if (elements.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            intersecting.current.set(entry.target.id, entry.boundingClientRect.top);
+          } else {
+            intersecting.current.delete(entry.target.id);
+          }
+        });
+
+        if (intersecting.current.size > 0) {
+          // Jo section sabse upar (smallest top) hai wahi active
+          const topId = [...intersecting.current.entries()].sort(
+            (a, b) => a[1] - b[1],
+          )[0][0];
+          setActiveId(topId);
+        }
+      },
+      {
+        rootMargin: "-120px 0px -60% 0px",
+        threshold: 0,
+      },
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [ids]);
+
+  return activeId;
+}
+
 const fadeUp = (show: boolean, distance = "translate-y-10") =>
   `transition-all duration-700 ease-out ${
     show ? "opacity-100 translate-y-0" : `opacity-0 ${distance}`
@@ -102,7 +144,7 @@ function SectionBlock({
   return (
     <Reveal
       id={id}
-      className={`scroll-mt-[120px] ${
+      className={` ${
         last ? "" : "border-b border-black/10 pb-10 md:pb-12"
       }`}
     >
@@ -207,6 +249,7 @@ const rights = [
 
 export default function PrivacyPage() {
   const hero = useInView<HTMLDivElement>(0.1);
+  const activeId = useActiveSection(toc.map((t) => t.id));
 
   return (
     <div className="relative">
@@ -251,7 +294,11 @@ export default function PrivacyPage() {
                     <li key={item.id}>
                       <a
                         href={`#${item.id}`}
-                        className="flex items-start gap-3 rounded-xl px-3 py-2 font-gotham text-[14px] xl:text-[16px] leading-[140%] text-[#012549]/80 transition-colors hover:bg-[#0CC1FA]/10 hover:text-[#012549]"
+                        className={`flex items-start gap-3 rounded-xl px-3 py-2 font-gotham text-[14px] xl:text-[16px] leading-[140%] transition-colors ${
+                          activeId === item.id
+                            ? "bg-[#0CC1FA]/10 text-[#012549]"
+                            : "text-[#012549]/80 hover:bg-[#0CC1FA]/10 hover:text-[#012549]"
+                        }`}
                       >
                         <span className="font-bold text-[#0CC1FA]">{item.n}.</span>
                         {item.title}

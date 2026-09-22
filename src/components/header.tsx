@@ -6,10 +6,10 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 
 const navLinks = [
-  { label: "Diensten", href: "/#service" },
-  { label: "Werkwijze", href: "/#work" },
+  { label: "Diensten", href: "/#diensten" },
+  { label: "Werkwijze", href: "/#werkwijze" },
   { label: "Gratis Scan", href: "/scan" },
-  { label: "Over Mij", href: "/#founder" },
+  { label: "Over Mij", href: "/#over" },
 ];
 
 const SCROLL_OFFSET_RATIO = 0.1; // top se space

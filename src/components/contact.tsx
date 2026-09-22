@@ -160,9 +160,9 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="group relative overflow-hidden mt-[1.5vh] w-full h-[48px] sm:h-[52px] xl:h-[54px] rounded-[319px] bg-[#0CC1FA] font-gotham font-bold text-[15px] md:text-[13px] xl:text-[16px] text-white flex items-center justify-center gap-2 transition-all duration-500 ease-out hover:shadow-[0_10px_30px_rgba(12,193,250,0.5)] active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="group relative overflow-hidden mt-[1.5vh] w-full h-[48px] sm:h-[52px] xl:h-[54px] rounded-[319px] bg-[#0CC1FA] font-gotham font-bold text-[15px] md:text-[13px] xl:text-[16px] text-white flex items-center justify-center gap-2 transition-all duration-500 ease-out disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  <span className="absolute inset-0 bg-gradient-to-r from-[#0aa8dd] to-[#0CC1FA] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+                  <span className="absolute inset-0 bg-[#012549] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
                   <span className="relative z-10 flex items-center gap-2">
                     {status === "loading" && (
                       <svg

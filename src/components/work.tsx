@@ -78,7 +78,7 @@ const card4 = useInView<HTMLDivElement>();
     visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10";
 
   return (
-    <section id="work" className="bg-white">
+    <section id="werkwijze" className="bg-white">
       <div className="px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-15">
         <div
           ref={headerRef}
