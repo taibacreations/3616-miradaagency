@@ -200,38 +200,41 @@ export default function ScanPage() {
 
   return (
     <div className="relative">
-      {/* ===== Section 1: navy bg, heading + form | image ===== */}
+            {/* ===== Section 1: navy bg, heading (full width) → form | image ===== */}
       <section className="relative w-full overflow-hidden bg-gradient-to-br from-[#01152b] via-[#0a2f52] to-[#124a7d]">
-        <div className="max-w-[1600px] mx-auto xl:px-15 md:px-6 px-4 pt-[120px] pb-[50px] md:pt-[140px] md:pb-[80px] lg:pt-50 lg:pb-[100px]">
-          <div
-            ref={hero.ref}
-            className="grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 lg:gap-10"
-          >
-            {/* Left column */}
+        <div className="max-w-[1600px] mx-auto xl:px-15 md:px-6 px-4 pt-[150px] pb-[50px] md:pt-[140px] md:pb-[80px] lg:pt-40 xl:pt-50 lg:pb-[100px]">
+          <div ref={hero.ref}>
+            {/* ===== Top: badge + heading + paragraph (FULL WIDTH) ===== */}
             <div
-              className={`flex flex-col ${fadeUp(hero.visible)}`}
+              className={`flex w-full flex-col ${fadeUp(hero.visible)}`}
               style={{ transitionDelay: hero.visible ? "0ms" : "0ms" }}
             >
-              <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#0CC1FA]/40 bg-[#0CC1FA]/10 px-4 py-2">
+              <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#0CC1FA]/40 bg-[#0CC1FA]/10 px-4 py-2 mx-auto">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#0CC1FA]" />
                 <span className="font-gotham font-bold text-[12px] text-[#0CC1FA] sm:text-[13px]">
                   100% Gratis — Geen Verplichtingen
                 </span>
               </div>
 
-              <h1 className="mb-6 break-words font-monument font-extrabold leading-[1.15] text-white text-[26px] sm:text-[30px] md:text-[24px] lg:text-[30px] xl:text-[36px] 2xl:text-[44px]">
+              <h1 className="mb-6 w-full md:max-w-[700px] text-center mx-auto break-words font-monument font-extrabold leading-[1.15] text-white text-[26px] sm:text-[30px] md:text-[24px] lg:text-[30px] xl:text-[36px] 2xl:text-[44px]">
                 Claim Jouw Gratis{" "}
                 <span className="text-[#0CC1FA]">Pixel- &amp; Conversiescan</span>
               </h1>
 
-              <p className="max-w-[560px] font-gotham font-normal text-[16px] leading-relaxed text-white/80 xl:text-[18px]">
+              <p className="w-full md:max-w-[950px] text-center mx-auto font-gotham font-normal text-[16px] leading-relaxed text-white/80 xl:text-[18px]">
                 Ontdek binnen 24 uur waar de digitale lead-lekken van jouw lokale onderneming zitten.
                 Vul je gegevens in en ons systeem start direct de analyse van je website,
                 tracking-pixels en mobiele conversie.
               </p>
+            </div>
 
+            {/* ===== Bottom: form | image (dono ki height barabar) ===== */}
+            <div className="mt-10 md:mt-15 lg:mt-20 grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 lg:gap-10">
               {/* Form card — contact card jaisi (white, rounded-[24px], #E5E7EB border) */}
-              <div className="mt-8 w-full rounded-[24px] border border-[#E5E7EB] bg-white px-6 py-8 sm:px-9 sm:py-10">
+              <div
+                className={`w-full rounded-[24px] border border-[#E5E7EB] bg-white px-6 py-8 sm:px-9 sm:py-10 ${fadeUp(hero.visible)}`}
+                style={{ transitionDelay: hero.visible ? "150ms" : "0ms" }}
+              >
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                   <div>
                     <label htmlFor="firstName" className={labelClass}>
@@ -359,18 +362,18 @@ export default function ScanPage() {
                   ))}
                 </div>
               </div>
-            </div>
 
-            {/* Right column: image (poori height) */}
-            <div
-              className={`relative h-[260px] w-full sm:h-[340px] md:h-auto ${fadeUp(hero.visible)}`}
-              style={{ transitionDelay: hero.visible ? "200ms" : "0ms" }}
-            >
-              <img
-                src="/scan.webp"
-                alt=""
-                className="absolute inset-0 h-full w-full rounded-3xl object-cover"
-              />
+              {/* Image: form card ki poori height ke barabar */}
+              <div
+                className={`relative h-[260px] w-full sm:h-[340px] md:h-auto ${fadeUp(hero.visible)}`}
+                style={{ transitionDelay: hero.visible ? "300ms" : "0ms" }}
+              >
+                <img
+                  src="/scan.webp"
+                  alt=""
+                  className="absolute inset-0 h-full w-full rounded-3xl object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

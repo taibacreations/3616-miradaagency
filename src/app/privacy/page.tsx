@@ -240,7 +240,7 @@ export default function PrivacyPage() {
       {/* ===== Content ===== */}
       <section className="bg-[#F5F9FC]">
         <div
-          className={`${containerClass} py-[50px] md:py-[80px] lg:py-[100px]`}
+          className={`${containerClass} py-[50px] md:pt-[80px] md:pb-0 lg:pt-[100px] lg:pb-[10px]`}
         >
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[260px_1fr] lg:gap-12 xl:gap-16">
             {/* TOC card (desktop only) — ye card rehne diya */}

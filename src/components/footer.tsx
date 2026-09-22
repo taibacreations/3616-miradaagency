@@ -253,17 +253,35 @@ const Footer = () => {
             </div>
           </div>
 
+                    
           {/* Bottom bar: <lg card se jura hua (no gap) | lg+ image ke bottom par overlap */}
           <div
-            className={`relative z-10 bg-[#0CC1FA] w-full min-h-[50px] lg:h-[60px] px-4 py-3 lg:py-0
+            className={`relative z-10 bg-[#0CC1FA] w-full min-h-[50px] lg:h-[60px] px-4 py-3 lg:py-3
              lg:-mt-[45px]
-            flex justify-center items-center text-center font-gotham text-white
+            flex items-center font-gotham text-white
             text-[14px] sm:text-[16px] xl:text-[18px] leading-[18px] xl:leading-normal
             ${anim(visible)}`}
             style={{ transitionDelay: visible ? "450ms" : "0ms" }}
           >
-            © 2026 Mirada Management B.V. Alle rechten voorbehouden. | KvK:
-            42084347
+            <div className="max-w-[1600px] mx-auto w-full xl:px-15 md:px-6 px-4 flex flex-col md:flex-row md:justify-between items-center text-center md:text-left gap-1 md:gap-3">
+              <span>
+                © 2026 Mirada Management B.V. Alle rechten voorbehouden. | KvK:
+                42084347
+              </span>
+
+              <div className="flex flex-row items-center gap-3">
+                <span className="cursor-pointer underline underline-offset-2 hover:text-[#04213D] transition-colors duration-300">
+                  Cookie-instellingen
+                </span>
+                <span className="h-4 w-px bg-white/50" aria-hidden="true" />
+                <Link
+                  href="/privacy"
+                  className="underline underline-offset-2 hover:text-[#04213D] transition-colors duration-300"
+                >
+                  Privacybeleid
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
