@@ -69,6 +69,8 @@ const sectionPadding110 =
   "pt-[50px] pb-[50px] md:pt-[80px] md:pb-[80px] xl:pt-[100px] xl:pb-[100px] 2xl:pt-[110px] 2xl:pb-[110px]";
 const sectionPadding100 =
   "pt-[50px] pb-[50px] md:pt-[80px] md:pb-[80px] xl:pt-[100px] xl:pb-[100px] 2xl:pt-[100px] 2xl:pb-[100px]";
+const sectionPaddingTop100 =
+  "pb-[50px] md:pb-[80px] xl:pb-[100px] 2xl:pb-[100px]";
 
 /* ---------- icons (viewBox 0 0 120 120, wrapper svg render ke waqt lagta hai) ---------- */
 
@@ -319,7 +321,7 @@ export default function GeoPage() {
 
       {/* ===== Section: Hoe we werken (4 steps, homepage stijl) ===== */}
       <section className="bg-[#F5F9FC] max-w-[1600px] mx-auto">
-        <div className={`${containerClass} ${sectionPadding100}`}>
+        <div className={`${containerClass} ${sectionPaddingTop100}`}>
           <Reveal className="mx-auto max-w-[700px] text-center" threshold={0.2}>
             <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
               Hoe We Samenwerken

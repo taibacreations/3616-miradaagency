@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import SmoothScroll from "@/components/SmoothScroll";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -62,6 +63,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="nl"
       className={`${geistSans.variable} ${geistMono.variable} ${monument.variable} ${gotham.variable} h-full antialiased`}
     >
+      <head>
+        <Script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="b362c421-fd32-498d-baba-e61c710a40fa"
+          data-blockingmode="auto"
+          strategy="beforeInteractive"
+        />
+      </head>
       <body className="min-h-full flex flex-col overflow-x-hidden">
         <SmoothScroll>
           <main>

@@ -4,6 +4,11 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
+declare global {
+  interface Window {
+    Cookiebot?: { renew: () => void; show: () => void };
+  }
+}
 
 const services = [
   "AI Automatiseringen",
@@ -96,7 +101,6 @@ const Footer = () => {
     "font-gotham text-[14px] sm:text-[16px] xl:text-[18px] leading-[20px] xl:leading-normal";
   const headingText =
     "font-monument text-[20px] sm:text-[22px] xl:text-[24px] text-white";
-
 
   const router = useRouter();
   const pathname = usePathname();
@@ -209,11 +213,14 @@ const Footer = () => {
                     <h3 className={headingText}>Diensten</h3>
                     <div className="flex flex-col gap-3 mt-3 xl:mt-4 ">
                       {services.map((label) => (
-                        <div key={label} className="flex items-center gap-3 hover:text-[#0CC1FA]">
+                        <div
+                          key={label}
+                          className="flex items-center gap-3 hover:text-[#0CC1FA]"
+                        >
                           <ArrowIcon />
                           <Link
                             href="/#diensten"
-                            onClick={(e) => handleFooterClick(e, "diensten")}
+                            onClick={(e) => handleFooterClick(e, "service")}
                             className={linkText}
                           >
                             {label}
@@ -253,7 +260,6 @@ const Footer = () => {
             </div>
           </div>
 
-                    
           {/* Bottom bar: <lg card se jura hua (no gap) | lg+ image ke bottom par overlap */}
           <div
             className={`relative z-10 bg-[#0CC1FA] w-full min-h-[50px] lg:h-[60px] px-4 py-3 lg:py-3
@@ -270,9 +276,13 @@ const Footer = () => {
               </span>
 
               <div className="flex flex-row items-center gap-3 md:mt-0 mt-[1vh]">
-                <span className="cursor-pointer underline underline-offset-2 hover:text-[#04213D] transition-colors duration-300">
+                <button
+                  type="button"
+                  onClick={() => window.Cookiebot?.renew()}
+                  className="cursor-pointer underline underline-offset-2 hover:text-[#04213D] transition-colors duration-300"
+                >
                   Cookie-instellingen
-                </span>
+                </button>
                 <span className="h-4 w-px bg-white/50" aria-hidden="true" />
                 <Link
                   href="/privacy"
