@@ -5,7 +5,7 @@ import { ReactNode, useEffect, useRef, useState } from "react";
 
 declare global {
   interface Window {
-    Cookiebot?: { renew: () => void };
+    cookiebot?: { renew: () => void };
   }
 }
 
@@ -221,11 +221,11 @@ const analyticsData = [
 
 const purposes = [
   {
-    title: "Contact & Scan Aanvragen",
+    title: "Contact & scan aanvragen",
     text: "Om contact met je op te nemen en de gevraagde dienst te leveren. Grondslag: uitvoering van een overeenkomst / gerechtvaardigd belang.",
   },
   {
-    title: "Google Analytics",
+    title: "Google analytics",
     text: "Om inzicht te krijgen in websitegebruik en onze website te verbeteren. Grondslag: toestemming (via cookiebanner).",
   },
 ];
@@ -233,7 +233,7 @@ const purposes = [
 const retention = [
   { label: "Contactformulier gegevens", value: "Maximaal 2 jaar na laatste contact" },
   { label: "Scan aanvraag gegevens", value: "Maximaal 2 jaar na aanvraag" },
-  { label: "Google Analytics data", value: "14 maanden (Google standaard)" },
+  { label: "Google analytics data", value: "14 maanden (Google standaard)" },
 ];
 
 const rights = [
@@ -368,7 +368,7 @@ export default function PrivacyPage() {
 
               {/* 2 */}
               <SectionBlock id="gegevens" number="2" title="Welke gegevens verzamelen we?">
-                <SubTitle>A. Contactformulier &amp; Scan Aanvraag</SubTitle>
+                <SubTitle>A. Contactformulier &amp; scan aanvraag</SubTitle>
                 <p className={bodyClass}>
                   Wanneer je ons contactformulier invult of een gratis scan aanvraagt,
                   verzamelen we de volgende gegevens:
@@ -376,9 +376,9 @@ export default function PrivacyPage() {
                 <BulletList items={contactFormData} cols />
 
                 <div className="mt-8">
-                  <SubTitle>B. Google Analytics (Statistieken)</SubTitle>
+                  <SubTitle>B. Google analytics (statistieken)</SubTitle>
                   <p className={bodyClass}>
-                    Met jouw toestemming gebruiken we Google Analytics 4 om anonieme
+                    Met jouw toestemming gebruiken we Google analytics 4 om anonieme
                     bezoekersstatistieken bij te houden. Dit omvat:
                   </p>
                   <BulletList items={analyticsData} cols />
@@ -453,7 +453,7 @@ export default function PrivacyPage() {
                       Statistieken
                     </span>
                     <span className="font-gotham text-[14px] text-[#012549]/80 xl:text-[15px]">
-                      Google Analytics, alleen na jouw toestemming.
+                      Google analytics, alleen na jouw toestemming.
                     </span>
                   </div>
                 </div>

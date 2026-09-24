@@ -76,7 +76,7 @@ const sectionPaddingTop100 =
 
 const geoAnalysisPoints = [
   {
-    text: "Wordt jouw bedrijf genoemd in ChatGPT, Gemini & Google AI Overviews?",
+    text: "Wordt jouw bedrijf genoemd in ChatGPT, Gemini & Google AI overviews?",
     icon: (
       <>
         <circle cx="60" cy="60" r="57" fill="white" />
@@ -133,28 +133,28 @@ const oldVsNew = {
 
 const geoServices = [
   {
-    title: "AI-Zichtbaarheidsaudit",
+    title: "AI-zichtbaarheidsaudit",
     text: "We testen tientallen relevante prompts in ChatGPT, Gemini, Perplexity en Google AI Overviews om te zien of en hoe jouw bedrijf wordt genoemd.",
   },
   {
-    title: "Content & Structuur Optimalisatie",
+    title: "Content & structuur optimalisatie",
     text: "We herschrijven en structureren jouw website-content (FAQ's, schema markup, heldere antwoorden) zodat AI-modellen het makkelijk kunnen lezen en citeren.",
   },
   {
-    title: "Autoriteit & Vermeldingen Opbouwen",
+    title: "Autoriteit & vermeldingen opbouwen",
     text: "We zorgen voor consistente, betrouwbare vermeldingen van jouw bedrijf op plekken die AI-modellen als bron gebruiken (reviews, directories, kennisbanken).",
   },
   {
-    title: "Maandelijkse AI-Rapportage",
+    title: "Maandelijkse AI-rapportage",
     text: "Je ziet zwart-op-wit hoe vaak en hoe jouw bedrijf wordt genoemd in AI-antwoorden, en welke concurrenten die plek innemen.",
   },
 ];
 
 const process = [
   { n: "01", title: "AI-Scan", text: "We testen hoe zichtbaar jouw bedrijf nu is in AI-zoekresultaten." },
-  { n: "02", title: "Strategie & Plan", text: "Concrete lijst met content- en structuurverbeteringen, geprioriteerd op impact." },
+  { n: "02", title: "Strategie & plan", text: "Concrete lijst met content- en structuurverbeteringen, geprioriteerd op impact." },
   { n: "03", title: "Implementatie", text: "Wij voeren de optimalisaties door op je website en externe bronnen." },
-  { n: "04", title: "Meten & Bijsturen", text: "Maandelijkse controle of AI-modellen jouw bedrijf nu wél aanbevelen." },
+  { n: "04", title: "Meten & bijsturen", text: "Maandelijkse controle of AI-modellen jouw bedrijf nu wél aanbevelen." },
 ];
 
 export default function GeoPage() {
@@ -177,7 +177,7 @@ export default function GeoPage() {
             </div>
 
             <h1 className="mb-6 w-full max-w-[900px] break-words font-monument text-[26px] font-extrabold leading-[1.15] text-white sm:text-[36px] lg:text-[46px] xl:text-[54px]">
-              Word Aanbevolen Door{" "}
+              Word aanbevolen door{" "}
               <span className="text-[#0CC1FA]">ChatGPT, Gemini &amp; Google AI</span>
             </h1>
 
@@ -196,7 +196,7 @@ export default function GeoPage() {
               >
                 <span className="absolute inset-0 bg-[#012549] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
                 <span className="relative z-10 flex items-center gap-2">
-                  Check Jouw AI-Zichtbaarheid
+                  Check jouw AI-zichtbaarheid
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none">
                     <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -212,7 +212,7 @@ export default function GeoPage() {
         <div className={`${containerClass} ${sectionPadding110}`}>
           <Reveal className="mx-auto max-w-[800px] text-center" threshold={0.2}>
             <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
-              Weet Jij Of AI Jouw Bedrijf Aanbeveelt?
+              Weet jij of aI jouw bedrijf aanbeveelt?
             </h2>
             <p className={`mt-4 ${bodyClass}`}>
               De meeste ondernemers hebben geen idee wat AI-modellen over hun bedrijf zeggen,
@@ -252,7 +252,7 @@ export default function GeoPage() {
         <div className={`${containerClass} ${sectionPadding100}`}>
           <Reveal className="mx-auto max-w-[750px] text-center" threshold={0.2}>
             <h2 className="font-monument font-extrabold text-[24px] sm:text-[30px] xl:text-[38px] text-white leading-[32px] sm:leading-[38px] xl:leading-[46px]">
-              Van Zoekmachine Naar <span className="text-[#0CC1FA]">Antwoordmachine</span>
+              Van zoekmachine naar <span className="text-[#0CC1FA]">antwoordmachine</span>
             </h2>
           </Reveal>
 
@@ -297,7 +297,7 @@ export default function GeoPage() {
         <div className={`${containerClass} ${sectionPadding110}`}>
           <Reveal className="mx-auto max-w-[700px] text-center" threshold={0.2}>
             <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
-              Wat Wij Voor Je Doen
+              Wat wij voor je doen
             </h2>
           </Reveal>
 
@@ -324,7 +324,7 @@ export default function GeoPage() {
         <div className={`${containerClass} ${sectionPaddingTop100}`}>
           <Reveal className="mx-auto max-w-[700px] text-center" threshold={0.2}>
             <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
-              Hoe We Samenwerken
+              Hoe we samenwerken
             </h2>
           </Reveal>
 
@@ -357,7 +357,7 @@ export default function GeoPage() {
         <div className={`relative ${containerClass} ${sectionPadding100} text-center`}>
           <Reveal className="mx-auto max-w-[700px]" threshold={0.2}>
             <h2 className="font-monument font-extrabold text-[24px] sm:text-[30px] xl:text-[38px] text-white leading-[32px] sm:leading-[38px] xl:leading-[46px]">
-              Klaar Om Gevonden Te Worden Door AI?
+              Klaar om gevonden te worden door AI?
             </h2>
             <p className="mt-4 font-gotham text-[15px] font-normal text-white/70 lg:text-[16px] xl:text-[17px]">
               Vraag een gratis AI-zichtbaarheidsscan aan en ontdek binnen 24 uur waar je staat.
@@ -368,7 +368,7 @@ export default function GeoPage() {
             >
               <span className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
               <span className="relative z-10 flex items-center gap-2 group-hover:text-[#012549] transition-colors duration-500">
-                Claim Gratis AI-Scan
+                Claim gratis AI-scan
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none">
                   <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

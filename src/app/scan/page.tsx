@@ -212,13 +212,13 @@ export default function ScanPage() {
               <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#0CC1FA]/40 bg-[#0CC1FA]/10 px-4 py-2 mx-auto">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#0CC1FA]" />
                 <span className="font-gotham font-bold text-[12px] text-[#0CC1FA] sm:text-[13px]">
-                  100% Gratis · Geen Verplichtingen
+                  100% gratis · Geen verplichtingen
                 </span>
               </div>
 
               <h1 className="md:mb-6 mb-3 w-full md:max-w-[700px] text-center mx-auto break-words font-monument font-extrabold leading-[1.15] text-white text-[26px] sm:text-[30px] md:text-[24px] lg:text-[30px] xl:text-[36px] 2xl:text-[44px]">
-                Claim Jouw Gratis{" "}
-                <span className="text-[#0CC1FA]">Pixel &amp; Conversiescan</span>
+                Claim jouw gratis{" "}
+                <span className="text-[#0CC1FA]">pixel &amp; conversiescan</span>
               </h1>
 
               <p className="w-full md:max-w-[950px] text-center mx-auto font-gotham font-normal text-[16px] leading-relaxed text-white/80 xl:text-[18px]">
@@ -252,7 +252,7 @@ export default function ScanPage() {
 
                   <div>
                     <label htmlFor="email" className={labelClass}>
-                      E-mailadres (Zakelijk) <span className="text-[#0CC1FA]">*</span>
+                      E-mailadres (zakelijk) <span className="text-[#0CC1FA]">*</span>
                     </label>
                     <input
                       id="email"
@@ -329,7 +329,7 @@ export default function ScanPage() {
                         </>
                       ) : (
                         <>
-                          Start Mijn Gratis Analyse
+                          Start mijn gratis analyse
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none">
                             <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                           </svg>

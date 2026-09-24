@@ -159,7 +159,7 @@ function BedanktContent() {
       </section>
 
       {/* ===== Content — card fade ke upar overlap karta hai ===== */}
-      <section className="relative z-10 pb-16 md:pb-20">
+      <section className="relative z-10 pb-16">
         <div
           className={`${containerClass} -mt-[270px] flex flex-col items-center md:-mt-[330px] lg:-mt-[390px]`}
         >
@@ -210,7 +210,7 @@ function BedanktContent() {
           >
             <span aria-hidden="true">💡</span>{" "}
             <span className="font-bold text-[#012549]">Tip:</span> Controleer ook je
-            spam-map — soms belandt ons rapport daar.
+            spam-map, soms belandt ons rapport daar.
           </div>
 
           {/* Back link */}
