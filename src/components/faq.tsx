@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "Wat is die gratis scan precies?",
     answer:
-      "We analyseren jouw huidige online aanwezigheid: waar verlies je potentiële klanten? Denk aan tracking-fouten, trage laadtijden, ontbrekende pixels, of campagnes die niet optimaal draaien. Je krijgt binnen 24 uur een concreet rapport — zonder verplichtingen.",
+      "We analyseren jouw huidige online aanwezigheid: waar verlies je potentiële klanten? Denk aan tracking-fouten, trage laadtijden, ontbrekende pixels, of campagnes die niet optimaal draaien. Je krijgt binnen 24 uur een concreet rapport, zonder verplichtingen.",
   },
   {
     question: "Ik heb al een website. Kan Mirada toch helpen?",
@@ -17,17 +17,17 @@ const faqs = [
   {
     question: "Moet ik al technisch onderlegd zijn?",
     answer:
-      "Nee, helemaal niet. Wij regelen alles technisch. Jij hoeft alleen te vertellen wat je wil bereiken — wij zorgen dat het werkt. We leggen alles uit in gewone taal, zonder jargon.",
+      "Nee, helemaal niet. Wij regelen alles technisch. Jij hoeft alleen te vertellen wat je wil bereiken, en wij zorgen dat het werkt. We leggen alles uit in gewone taal, zonder jargon.",
   },
   {
     question: "Hoe snel zie ik resultaten?",
     answer:
-      "Dat verschilt per dienst. Een website is live in 2–4 weken. Automatiseringen draaien vaak binnen 1–2 weken. Bij advertenties zie je doorgaans de eerste leads binnen de eerste maand. We stellen altijd een realistisch tijdpad op bij de start.",
+      "Dat verschilt per dienst. Een website is live in 2 tot 4 weken. Automatiseringen draaien vaak binnen 1 tot 2 weken. Bij advertenties zie je doorgaans de eerste leads binnen de eerste maand. We stellen altijd een realistisch tijdpad op bij de start.",
   },
   {
     question: "Zit ik vast aan een lang contract?",
     answer:
-      "Nee. Maandelijkse diensten zijn per maand opzegbaar. Projecten (website, automatisering) worden met een vaste prijs afgesproken zonder langlopend contract. Flexibel en eerlijk — zo hoort het.",
+      "Nee. Maandelijkse diensten zijn per maand opzegbaar. Projecten (website, automatisering) worden met een vaste prijs afgesproken zonder langlopend contract. Flexibel en eerlijk, zo hoort het.",
   },
   {
     question: "Werken jullie alleen lokaal of ook nationaal?",

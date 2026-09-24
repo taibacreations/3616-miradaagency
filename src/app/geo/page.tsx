@@ -64,7 +64,7 @@ const bodyClass =
   "font-gotham font-normal text-[16px] leading-[170%] text-[#012549]/80 xl:text-[18px]";
 const containerClass = "mx-auto max-w-[1560px] xl:px-10 md:px-6 px-4";
 
-// mobile 50px, md/lg 80px, xl 100px — 2xl pe wapis wahi values jo pehle (sectionPadding se pehle) is section mein thi
+// mobile 50px, md/lg 80px, xl 100px - 2xl pe wapis wahi values jo pehle (sectionPadding se pehle) is section mein thi
 const sectionPadding110 =
   "pt-[50px] pb-[50px] md:pt-[80px] md:pb-[80px] xl:pt-[100px] xl:pb-[100px] 2xl:pt-[110px] 2xl:pb-[110px]";
 const sectionPadding100 =
@@ -125,7 +125,7 @@ const oldVsNew = {
   ],
   new: [
     "Klant vraagt het rechtstreeks aan ChatGPT of Gemini",
-    "AI geeft één (of een paar) aanbevelingen — direct",
+    "AI geeft direct één (of een paar) aanbevelingen",
     "GEO structureert content zodat AI 'm begrijpt en citeert",
     "Wij zorgen dat AI jouw bedrijf correct en positief noemt",
   ],
@@ -134,7 +134,7 @@ const oldVsNew = {
 const geoServices = [
   {
     title: "AI-Zichtbaarheidsaudit",
-    text: "We testen tientallen relevante prompts in ChatGPT, Gemini, Perplexity en Google AI Overviews om te zien of — en hoe — jouw bedrijf wordt genoemd.",
+    text: "We testen tientallen relevante prompts in ChatGPT, Gemini, Perplexity en Google AI Overviews om te zien of en hoe jouw bedrijf wordt genoemd.",
   },
   {
     title: "Content & Structuur Optimalisatie",
@@ -146,7 +146,7 @@ const geoServices = [
   },
   {
     title: "Maandelijkse AI-Rapportage",
-    text: "Je ziet zwart-op-wit hoe vaak en hoe jouw bedrijf wordt genoemd in AI-antwoorden — en welke concurrenten die plek innemen.",
+    text: "Je ziet zwart-op-wit hoe vaak en hoe jouw bedrijf wordt genoemd in AI-antwoorden, en welke concurrenten die plek innemen.",
   },
 ];
 
@@ -162,7 +162,7 @@ export default function GeoPage() {
 
   return (
     <div className="relative">
-      {/* ===== Hero — spacing scan page ke banner se exact match ===== */}
+      {/* ===== Hero - spacing scan page ke banner se exact match ===== */}
       <section className="relative w-full overflow-hidden bg-gradient-to-br from-[#01152b] via-[#0a2f52] to-[#124a7d]">
         <div className="max-w-[1600px] mx-auto xl:px-15 md:px-6 px-4 pt-[150px] pb-[50px] md:pt-[140px] md:pb-[80px] lg:pt-40 xl:pt-50 lg:pb-[100px]">
           <div
@@ -172,7 +172,7 @@ export default function GeoPage() {
             <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#0CC1FA]/40 bg-[#0CC1FA]/10 px-4 py-2">
               <span className="h-1.5 w-1.5 rounded-full bg-[#0CC1FA]" />
               <span className="font-gotham text-[12px] font-bold text-[#0CC1FA] sm:text-[13px] lg:text-[16px]">
-                GEO — Generative Engine Optimization
+                GEO: Generative Engine Optimization
               </span>
             </div>
 
@@ -182,7 +182,7 @@ export default function GeoPage() {
             </h1>
 
             <p className="w-full max-w-[750px] font-gotham text-[16px] font-normal leading-relaxed text-white/80 xl:text-[18px]">
-              Steeds meer mensen zoeken niet meer op Google — ze vragen het direct aan AI.
+              Steeds meer mensen zoeken niet meer op Google. Ze vragen het direct aan AI.
               Wij zorgen dat jouw bedrijf het antwoord wordt dat AI-modellen geven.
             </p>
 
@@ -215,8 +215,8 @@ export default function GeoPage() {
               Weet Jij Of AI Jouw Bedrijf Aanbeveelt?
             </h2>
             <p className={`mt-4 ${bodyClass}`}>
-              De meeste ondernemers hebben geen idee wat AI-modellen over hun bedrijf zeggen —
-              of ze het überhaupt noemen.
+              De meeste ondernemers hebben geen idee wat AI-modellen over hun bedrijf zeggen,
+              of dat ze het überhaupt noemen.
             </p>
           </Reveal>
 

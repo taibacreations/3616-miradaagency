@@ -445,7 +445,7 @@ export default function PrivacyPage() {
                       Noodzakelijk
                     </span>
                     <span className="font-gotham text-[14px] text-[#012549]/80 xl:text-[15px]">
-                      Altijd actief — nodig voor de basisfunctionaliteit van de website.
+                      Altijd actief. Nodig voor de basisfunctionaliteit van de website.
                     </span>
                   </div>
                   <div className="flex flex-wrap items-center gap-3">
@@ -453,7 +453,7 @@ export default function PrivacyPage() {
                       Statistieken
                     </span>
                     <span className="font-gotham text-[14px] text-[#012549]/80 xl:text-[15px]">
-                      Google Analytics — alleen na jouw toestemming.
+                      Google Analytics, alleen na jouw toestemming.
                     </span>
                   </div>
                 </div>

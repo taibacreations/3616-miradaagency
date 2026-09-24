@@ -42,10 +42,10 @@ const Banner = () => {
             }`}
           >
             <h4 className="font-gotham text-[14px] sm:text-[17px] xl:text-[20px] text-white">
-              Slimme AI-Workflows & Converterende Websites
+              Slimme AI-workflows & converterende websites
             </h4>
-            <h1 className="font-monument text-[30px] leading-[34px] sm:text-[44px] sm:leading-[48px] md:text-[52px] md:leading-[56px] 2xl:text-[60px] xl:leading-[64px] text-white tracking-[0.05em] mt-[1.3vh] h1">
-              Voor Lokale Ondernemers.
+            <h1 className="font-monument font-extrabold text-[30px] leading-[34px] sm:text-[44px] sm:leading-[48px] md:text-[52px] md:leading-[56px] 2xl:text-[60px] xl:leading-[64px] text-white tracking-[0.05em] mt-[1.3vh] h1">
+              Voor lokale ondernemers.
             </h1>
           </div>
 
@@ -55,7 +55,7 @@ const Banner = () => {
             }`}
             style={{ transitionDelay: mounted ? "150ms" : "0ms" }}
           >
-            AI & Marketing voor Lokale Ondernemers
+            AI & marketing voor lokale ondernemers
           </h4>
 
           <p
@@ -81,7 +81,7 @@ const Banner = () => {
             >
               <span className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
               <span className="relative z-10 transition-transform duration-300 ease-out">
-                Claim Jouw Gratis Scan
+                Claim jouw gratis scan
               </span>
               <div className="relative z-10 bg-white group-hover:bg-[#0CC1FA] rounded-full w-[30px] h-[30px] flex justify-center items-center transition-transform duration-500 ease-out">
                 <svg

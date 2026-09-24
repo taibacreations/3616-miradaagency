@@ -22,7 +22,7 @@ const Choose = () => {
           observer.disconnect();
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -44,26 +44,30 @@ const Choose = () => {
             }`}
           >
             <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[32px] sm:leading-[38px] xl:leading-[46px] max-w-full xl:max-w-[449px]">
-              Waarom Lokale Ondernemers Ons Kiezen
+              Waarom lokale ondernemers ons kiezen
             </h2>
             <p className="text-[14px] sm:text-[16px] xl:text-[18px] font-gotham leading-[20px] sm:leading-[22px] text-black mt-[2.2vh]">
               15+ jaar IT-expertise, vertaald naar concrete groei voor jouw
-              bedrijf — zonder jargon, met meetbare resultaten.
+              bedrijf. Zonder jargon, met meetbare resultaten.
             </p>
 
             <div className="flex flex-col gap-4 mt-[2.8vh]">
               {[
-                "Vast aanspreekpunt — geen doorverwijzingen",
-                "Transparante prijzen — geen verborgen kosten",
-                "Korte lijnen — directe toegang tot expertise",
-                "Flexibele contracten — schaalbaar met je groei",
+                "Vast aanspreekpunt, geen doorverwijzingen",
+                "Transparante prijzen, geen verborgen kosten",
+                "Korte lijnen en directe toegang tot expertise",
+                "Flexibele contracten die meeschalen met je groei",
               ].map((text, i) => (
                 <div
                   key={text}
                   className={`flex items-start gap-4 transition-all duration-500 ease-out ${
-                    visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
+                    visible
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 -translate-x-4"
                   }`}
-                  style={{ transitionDelay: visible ? `${150 + i * 100}ms` : "0ms" }}
+                  style={{
+                    transitionDelay: visible ? `${150 + i * 100}ms` : "0ms",
+                  }}
                 >
                   <img
                     src="/ticks.png"
@@ -79,14 +83,16 @@ const Choose = () => {
 
             <Link
               href={"/scan"}
-              className={`mt-[2.5vh] group relative overflow-hidden flex justify-center items-center xl:gap-4 font-gotham font-medium text-[13px] xl:text-[16px] text-white bg-[#0CC1FA] w-full sm:w-[340px] xl:w-[418px] h-[50px] sm:h-[52px] xl:h-[56px] rounded-[319px] transition-all duration-500 ease-out ${
-                visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              className={`mt-[2.5vh] group relative overflow-hidden flex justify-center items-center xl:gap-2 font-gotham font-medium text-[12px] md:text-[13px] xl:text-[16px] text-white bg-[#0CC1FA] w-full md:w-[370px] xl:w-[450px] h-[50px] sm:h-[52px] xl:h-[56px] rounded-[319px] transition-all duration-500 ease-out ${
+                visible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4"
               }`}
               style={{ transitionDelay: visible ? "550ms" : "0ms" }}
             >
               <span className="absolute inset-0 bg-[#012549] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
               <span className="relative z-10 text-center px-2 transition-transform duration-300 ease-out">
-                Ontdek Jouw Lead-Lekken — Gratis Scan
+                Ontdek jouw lead-lekken met een gratis scan
               </span>
               <div className="relative z-10 bg-white rounded-full w-[26px] h-[26px] sm:w-[30px] sm:h-[30px] flex justify-center items-center shrink-0 transition-transform duration-500 ease-out">
                 <svg
@@ -108,7 +114,9 @@ const Choose = () => {
 
             <h4
               className={`font-gotham text-[14px] sm:text-[16px] xl:text-[18px] leading-[20px] sm:leading-[24px] text-black mt-[2.5vh] transition-all duration-700 ease-out ${
-                visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                visible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4"
               }`}
               style={{ transitionDelay: visible ? "650ms" : "0ms" }}
             >
@@ -122,10 +130,10 @@ const Choose = () => {
             alt="hand"
             className={`block mx-auto order-last md:order-none md:mx-0 w-[180px] md:w-[210px] lg:w-[240px] xl:w-[351px] h-auto md:absolute md:left-1/2 md:-translate-x-1/2 xl:bottom
               bottom-0 transition-all duration-1000 ease-out ${
-              visible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-24 md:translate-y-32"
-            }`}
+                visible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-24 md:translate-y-32"
+              }`}
             style={{ transitionDelay: visible ? "300ms" : "0ms" }}
           />
 
@@ -135,8 +143,8 @@ const Choose = () => {
               {
                 offset: "",
                 iconSize: { w: 48, h: 48 },
-                title: "Snelle Implementatie",
-                text: "Websites live in 2–4 weken, AI-workflows operationeel binnen 1–2 weken — geen maanden wachten.",
+                title: "Snelle implementatie",
+                text: "Websites live in 2 tot 4 weken, AI-workflows operationeel binnen 1 tot 2 weken. Geen maanden wachten.",
                 icon: (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -153,8 +161,8 @@ const Choose = () => {
               },
               {
                 offset: "lg:ml-[6.5%]",
-                title: "Technisch Waterdicht",
-                text: "15+ jaar ervaring in complexe IT-omgevingen — je systemen draaien stabiel, veilig en schaalbaar.",
+                title: "Technisch waterdicht",
+                text: "15+ jaar ervaring in complexe IT-omgevingen. Je systemen draaien stabiel, veilig en schaalbaar.",
                 icon: (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +178,10 @@ const Choose = () => {
                       width="47"
                       height="47"
                     >
-                      <path d="M0 3.05176e-05H47V47H0V3.05176e-05Z" fill="white"></path>
+                      <path
+                        d="M0 3.05176e-05H47V47H0V3.05176e-05Z"
+                        fill="white"
+                      ></path>
                     </mask>
                     <g mask="url(#mask0_54_791)">
                       <path
@@ -219,8 +230,8 @@ const Choose = () => {
               },
               {
                 offset: "",
-                title: "Meetbare Resultaten",
-                text: "Transparante tracking en rapportages in begrijpelijk Nederlands — je weet precies wat je investering oplevert.",
+                title: "Meetbare resultaten",
+                text: "Transparante tracking en rapportages in begrijpelijk Nederlands, zodat je precies weet wat je investering oplevert.",
                 icon: (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -241,9 +252,13 @@ const Choose = () => {
               <div
                 key={box.title}
                 className={`group choose-box w-full xl:w-[510px] xl:max-w-full lg:w-[400px] md:w-[300px] h-auto xl:h-[145px] lg:h-[140px] rounded-[18px] bg-white flex flex-col md:text-left text-center lg:flex-row lg:items-center gap-2 xl:gap-6.5 px-4 sm:px-5 xl:px-5.5 py-4 lg:py-0 transition-colors duration-500 ease-out hover:bg-[#012549] cursor-pointer ${box.offset} ${
-                  visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
+                  visible
+                    ? "opacity-100 translate-x-0"
+                    : "opacity-0 translate-x-8"
                 }`}
-                style={{ transitionDelay: visible ? `${400 + i * 150}ms` : "0ms" }}
+                style={{
+                  transitionDelay: visible ? `${400 + i * 150}ms` : "0ms",
+                }}
               >
                 <div className="bg-[#012549] group-hover:bg-white min-w-[56px] w-[56px] h-[56px] sm:min-w-[68px] sm:w-[68px] sm:h-[68px] xl:min-w-[84px] xl:w-[84px] xl:h-[84px] rounded-full flex justify-center items-center transition-colors duration-500 ease-out text-white group-hover:text-[#012549] shrink-0">
                   {box.icon}

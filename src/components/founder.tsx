@@ -6,7 +6,7 @@ const founderFaqs = [
   {
     question: "Werken jullie voor specifieke branches?",
     answer:
-      "Mirada Agency helpt lokale ondernemers, high-ticket dienstverleners en regionale bedrijven die willen opschalen. Of je nu een exclusieve praktijk runt, een high-end servicebedrijf of een lokaal autobedrijf — onze systemen en AI-workflows zijn flexibel en worden volledig op maat ingericht voor jouw specifieke bedrijfsproces.",
+      "Mirada Agency helpt lokale ondernemers, high-ticket dienstverleners en regionale bedrijven die willen opschalen. Of je nu een exclusieve praktijk runt, een high-end servicebedrijf of een lokaal autobedrijf, onze systemen en AI-workflows zijn flexibel en worden volledig op maat ingericht voor jouw specifieke bedrijfsproces.",
   },
   {
     question: "Wat houdt de gratis scan precies in?",
@@ -55,22 +55,22 @@ const Founder = () => {
         >
           <div className="max-w-full sm:max-w-[443px]">
             <p className="font-gotham text-[16px] sm:text-[18px] xl:text-[20px] text-black capitalize">
-              Over Mirada Intelligence
+              Over mirada agency
             </p>
-            <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[34px] sm:leading-[40px] xl:leading-[46px] mt-[1vh] capitalize">
-              Het gezicht achter Mirada
+            <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[34px] sm:leading-[40px] xl:leading-[46px] mt-[1vh] ">
+              Het gezicht achter mirada
             </h2>
           </div>
 
           <div className="max-w-full sm:max-w-[607px] mt-[2.5vh]">
-            <p className="font-gotham text-[14px] sm:text-[16px] xl:text-[18px] leading-[129%] capitalize text-black font-normal">
-              Achter Mirada Intelligence staat Virgil Ippel. Met meer dan 15
+            <p className="font-gotham text-[14px] sm:text-[16px] xl:text-[18px] leading-[129%] text-black font-normal">
+              Achter Mirada Agency staat Virgil Ippel. Met meer dan 15
               jaar diepgaande expertise in het leiden van complexe
               IT-omgevingen, systeemtransities en procesoptimalisaties, breng ik
               het beste van twee werelden samen naar de lokale ondernemer:
               hardcore IT-structuur en resultaatgerichte online marketing.
             </p>
-            <p className="font-gotham text-[14px] sm:text-[16px] xl:text-[18px] leading-[129%] capitalize text-black font-normal mt-[3.5vh]">
+            <p className="font-gotham text-[14px] sm:text-[16px] xl:text-[18px] leading-[129%] text-black font-normal mt-[3.5vh]">
               Bij Mirada geloven we niet in ingewikkelde marketingtermen, wel in
               transparantie, korte lijnen en meetbaar resultaat in de regio. We
               introduceren nu tijdelijk exclusieve AI-pilotprojecten voor een
@@ -80,7 +80,7 @@ const Founder = () => {
           </div>
 
           <div className="mt-[3vh]">
-            <h5 className="text-[14px] sm:text-[16px] xl:text-[18px] font-bold capitalize text-[#012549] leading-[129%]">
+            <h5 className="text-[14px] sm:text-[16px] xl:text-[18px] font-bold text-[#012549] leading-[129%]">
               Veelgestelde vragen:
             </h5>
           </div>
@@ -163,7 +163,7 @@ const Founder = () => {
               Virgil Ippel
             </h3>
             <p className="font-gotham text-[15px] sm:text-[19px] md:text-[18px] lg:text-[24px] xl:text-[28px] text-white mt-[1.5vh]">
-              Mirada Intelligence
+              Mirada Agency
             </p>
           </div>
         </div>

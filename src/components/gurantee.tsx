@@ -101,7 +101,7 @@ const Gurantee = () => {
                 className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
               />
               <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
-                Geen lange contracten — flexibel en schaalbaar
+                Geen lange contracten, flexibel en schaalbaar
               </h4>
             </div>
           </div>

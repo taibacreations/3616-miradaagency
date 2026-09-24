@@ -9,8 +9,8 @@ const navLinks = [
   { label: "Diensten", href: "/#diensten" },
   { label: "Werkwijze", href: "/#werkwijze" },
   { label: "GEO", href: "/geo" },
-  { label: "Gratis Scan", href: "/scan" },
-  { label: "Over Mij", href: "/#over" },
+  { label: "Gratis scan", href: "/scan" },
+  { label: "Over mij", href: "/#over" },
 ];
 
 const SCROLL_OFFSET_RATIO = 0.1; // top se space

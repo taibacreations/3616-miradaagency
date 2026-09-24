@@ -212,13 +212,13 @@ export default function ScanPage() {
               <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#0CC1FA]/40 bg-[#0CC1FA]/10 px-4 py-2 mx-auto">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#0CC1FA]" />
                 <span className="font-gotham font-bold text-[12px] text-[#0CC1FA] sm:text-[13px]">
-                  100% Gratis — Geen Verplichtingen
+                  100% Gratis · Geen Verplichtingen
                 </span>
               </div>
 
               <h1 className="md:mb-6 mb-3 w-full md:max-w-[700px] text-center mx-auto break-words font-monument font-extrabold leading-[1.15] text-white text-[26px] sm:text-[30px] md:text-[24px] lg:text-[30px] xl:text-[36px] 2xl:text-[44px]">
                 Claim Jouw Gratis{" "}
-                <span className="text-[#0CC1FA]">Pixel- &amp; Conversiescan</span>
+                <span className="text-[#0CC1FA]">Pixel &amp; Conversiescan</span>
               </h1>
 
               <p className="w-full md:max-w-[950px] text-center mx-auto font-gotham font-normal text-[16px] leading-relaxed text-white/80 xl:text-[18px]">
@@ -291,7 +291,7 @@ export default function ScanPage() {
                       className={inputClass}
                     />
                     <p className="mt-2 font-gotham font-normal text-[12px] text-black/40 sm:text-[13px]">
-                      &quot;https://&quot; hoeft niet — die vullen we automatisch aan.
+                      &quot;https://&quot; hoeft niet, die vullen we automatisch aan.
                     </p>
                   </div>
 

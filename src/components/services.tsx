@@ -5,23 +5,23 @@ import { useEffect, useRef, useState } from "react";
 const services = [
   {
     image: "/services1.png",
-    title: "High-Converting Websites",
+    title: "High-Converting websites",
     description:
-      "Wij bouwen loeistrakke, pixel-perfecte websites die...",
+      "Wij bouwen loeistrakke, pixel-perfecte websites...",
     fullDescription:
       "Wij bouwen loeistrakke, pixel-perfecte websites die specifiek zijn ontworpen om lokale bezoekers om te zetten in betalende klanten. Volledig geoptimaliseerd voor mobiel, razendsnel en technisch waterdicht zodat je geen klant meer misloopt.",
     bullets: [
       "Pixel-perfect design dat vertrouwen wekt",
       "Razendsnel & technisch waterdicht",
       "SEO-geoptimaliseerd voor lokale vindbaarheid",
-      "Live in 2–4 weken",
+      "Live in 2 tot 4 weken",
     ],
   },
   {
     image: "/services2.png",
-    title: "AI & Workflow Automation",
+    title: "AI & workflow automation",
     description:
-      "Eliminate repetitive manual work in your business. We...",
+      "Eliminate repetitive manual work in your...",
     fullDescription:
       "Elimineer repetitief handmatig werk in je onderneming. Wij bouwen slimme AI-workflows en koppelingen die je leadopvolging, administratie of klantbeheer 24/7 automatisch laten draaien. Meer rust, minder overhead.",
     bullets: [
@@ -33,11 +33,11 @@ const services = [
   },
   {
     image: "/services4.webp",
-    title: "AI Chatbots",
+    title: "AI chatbots",
     description:
-      "Een slimme chatbot op je website die bezoekers direct antwoord geeft, ook 's...",
-    fullDescription:
-      "Een slimme chatbot op je website die bezoekers direct antwoord geeft — ook 's avonds en in het weekend. Hij vangt terugkerende vragen over openingstijden, tarieven en beschikbaarheid automatisch op, en schakelt door naar jou zodra er een echte aanvraag binnenkomt.",
+      "Een slimme chatbot op je website die bezoekers direct antwoord geeft...",
+fullDescription:
+  "Een slimme chatbot op je website die bezoekers direct antwoord geeft, ook 's avonds en in het weekend. Hij vangt terugkerende vragen over openingstijden, tarieven en beschikbaarheid automatisch op, en schakelt door naar jou zodra er een echte aanvraag binnenkomt.",
     bullets: [
       "Beantwoordt standaardvragen 24/7",
       "Getraind op jouw diensten en tarieven",
@@ -47,8 +47,8 @@ const services = [
   },
   {
     image: "/services3.png",
-    title: "Regional Marketing & Retargeting",
-    description: "We drive targeted traffic to your business via strategic...",
+    title: "Regional marketing & retargeting",
+    description: "We drive targeted traffic to your business via...",
     fullDescription:
       "Wij brengen gericht verkeer naar je bedrijf via strategische, lokale campagnes (Meta & Google) op jouw verzorgingsgebied. Met de juiste tracking zorgen we dat misgelopen bezoekers uit de regio alsnog converteren.",
     bullets: [
@@ -121,12 +121,12 @@ const ServiceCard = ({
       />
 
       {/* White box — moves from bottom-overlap to top of the image on hover/click */}
-            <div className="absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[376px] top-[335px] group-hover:top-[20px] lg:group-hover:top-[150px] xl:group-hover:top-[20px] group-data-[open=true]:top-[20px] lg:group-data-[open=true]:top-[150px] xl:group-data-[open=true]:top-[20px] bg-white xl:rounded-[22px] rounded-[18px] xl:px-7 px-4 py-[2.2vh] service-shadow transition-all duration-500 ease-out overflow-hidden z-20">
+            <div className="absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[376px] top-[335px] group-hover:top-[20px] lg:group-hover:top-[150px] xl:group-hover:top-[20px] group-data-[open=true]:top-[20px] lg:group-data-[open=true]:top-[150px] xl:group-data-[open=true]:top-[20px] bg-white xl:rounded-[22px] rounded-[18px] xl:px-7 px-4 py-[1.5vh] service-shadow transition-all duration-500 ease-out overflow-hidden z-20      hover:h-auto    h-[110px] sm:h-[115px] lg:h-[100px] xl:h-[150px] 2xl:h-[135px]    group-data-[open=true]:h-auto    flex flex-col justify-center">
         <h3 className="xl:text-[20px] text-[16px] font-gotham font-bold xl:leading-[28px] text-[#0A192F]">
           {service.title}
         </h3>
 
-        <p className="font-gotham text-[14px] xl:text-[18px] text-black xl:leading-[22px] mt-[.8vh] transition-all duration-300 ease-out group-hover:opacity-0 group-hover:h-0 group-hover:mt-0 group-hover:overflow-hidden group-data-[open=true]:opacity-0 group-data-[open=true]:h-0 group-data-[open=true]:mt-0 group-data-[open=true]:overflow-hidden">
+        <p className="font-gotham text-[14px] xl:text-[18px] text-black xl:leading-[22px] mt-[.5vh] transition-all duration-300 ease-out group-hover:opacity-0 group-hover:h-0 group-hover:mt-0 group-hover:overflow-hidden group-data-[open=true]:opacity-0 group-data-[open=true]:h-0 group-data-[open=true]:mt-0 group-data-[open=true]:overflow-hidden">
           {service.description}
         </p>
 
@@ -137,13 +137,13 @@ const ServiceCard = ({
             </p>
             <ul className="flex flex-col gap-2 mt-[1.4vh] pt-[.4vh] border-t border-black/10">
               {service.bullets.map((bullet) => (
-                <li
-                  key={bullet}
-                  className="flex gap-2 font-gotham text-[14px] text-[#0A192F]"
-                >
-                  <span className="text-[#0CC1FA] font-bold">—</span>
-                  {bullet}
-                </li>
+<li
+  key={bullet}
+  className="flex items-start gap-2 font-gotham text-[14px] text-[#0A192F]"
+>
+  <span className="mt-[6px] w-[6px] h-[6px] rounded-full bg-[#0CC1FA] shrink-0" />
+  {bullet}
+</li>
               ))}
             </ul>
           </div>

@@ -89,7 +89,7 @@ const card4 = useInView<HTMLDivElement>();
           }`}
         >
           <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
-            Hoe We Samenwerken
+            Hoe we samenwerken
           </h2>
 
           <p className="font-gotham text-[14px] xl:text-[18px] text-black mt-3 md:mt-4 2xl:mt-[1.2vh] max-w-[609px] mx-auto leading-[22.8px]">
@@ -102,7 +102,7 @@ const card4 = useInView<HTMLDivElement>();
           className="work-bg relative rounded-[28px] lg:rounded-none overflow-hidden lg:overflow-visible 
           bg-gradient-to-br from-[#01152b] via-[#0a2f52] to-[#124a7d] 
           lg:bg-[url(/work.png)] lg:bg-cover lg:bg-center lg:bg-no-repeat 
-          px-8 sm:px-8 md:px-12 lg:px-16 xl:px-10 2xl:px-50 
+          px-8 sm:px-8 md:px-12 lg:px-16 xl:px-10 2xl:px-0
           pt-10 sm:pt-14 md:pt-16 lg:pt-28 xl:pt-24 2xl:pt-[17vh] 
           pb-10 sm:pb-14 md:pb-16 lg:pb-24 xl:pb-24 2xl:pb-[15vh] 
           mt-8 md:mt-10 2xl:mt-0"
@@ -115,7 +115,7 @@ const card4 = useInView<HTMLDivElement>();
 
           <div
             ref={cardsRef}
-            className="max-w-[1500px] mx-auto
+            className="max-w-[1500px] 2xl:px-12 mx-auto
               grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4
               gap-6
               items-start md:items-stretch
@@ -123,7 +123,7 @@ const card4 = useInView<HTMLDivElement>();
               2xl:flex 2xl:flex-row
               2xl:justify-between
               2xl:items-center
-              2xl:gap-0
+              2xl:gap-4
             "
           >
             {/* Card 01 */}
@@ -143,8 +143,8 @@ const card4 = useInView<HTMLDivElement>();
                   (30 min, gratis)
                 </h3>
 
-                <p className="font-gotham text-[14px] xl:text-[18px] leading-[149%] text-[#012549] capitalize mt-3 2xl:mt-[1vh]">
-                  Jij vertelt wat je wilt bereiken. Je krijgt eerlijk advies —
+                <p className="font-gotham text-[14px] xl:text-[18px] leading-[149%] text-[#012549] mt-3 2xl:mt-[1vh]">
+                  Jij vertelt wat je wilt bereiken. Je krijgt eerlijk advies,
                   ook als we denken dat je het zelf kunt of dat er een
                   goedkopere optie is. Geen salespraat, geen druk. Gewoon een
                   open gesprek.
@@ -162,10 +162,10 @@ const card4 = useInView<HTMLDivElement>();
                 </p>
 
                 <h3 className="font-gotham font-extrabold text-[16px] sm:text-[18px] xl:text-[20px] 2xl:text-[24px] text-black leading-[22px] sm:leading-[24px] xl:leading-[26px] 2xl:leading-[28px] 2xl:pt-12.5 pr-10">
-                  Offerte & Plan
+                  Offerte & plan
                 </h3>
 
-                <p className="font-gotham text-[14px] xl:text-[18px] leading-[149%] text-[#012549] capitalize mt-3 2xl:mt-[1vh]">
+                <p className="font-gotham text-[14px] xl:text-[18px] leading-[149%] text-[#012549]  mt-3 2xl:mt-[1vh]">
                   Je ontvangt een heldere offerte. Concrete tijdlijn.
                   Transparante prijzen. Jij beslist rustig, we sturen je echt
                   niet drie keer achter elkaar een mailtje.
@@ -183,13 +183,13 @@ const card4 = useInView<HTMLDivElement>();
                 </p>
 
                 <h3 className="font-gotham font-extrabold text-[16px] sm:text-[18px] xl:text-[20px] 2xl:text-[24px] text-black leading-[22px] sm:leading-[24px] xl:leading-[26px] 2xl:leading-[28px] 2xl:pt-12.5 pr-10">
-                  Aan de Slag
+                  Aan de slag
                 </h3>
 
-                <p className="font-gotham text-[14px] xl:text-[18px] leading-[149%] text-[#012549] capitalize mt-3 2xl:mt-[1vh]">
+                <p className="font-gotham text-[14px] xl:text-[18px] leading-[149%] text-[#012549] mt-3 2xl:mt-[1vh]">
                   We starten. Wekelijkse check-ins (elke vrijdag een update).
-                  Jij geeft feedback, we passen aan. Website live in 2–4
-                  weken, of ads direct actief. We gaan extra ver voor je —
+                  Jij geeft feedback, we passen aan. Website live in 2 tot 4
+                  weken, of ads direct actief. We gaan extra ver voor je,
                   zeker als je een pilotklant bent.
                 </p>
 
@@ -210,10 +210,10 @@ const card4 = useInView<HTMLDivElement>();
                 </p>
 
                 <h3 className="font-gotham font-extrabold text-[16px] sm:text-[18px] xl:text-[20px] 2xl:text-[24px] text-black leading-[22px] sm:leading-[24px] xl:leading-[26px] 2xl:leading-[28px] 2xl:pt-12.5 pr-10">
-                  Groei & Aanpassen
+                  Groei & aanpassen
                 </h3>
 
-                <p className="font-gotham text-[14px] xl:text-[18px] leading-[149%] text-[#012549] capitalize mt-3 2xl:mt-[1vh]">
+                <p className="font-gotham text-[14px] xl:text-[18px] leading-[149%] text-[#012549] mt-3 2xl:mt-[1vh]">
                   Maandelijkse rapportage in gewoon Nederlands. We kijken
                   samen wat werkt en wat niet. Werkt het niet zoals verwacht?
                   Dan stoppen we maandelijks opzegbaar, geen gezeur.
@@ -223,7 +223,7 @@ const card4 = useInView<HTMLDivElement>();
           </div>
 
           <p
-            className={`font-gotham text-[14px] xl:text-[18px] text-white mt-8 md:mt-4 xl:mt-10 2xl:mt-[5vh] max-w-[960px] mx-auto text-center capitalize leading-[22.8px] transition-all duration-700 ease-out ${
+            className={`font-gotham text-[14px] xl:text-[18px] text-white mt-8 md:mt-4 xl:mt-10 2xl:mt-[5vh] max-w-[960px] mx-auto text-center leading-[22.8px] transition-all duration-700 ease-out ${
               cardsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
             style={{ transitionDelay: cardsVisible ? "480ms" : "0ms" }}

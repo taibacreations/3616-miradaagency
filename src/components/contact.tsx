@@ -77,9 +77,9 @@ const Contact = () => {
             }`}
           >
             <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[30px] sm:leading-[38px] xl:leading-[46px]">
-              Laten we Kennismaken
+              Laten we kennismaken
             </h2>
-            <p className="font-gotham text-[14px] sm:text-[16px] xl:text-[18px] text-black mt-[1.2vh] capitalize">
+            <p className="font-gotham text-[14px] sm:text-[16px] xl:text-[18px] text-black mt-[1.2vh]">
               Benieuwd wat AI en automatisering voor jouw bedrijf kunnen
               betekenen? Neem contact op voor een gratis kennismakingsgesprek.
             </p>
@@ -94,7 +94,7 @@ const Contact = () => {
               style={{ transitionDelay: visible ? "150ms" : "0ms" }}
             >
               <h4 className="font-monument font-bold text-[16px] sm:text-[18px] xl:text-[20px] text-[#0A192F]">
-                Stuur een Bericht
+                Stuur een bericht
               </h4>
 
               <form onSubmit={handleSubmit} className="mt-[2.3vh]">
@@ -190,7 +190,7 @@ const Contact = () => {
                       ? "Versturen..."
                       : status === "success"
                         ? "Verstuurd!"
-                        : "Verstuur Bericht"}
+                        : "Verstuur bericht"}
                   </span>
                 </button>
 

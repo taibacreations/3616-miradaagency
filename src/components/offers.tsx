@@ -10,18 +10,18 @@ const offers = [
   },
   {
     icon: "/offer2.png",
-    title: "24/7 Online",
+    title: "24/7 online",
     description: "Website en chatbot werken ook als jij slaapt",
   },
   {
     icon: "/offer3.png",
-    title: "Meer Klanten",
+    title: "Meer klanten",
     description: "Advertenties gericht op mensen die nu zoeken",
   },
   {
     icon: "/offer4.png",
-    title: "Geen Lock-in",
-    description: "Maandelijks opzegbaar — geen gedwongen contract",
+    title: "Geen lock-in",
+description: "Maandelijks opzegbaar, geen gedwongen contract",
   },
 ];
 

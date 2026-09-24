@@ -11,10 +11,10 @@ declare global {
 }
 
 const services = [
-  "AI Automatiseringen",
-  "AI Chatbots",
-  "Website Ontwikkeling",
-  "Online Advertenties (Google & Meta)",
+  "AI automatiseringen",
+  "AI chatbots",
+  "Website ontwikkeling",
+  "Online advertenties (Google & Meta)",
 ];
 
 const ArrowIcon = () => (
@@ -196,7 +196,7 @@ const Footer = () => {
                     />
                   </Link>
                   <p
-                    className={`${linkText} md:flex-1 md:max-w-[340px] lg:flex-none lg:max-w-none text-white capitalize`}
+                    className={`${linkText} md:flex-1 md:max-w-[340px] lg:flex-none lg:max-w-none text-white`}
                   >
                     AI-oplossingen, automatiseringen én online marketing voor
                     lokale ondernemers. Meer tijd, meer klanten, meer groei.
@@ -271,7 +271,7 @@ const Footer = () => {
           >
             <div className="max-w-[1600px] mx-auto w-full xl:px-15 md:px-6 px-4 flex flex-col md:flex-row md:justify-between items-center text-center md:text-left gap-1 md:gap-3">
               <span>
-                © 2026 Mirada Management B.V. Alle rechten voorbehouden. | KvK:
+                © 2026 Mirada management B.V. alle rechten voorbehouden. | KvK:
                 42084347
               </span>
 

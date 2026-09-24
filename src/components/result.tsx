@@ -45,7 +45,7 @@ const Result = () => {
               Klaar voor meetbaar resultaat?
             </h3>
             <p className="font-gotham text-white text-[16px] sm:text-[18px] xl:text-[20px] leading-[155%] mt-[1vh]">
-              Claim je gratis Pixel- & Conversiescan en ontdek binnen 24 uur
+              Claim je gratis pixel & conversiescan en ontdek binnen 24 uur
               waar de digitale lead-lekken van jouw onderneming zitten. Geen
               verplichtingen.
             </p>
@@ -57,7 +57,7 @@ const Result = () => {
             className="group relative overflow-hidden mt-[2.5vh] flex justify-center items-center gap-3 font-gotham font-medium text-[15px] md:text-[13px] xl:text-[16px] text-white hover:text-[#0CC1FA] bg-[#0CC1FA] w-[236px] h-[53px] rounded-[319px] transition-all duration-500 ease-out"
           >
             <span className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
-            <span className="relative z-10">Claim Gratis Scan</span>
+            <span className="relative z-10">Claim gratis scan</span>
             <div className="relative z-10 bg-white group-hover:bg-[#0CC1FA] rounded-full w-[24px] h-[24px] flex justify-center items-center transition-transform duration-500 ease-out group-hover:scale-110">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
