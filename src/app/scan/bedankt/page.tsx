@@ -126,7 +126,7 @@ function BedanktContent() {
 
           {/* Heading */}
           <h1
-            className={`mt-8 break-words font-monument text-[26px] font-extrabold leading-[1.2] text-white sm:text-[34px] xl:text-[44px] ${fadeClass(mounted)}`}
+            className={`mt-8 break-words  text-[26px] font-bold leading-[1.2] text-white sm:text-[34px] xl:text-[44px] ${fadeClass(mounted)}`}
             style={fade(mounted, 100)}
           >
             {naam ? `Top, ${naam}!` : "Top!"} <span aria-hidden="true">✅</span>
@@ -134,13 +134,13 @@ function BedanktContent() {
 
           {/* Text */}
           <p
-            className={`mt-5 max-w-[640px] font-gotham text-[14px] font-normal leading-[170%] text-white/75 sm:text-[16px] xl:text-[18px] ${fadeClass(mounted)}`}
+            className={`mt-5 max-w-[640px]  text-[14px] font-normal leading-[170%] text-white/75 sm:text-[16px] xl:text-[18px] ${fadeClass(mounted)}`}
             style={fade(mounted, 200)}
           >
             {website ? (
               <>
                 We zijn direct begonnen met de analyse van{" "}
-                <span className="break-words font-bold text-[#0CC1FA]">{website}</span>.
+                <span className="break-words font-semibold text-[#0CC1FA]">{website}</span>.
               </>
             ) : (
               <>We zijn direct begonnen met de analyse van jouw website.</>
@@ -149,7 +149,7 @@ function BedanktContent() {
             {email ? (
               <>
                 {" "}
-                op <span className="break-words font-bold text-white">{email}</span>.
+                op <span className="break-words font-semibold text-white">{email}</span>.
               </>
             ) : (
               <>.</>
@@ -168,7 +168,7 @@ function BedanktContent() {
             className={`w-full max-w-[680px] rounded-3xl border border-black/5 bg-white px-5 py-8 text-left shadow-[0px_10px_40px_0px_#0000001a] sm:px-8 sm:py-10 ${fadeClass(mounted)}`}
             style={fade(mounted, 300)}
           >
-            <h2 className="mb-7 text-center font-gotham text-[16px] font-bold text-[#012549] sm:text-[18px]">
+            <h2 className="mb-7 text-center  text-[16px] font-semibold text-[#012549] sm:text-[18px]">
               Wat staat er in jouw rapport?
             </h2>
 
@@ -191,10 +191,10 @@ function BedanktContent() {
                     </svg>
                   </span>
                   <div>
-                    <p className="font-gotham text-[14px] font-bold text-[#012549] sm:text-[15px]">
+                    <p className=" text-[14px] font-semibold text-[#012549] sm:text-[15px]">
                       {item.title}
                     </p>
-                    <p className="mt-1 font-gotham text-[12px] leading-[160%] text-[#012549]/60 sm:text-[13px]">
+                    <p className="mt-1  text-[12px] leading-[160%] text-[#012549]/60 sm:text-[13px]">
                       {item.text}
                     </p>
                   </div>
@@ -205,18 +205,18 @@ function BedanktContent() {
 
           {/* Tip */}
           <div
-            className={`mt-6 w-full max-w-[680px] rounded-2xl border border-[#0CC1FA]/30 bg-[#0CC1FA]/10 px-5 py-4 text-center font-gotham text-[13px] leading-[160%] text-[#012549]/80 sm:text-[14px] ${fadeClass(mounted)}`}
+            className={`mt-6 w-full max-w-[680px] rounded-2xl border border-[#0CC1FA]/30 bg-[#0CC1FA]/10 px-5 py-4 text-center text-[13px] leading-[160%] text-[#012549]/80 sm:text-[14px] ${fadeClass(mounted)}`}
             style={fade(mounted, 400)}
           >
             <span aria-hidden="true">💡</span>{" "}
-            <span className="font-bold text-[#012549]">Tip:</span> Controleer ook je
+            <span className="font-semibold text-[#012549]">Tip:</span> Controleer ook je
             spam-map, soms belandt ons rapport daar.
           </div>
 
           {/* Back link */}
           <Link
             href="/"
-            className={`group mt-10 inline-flex items-center gap-2 font-gotham text-[14px] text-[#012549]/70 transition-colors hover:text-[#0CC1FA] sm:text-[15px] ${fadeClass(mounted)}`}
+            className={`group mt-10 inline-flex items-center gap-2  text-[14px] text-[#012549]/70 transition-colors hover:text-[#0CC1FA] sm:text-[15px] ${fadeClass(mounted)}`}
             style={fade(mounted, 500)}
           >
             <svg

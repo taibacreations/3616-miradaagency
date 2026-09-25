@@ -98,9 +98,9 @@ const Footer = () => {
     }`;
 
   const linkText =
-    "font-gotham text-[14px] sm:text-[16px] xl:text-[18px] leading-[20px] xl:leading-normal";
+    " text-[14px] sm:text-[16px] xl:text-[18px] leading-[20px] xl:leading-normal";
   const headingText =
-    "font-monument text-[20px] sm:text-[22px] xl:text-[24px] text-white";
+    "font-semibold text-[20px] sm:text-[22px] xl:text-[24px] text-white";
 
   const router = useRouter();
   const pathname = usePathname();
@@ -264,7 +264,7 @@ const Footer = () => {
           <div
             className={`relative z-10 bg-[#0CC1FA] w-full min-h-[50px] lg:h-[60px] px-4 py-3 lg:py-3
              lg:-mt-[45px]
-            flex items-center font-gotham text-white
+            flex items-center font-semibold text-white
             text-[14px] sm:text-[16px] xl:text-[18px] leading-[18px] xl:leading-normal
             ${anim(visible)}`}
             style={{ transitionDelay: visible ? "450ms" : "0ms" }}

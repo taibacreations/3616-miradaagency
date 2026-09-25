@@ -61,7 +61,7 @@ function Reveal({
 const cardClass =
   "rounded-[24px] border border-black/5 bg-white shadow-[0px_4px_29.8px_0px_#00000012]";
 const bodyClass =
-  "font-gotham font-normal text-[16px] leading-[170%] text-[#012549]/80 xl:text-[18px]";
+  " font-normal text-[16px] leading-[170%] text-[#012549]/80 xl:text-[18px]";
 const containerClass = "mx-auto max-w-[1560px] xl:px-10 md:px-6 px-4";
 
 // mobile 50px, md/lg 80px, xl 100px - 2xl pe wapis wahi values jo pehle (sectionPadding se pehle) is section mein thi
@@ -171,17 +171,17 @@ export default function GeoPage() {
           >
             <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#0CC1FA]/40 bg-[#0CC1FA]/10 px-4 py-2">
               <span className="h-1.5 w-1.5 rounded-full bg-[#0CC1FA]" />
-              <span className="font-gotham text-[12px] font-bold text-[#0CC1FA] sm:text-[13px] lg:text-[16px]">
+              <span className=" text-[12px] font-semibold text-[#0CC1FA] sm:text-[13px] lg:text-[16px]">
                 GEO: Generative Engine Optimization
               </span>
             </div>
 
-            <h1 className="mb-6 w-full max-w-[900px] break-words font-monument text-[26px] font-extrabold leading-[1.15] text-white sm:text-[36px] lg:text-[46px] xl:text-[54px]">
+            <h1 className="mb-6 w-full max-w-[900px] break-words text-[26px] font-bold leading-[1.15] text-white sm:text-[36px] lg:text-[46px] xl:text-[54px]">
               Word aanbevolen door{" "}
               <span className="text-[#0CC1FA]">ChatGPT, Gemini &amp; Google AI</span>
             </h1>
 
-            <p className="w-full max-w-[750px] font-gotham text-[16px] font-normal leading-relaxed text-white/80 xl:text-[18px]">
+            <p className="w-full max-w-[750px] text-[16px] font-normal leading-relaxed text-white/80 xl:text-[18px]">
               Steeds meer mensen zoeken niet meer op Google. Ze vragen het direct aan AI.
               Wij zorgen dat jouw bedrijf het antwoord wordt dat AI-modellen geven.
             </p>
@@ -192,7 +192,7 @@ export default function GeoPage() {
             >
               <Link
                 href="/scan"
-                className="group relative overflow-hidden h-[48px] sm:h-[52px] xl:h-[54px] px-8 rounded-[319px] bg-[#0CC1FA] font-gotham font-bold text-[15px] lg:text-[16px] text-white flex items-center justify-center gap-2 transition-all duration-500 ease-out active:scale-95"
+                className="group relative overflow-hidden h-[48px] sm:h-[52px] xl:h-[54px] px-8 rounded-[319px] bg-[#0CC1FA]  font-semibold text-[15px] lg:text-[16px] text-white flex items-center justify-center gap-2 transition-all duration-500 ease-out active:scale-95"
               >
                 <span className="absolute inset-0 bg-[#012549] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
                 <span className="relative z-10 flex items-center gap-2">
@@ -211,7 +211,7 @@ export default function GeoPage() {
       <section className="bg-[#F5F9FC] max-w-[1600px] mx-auto">
         <div className={`${containerClass} ${sectionPadding110}`}>
           <Reveal className="mx-auto max-w-[800px] text-center" threshold={0.2}>
-            <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
+            <h2 className=" font-bold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
               Weet jij of aI jouw bedrijf aanbeveelt?
             </h2>
             <p className={`mt-4 ${bodyClass}`}>
@@ -236,7 +236,7 @@ export default function GeoPage() {
                     </svg>
                   </div>
                   <div className={`relative flex-1 overflow-hidden px-6 pb-7 pt-12 text-center transition-shadow duration-500 ease-out group-hover:shadow-[0_20px_50px_rgba(12,193,250,0.18)] md:px-4 md:pb-6 md:pt-10 xl:px-8 xl:pb-9 xl:pt-14 ${cardClass}`}>
-                    <p className="font-gotham leading-[149%] text-[#012549] text-[16px] xl:text-[18px]">
+                    <p className="leading-[149%] text-[#012549] text-[16px] xl:text-[18px]">
                       {point.text}
                     </p>
                   </div>
@@ -251,7 +251,7 @@ export default function GeoPage() {
       <section className="relative w-full overflow-hidden bg-gradient-to-br from-[#01152b] via-[#0a2f52] to-[#124a7d]">
         <div className={`${containerClass} ${sectionPadding100}`}>
           <Reveal className="mx-auto max-w-[750px] text-center" threshold={0.2}>
-            <h2 className="font-monument font-extrabold text-[24px] sm:text-[30px] xl:text-[38px] text-white leading-[32px] sm:leading-[38px] xl:leading-[46px]">
+            <h2 className=" font-bold text-[24px] sm:text-[30px] xl:text-[38px] text-white leading-[32px] sm:leading-[38px] xl:leading-[46px]">
               Van zoekmachine naar <span className="text-[#0CC1FA]">antwoordmachine</span>
             </h2>
           </Reveal>
@@ -259,12 +259,12 @@ export default function GeoPage() {
           <div className="md:mt-12 mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 xl:gap-8">
             <Reveal delay={0}>
               <div className="h-full rounded-[24px] border border-red-400/20 bg-white/5 backdrop-blur px-6 py-8 sm:px-8">
-                <span className="inline-block rounded-full bg-red-500/15 px-4 py-1.5 font-gotham text-[12px] font-bold text-red-300 lg:text-[16px]">
+                <span className="inline-block rounded-full bg-red-500/15 px-4 py-1.5 text-[12px] font-semibold text-red-300 lg:text-[16px]">
                   Traditionele SEO
                 </span>
                 <ul className="mt-6 flex flex-col gap-4">
                   {oldVsNew.old.map((item) => (
-                    <li key={item} className="flex items-start gap-3 font-gotham text-[14px] leading-[150%] text-white/70 lg:text-[16px]">
+                    <li key={item} className="flex items-start gap-3 text-[14px] leading-[150%] text-white/70 lg:text-[16px]">
                       <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-red-400" />
                       {item}
                     </li>
@@ -275,12 +275,12 @@ export default function GeoPage() {
 
             <Reveal delay={150}>
               <div className="h-full rounded-[24px] border border-[#0CC1FA]/40 bg-white/5 backdrop-blur px-6 py-8 sm:px-8">
-                <span className="inline-block rounded-full bg-[#0CC1FA]/15 px-4 py-1.5 font-gotham text-[12px] font-bold text-[#0CC1FA] lg:text-[16px]">
+                <span className="inline-block rounded-full bg-[#0CC1FA]/15 px-4 py-1.5  text-[12px] font-semibold text-[#0CC1FA] lg:text-[16px]">
                   Met GEO
                 </span>
                 <ul className="mt-6 flex flex-col gap-4">
                   {oldVsNew.new.map((item) => (
-                    <li key={item} className="flex items-start gap-3 font-gotham text-[14px] leading-[150%] text-white lg:text-[16px]">
+                    <li key={item} className="flex items-start gap-3 text-[14px] leading-[150%] text-white lg:text-[16px]">
                       <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#0CC1FA]" />
                       {item}
                     </li>
@@ -296,7 +296,7 @@ export default function GeoPage() {
       <section className="bg-[#F5F9FC] max-w-[1600px] mx-auto">
         <div className={`${containerClass} ${sectionPadding110}`}>
           <Reveal className="mx-auto max-w-[700px] text-center" threshold={0.2}>
-            <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
+            <h2 className=" font-bold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
               Wat wij voor je doen
             </h2>
           </Reveal>
@@ -308,7 +308,7 @@ export default function GeoPage() {
                   <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-[#0CC1FA]/10 font-monument text-[14px] font-extrabold text-[#0CC1FA] lg:text-[16px]">
                     {String(i + 1).padStart(2, "0")}
                   </div>
-                  <h3 className="font-gotham text-[18px] font-bold text-[#012549] xl:text-[20px]">
+                  <h3 className="text-[18px] font-semibold text-[#012549] xl:text-[20px]">
                     {service.title}
                   </h3>
                   <p className={`mt-2 ${bodyClass}`}>{service.text}</p>
@@ -323,7 +323,7 @@ export default function GeoPage() {
       <section className="bg-[#F5F9FC] max-w-[1600px] mx-auto">
         <div className={`${containerClass} ${sectionPaddingTop100}`}>
           <Reveal className="mx-auto max-w-[700px] text-center" threshold={0.2}>
-            <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
+            <h2 className=" font-bold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
               Hoe we samenwerken
             </h2>
           </Reveal>
@@ -335,13 +335,13 @@ export default function GeoPage() {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4 xl:gap-8">
               {process.map((step) => (
                 <div key={step.n} className="rounded-[20px] bg-white px-6 py-7">
-                  <span className="font-monument text-[28px] font-extrabold text-[#0CC1FA]/30">
+                  <span className=" text-[28px] font-extrabold text-[#0CC1FA]/30">
                     {step.n}
                   </span>
-                  <h3 className="mt-2 font-gotham text-[16px] font-bold text-[#012549] lg:text-[18px]">
+                  <h3 className="mt-2 text-[16px] font-semibold text-[#012549] lg:text-[18px]">
                     {step.title}
                   </h3>
-                  <p className="mt-2 font-gotham text-[13px] leading-[150%] text-[#012549]/70 lg:text-[16px]">
+                  <p className="mt-2 text-[13px] leading-[150%] text-[#012549]/70 lg:text-[16px]">
                     {step.text}
                   </p>
                 </div>
@@ -356,15 +356,15 @@ export default function GeoPage() {
         <div className="pointer-events-none absolute -left-40 -bottom-40 h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle,rgba(12,193,250,0.2)_0%,transparent_70%)]" />
         <div className={`relative ${containerClass} ${sectionPadding100} text-center`}>
           <Reveal className="mx-auto max-w-[700px]" threshold={0.2}>
-            <h2 className="font-monument font-extrabold text-[24px] sm:text-[30px] xl:text-[38px] text-white leading-[32px] sm:leading-[38px] xl:leading-[46px]">
+            <h2 className="font-bold text-[24px] sm:text-[30px] xl:text-[38px] text-white leading-[32px] sm:leading-[38px] xl:leading-[46px]">
               Klaar om gevonden te worden door AI?
             </h2>
-            <p className="mt-4 font-gotham text-[15px] font-normal text-white/70 lg:text-[16px] xl:text-[17px]">
+            <p className="mt-4 text-[15px] font-normal text-white/70 lg:text-[16px] xl:text-[17px]">
               Vraag een gratis AI-zichtbaarheidsscan aan en ontdek binnen 24 uur waar je staat.
             </p>
             <Link
               href="/scan"
-              className="group relative mt-8 inline-flex overflow-hidden h-[48px] sm:h-[52px] xl:h-[54px] px-8 rounded-[319px] bg-[#0CC1FA] font-gotham font-bold text-[15px] lg:text-[16px] text-white items-center justify-center gap-2 transition-all duration-500 ease-out active:scale-95"
+              className="group relative mt-8 inline-flex overflow-hidden h-[48px] sm:h-[52px] xl:h-[54px] px-8 rounded-[319px] bg-[#0CC1FA] font-semibold text-[15px] lg:text-[16px] text-white items-center justify-center gap-2 transition-all duration-500 ease-out active:scale-95"
             >
               <span className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
               <span className="relative z-10 flex items-center gap-2 group-hover:text-[#012549] transition-colors duration-500">

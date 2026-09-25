@@ -118,7 +118,7 @@ function Reveal({
 const innerCardClass =
   "rounded-2xl border border-black/5 bg-white shadow-[0px_4px_20px_0px_#0000000d]";
 const bodyClass =
-  "font-gotham font-normal text-[16px] leading-[170%] text-[#012549]/80 md:text-[16px] xl:text-[18px]";
+  " font-normal text-[16px] leading-[170%] text-[#012549]/80 md:text-[16px] xl:text-[18px]";
 const linkClass =
   "text-[#0CC1FA] underline-offset-4 transition-colors hover:text-[#0A93C4] hover:underline";
 
@@ -149,10 +149,10 @@ function SectionBlock({
       }`}
     >
       <div className="mb-5 flex items-center gap-4">
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#0CC1FA] font-monument text-[14px] font-extrabold text-white">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#0CC1FA]  text-[14px] font-bold text-white">
           {number}
         </span>
-        <h2 className="font-gotham text-[20px] font-bold leading-tight text-[#012549] xl:text-[24px]">
+        <h2 className=" text-[20px] font-bold leading-tight text-[#012549] xl:text-[24px]">
           {title}
         </h2>
       </div>
@@ -163,7 +163,7 @@ function SectionBlock({
 
 function SubTitle({ children }: { children: ReactNode }) {
   return (
-    <h3 className="mb-3 font-gotham text-[16px] font-bold text-[#012549] xl:text-[18px]">
+    <h3 className="mb-3  text-[16px] font-semibold text-[#012549] xl:text-[18px]">
       {children}
     </h3>
   );
@@ -179,7 +179,7 @@ function BulletList({ items, cols = false }: { items: string[]; cols?: boolean }
       {items.map((item) => (
         <li
           key={item}
-          className="flex items-start gap-3 font-gotham text-[14px] leading-[150%] text-[#012549] xl:text-[15px]"
+          className="flex items-start gap-3  text-[14px] leading-[150%] text-[#012549] xl:text-[15px]"
         >
           <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#0CC1FA]" />
           {item}
@@ -264,16 +264,16 @@ export default function PrivacyPage() {
           <div ref={hero.ref} className={`flex flex-col ${fadeUp(hero.visible)}`}>
             <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#0CC1FA]/40 bg-[#0CC1FA]/10 px-4 py-2">
               <span className="h-1.5 w-1.5 rounded-full bg-[#0CC1FA]" />
-              <span className="font-gotham text-[12px] font-bold text-[#0CC1FA] sm:text-[13px]">
+              <span className=" text-[12px] font-semibold text-[#0CC1FA] sm:text-[13px]">
                 Juridisch
               </span>
             </div>
 
-            <h1 className="mb-5 break-words font-monument text-[26px] font-extrabold leading-[1.15] text-white sm:text-[36px] lg:text-[44px] xl:text-[52px]">
+            <h1 className="mb-5 break-words  text-[26px] font-bold leading-[1.15] text-white sm:text-[36px] lg:text-[44px] xl:text-[52px]">
               Privacy<span className="text-[#0CC1FA]">beleid</span>
             </h1>
 
-            <p className="font-gotham text-[14px] font-normal text-white/70 xl:text-[16px]">
+            <p className=" text-[14px] font-normal text-white/70 xl:text-[16px]">
               Laatst bijgewerkt: 14 juni 2026
             </p>
           </div>
@@ -294,7 +294,7 @@ export default function PrivacyPage() {
                     <li key={item.id}>
                       <a
                         href={`#${item.id}`}
-                        className={`flex items-start gap-3 rounded-xl px-3 py-2 font-gotham text-[14px] xl:text-[16px] leading-[140%] transition-colors ${
+                        className={`flex items-start gap-3 rounded-xl px-3 py-2 text-[14px] xl:text-[16px] leading-[140%] transition-colors ${
                           activeId === item.id
                             ? "bg-[#0CC1FA]/10 text-[#012549]"
                             : "text-[#012549]/80 hover:bg-[#0CC1FA]/10 hover:text-[#012549]"
@@ -331,7 +331,7 @@ export default function PrivacyPage() {
                 </p>
 
                 <dl
-                  className={`mt-6 flex flex-col gap-2 border-l-[3px] border-l-[#0CC1FA] px-5 py-5 font-gotham text-[14px] leading-[150%] text-[#012549] xl:text-[15px] ${innerCardClass}`}
+                  className={`mt-6 flex flex-col gap-2 border-l-[3px] border-l-[#0CC1FA] px-5 py-5 text-[14px] leading-[150%] text-[#012549] xl:text-[15px] ${innerCardClass}`}
                 >
                   <div>
                     <dt className="inline font-bold">Bedrijfsnaam: </dt>
@@ -382,7 +382,7 @@ export default function PrivacyPage() {
                     bezoekersstatistieken bij te houden. Dit omvat:
                   </p>
                   <BulletList items={analyticsData} cols />
-                  <p className="mt-4 rounded-xl bg-[#0CC1FA]/10 px-4 py-3 font-gotham text-[13px] leading-[160%] text-[#012549]/80 xl:text-[14px]">
+                  <p className="mt-4 rounded-xl bg-[#0CC1FA]/10 px-4 py-3  text-[13px] leading-[160%] text-[#012549]/80 xl:text-[14px]">
                     IP-adressen worden geanonimiseerd. We delen deze gegevens niet met derden
                     voor commerciële doeleinden.
                   </p>
@@ -396,7 +396,7 @@ export default function PrivacyPage() {
                     <li key={p.title} className="flex items-start gap-3">
                       <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#0CC1FA]" />
                       <div>
-                        <p className="font-gotham text-[16px] font-bold text-[#012549] xl:text-[18px]">
+                        <p className="text-[16px] font-bold text-[#012549] xl:text-[18px]">
                           {p.title}
                         </p>
                         <p className={`mt-1 ${bodyClass}`}>{p.text}</p>
@@ -420,10 +420,10 @@ export default function PrivacyPage() {
                         i !== retention.length - 1 ? "border-b border-black/10" : ""
                       } ${i === 0 ? "pt-0" : ""}`}
                     >
-                      <span className="font-gotham text-[16px] font-bold text-[#012549] xl:text-[18px]">
+                      <span className=" text-[16px] font-bold text-[#012549] xl:text-[18px]">
                         {row.label}
                       </span>
-                      <span className="font-gotham text-[14px] text-[#012549]/60 sm:text-right xl:text-[16px]">
+                      <span className=" text-[14px] text-[#012549]/60 sm:text-right xl:text-[16px]">
                         {row.value}
                       </span>
                     </div>
@@ -441,24 +441,24 @@ export default function PrivacyPage() {
 
                 <div className="mt-5 flex flex-col gap-3">
                   <div className="flex flex-wrap items-center gap-3">
-                    <span className="rounded-md bg-emerald-100 px-3 py-1 font-gotham text-[12px] font-bold text-emerald-700">
+                    <span className="rounded-md bg-emerald-100 px-3 py-1  text-[12px] font-bold text-emerald-700">
                       Noodzakelijk
                     </span>
-                    <span className="font-gotham text-[14px] text-[#012549]/80 xl:text-[15px]">
+                    <span className="text-[14px] text-[#012549]/80 xl:text-[15px]">
                       Altijd actief. Nodig voor de basisfunctionaliteit van de website.
                     </span>
                   </div>
                   <div className="flex flex-wrap items-center gap-3">
-                    <span className="rounded-md bg-blue-100 px-3 py-1 font-gotham text-[12px] font-bold text-blue-700">
+                    <span className="rounded-md bg-blue-100 px-3 py-1 text-[12px] font-bold text-blue-700">
                       Statistieken
                     </span>
-                    <span className="font-gotham text-[14px] text-[#012549]/80 xl:text-[15px]">
+                    <span className=" text-[14px] text-[#012549]/80 xl:text-[15px]">
                       Google analytics, alleen na jouw toestemming.
                     </span>
                   </div>
                 </div>
 
-                <p className="mt-6 border-t border-black/10 pt-5 font-gotham text-[13px] leading-[160%] text-[#012549]/60 xl:text-[14px]">
+                <p className="mt-6 border-t border-black/10 pt-5  text-[13px] leading-[160%] text-[#012549]/60 xl:text-[14px]">
                   Je kunt je cookievoorkeuren op elk moment aanpassen via de{" "}
                   <button
                     type="button"
@@ -484,17 +484,17 @@ export default function PrivacyPage() {
                       key={r.title}
                       className={`border-l-[3px] border-l-[#0CC1FA] px-5 py-5 transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(12,193,250,0.15)] ${innerCardClass}`}
                     >
-                      <p className="font-gotham text-[15px] font-bold text-[#012549] xl:text-[16px]">
+                      <p className=" text-[15px] font-bold text-[#012549] xl:text-[16px]">
                         {r.title}
                       </p>
-                      <p className="mt-1 font-gotham text-[13px] leading-[150%] text-[#012549]/60 xl:text-[14px]">
+                      <p className="mt-1 text-[13px] leading-[150%] text-[#012549]/60 xl:text-[14px]">
                         {r.text}
                       </p>
                     </div>
                   ))}
                 </div>
 
-                <p className="mt-6 font-gotham text-[13px] leading-[160%] text-[#012549]/60 xl:text-[14px]">
+                <p className="mt-6  text-[13px] leading-[160%] text-[#012549]/60 xl:text-[14px]">
                   Om gebruik te maken van je rechten, neem je contact op via{" "}
                   <Link href={CONTACT_EMAIL_HREF} className={`${linkClass} break-words`}>
                     {CONTACT_EMAIL}

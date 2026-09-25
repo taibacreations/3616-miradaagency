@@ -49,7 +49,7 @@ const Gurantee = () => {
           }`}
           style={{ transitionDelay: visible ? "150ms" : "0ms" }}
         >
-          <h3 className="font-gotham text-[20px] sm:text-[22px] xl:text-[24px] font-bold">
+          <h3 className="text-[28px] sm:text-[32px] xl:text-[34px] font-bold">
             Wat wij garanderen
           </h3>
 
@@ -60,7 +60,7 @@ const Gurantee = () => {
                 alt="check"
                 className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
               />
-              <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
+              <h4 className=" text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
                 Technisch waterdichte implementatie
               </h4>
             </div>
@@ -70,7 +70,7 @@ const Gurantee = () => {
                 alt="check"
                 className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
               />
-              <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
+              <h4 className=" text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
                 Wekelijks contact over de voortgang
               </h4>
             </div>
@@ -80,7 +80,7 @@ const Gurantee = () => {
                 alt="check"
                 className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
               />
-              <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
+              <h4 className=" text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
                 Transparante rapportages in begrijpelijk Nederlands
               </h4>
             </div>
@@ -90,7 +90,7 @@ const Gurantee = () => {
                 alt="check"
                 className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto "
               />
-              <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
+              <h4 className=" text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
                 Meetbare resultaten binnen de afgesproken termijn
               </h4>
             </div>
@@ -100,7 +100,7 @@ const Gurantee = () => {
                 alt="check"
                 className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
               />
-              <h4 className="font-gotham text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
+              <h4 className=" text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
                 Geen lange contracten, flexibel en schaalbaar
               </h4>
             </div>

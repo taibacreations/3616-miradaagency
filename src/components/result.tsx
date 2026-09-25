@@ -36,15 +36,15 @@ const Result = () => {
           style={{ transitionDelay: visible ? "0ms" : "0ms" }}
         >
           <div
-            className={`max-w-[636px] transition-all duration-700 ease-out ${
+            className={`max-w-[620px] transition-all duration-700 ease-out ${
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
             style={{ transitionDelay: visible ? "200ms" : "0ms" }}
           >
-            <h3 className="font-gotham text-[20px] sm:text-[22px] xl:text-[24px] font-bold text-white">
+            <h3 className=" text-[28px] sm:text-[32px] xl:text-[34px] font-bold text-white">
               Klaar voor meetbaar resultaat?
             </h3>
-            <p className="font-gotham text-white text-[16px] sm:text-[18px] xl:text-[20px] leading-[155%] mt-[1vh]">
+            <p className=" text-white text-[16px] sm:text-[18px] xl:text-[20px] leading-[155%] mt-[1vh]">
               Claim je gratis pixel & conversiescan en ontdek binnen 24 uur
               waar de digitale lead-lekken van jouw onderneming zitten. Geen
               verplichtingen.
@@ -54,7 +54,7 @@ const Result = () => {
 
           <Link
             href="/scan"
-            className="group relative overflow-hidden mt-[2.5vh] flex justify-center items-center gap-3 font-gotham font-medium text-[15px] md:text-[13px] xl:text-[16px] text-white hover:text-[#0CC1FA] bg-[#0CC1FA] w-[236px] h-[53px] rounded-[319px] transition-all duration-500 ease-out"
+            className="group relative overflow-hidden mt-[2.5vh] flex justify-center items-center gap-3  font-semibold text-[15px] md:text-[13px] xl:text-[16px] text-white hover:text-[#0CC1FA] bg-[#0CC1FA] w-[236px] h-[53px] rounded-[319px] transition-all duration-500 ease-out"
           >
             <span className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
             <span className="relative z-10">Claim gratis scan</span>

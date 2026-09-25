@@ -63,11 +63,11 @@ const Offers = () => {
                   alt="vector"
                   className="pointer-events-none z-10 w-[50px] md:w-[65px] lg:w-[70px] xl:w-[100px] h-auto absolute left-1/2 -translate-x-1/2 top-[-20%] md:top-[-25%] lg:top-[-30%] transition-transform duration-500 ease-out group-hover:scale-110"
                 />
-                <div className="relative w-full lg:w-[220px] xl:w-[300px] 2xl:w-[314px] h-[165px] md:h-[165px] lg:h-[150px] xl:h-[176px] rounded-[24px] bg-[#F5F9FC] text-center px-4 lg:px-5 xl:px-7 pt-[5vh] md:pt-[5.5vh] lg:pt-[5.5vh] xl:pt-[6.5vh] transition-shadow duration-500 ease-out group-hover:shadow-[0_20px_50px_rgba(12,193,250,0.18)]">
-                  <h3 className="font-gotham font-bold text-[16px] sm:text-[18px] xl:text-[20px] text-[#0A192F]">
+                <div className="relative w-full lg:w-[220px] xl:w-[300px] 2xl:w-[314px] min-h-[165px] md:min-h-[165px] lg:min-h-[150px] xl:min-h-[176px] rounded-[24px] bg-[#F5F9FC] text-center px-4 lg:px-5 xl:px-7 pt-[5vh] pb-[2.5vh] md:pt-[5.5vh] md:pb-[1vh] lg:pt-[3.5vh] lg:pb-[2.5vh] xl:pt-[6.5vh] xl:pb-[4vh] transition-shadow duration-500 ease-out group-hover:shadow-[0_20px_50px_rgba(12,193,250,0.18)]">
+                  <h3 className="font-semibold text-[16px] sm:text-[18px] xl:text-[20px] text-[#0A192F]">
                     {offer.title}
                   </h3>
-                  <p className="font-gotham text-[15px] lg:text-[16px] xl:text-[16px] text-black leading-[18px] md:leading-[20px] lg:leading-[19px] xl:leading-[24px] mt-[.8vh]">
+                  <p className="text-[15px] lg:text-[16px] xl:text-[16px] text-black leading-[18px] md:leading-[20px] lg:leading-[19px] xl:leading-[24px] mt-[.8vh]">
                     {offer.description}
                   </p>
                 </div>

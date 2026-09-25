@@ -41,16 +41,16 @@ const Banner = () => {
               mounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"
             }`}
           >
-            <h4 className="font-gotham text-[14px] sm:text-[17px] xl:text-[20px] text-white">
+            <h4 className="text-[14px] sm:text-[17px] xl:text-[20px] text-white">
               Slimme AI-workflows & converterende websites
             </h4>
-            <h1 className="font-monument font-extrabold text-[30px] leading-[34px] sm:text-[44px] sm:leading-[48px] md:text-[52px] md:leading-[56px] 2xl:text-[60px] xl:leading-[64px] text-white tracking-[0.05em] mt-[1.3vh] h1">
+            <h1 className="font-extrabold text-[30px] leading-[34px] sm:text-[44px] sm:leading-[48px] md:text-[52px] md:leading-[56px] 2xl:text-[60px] xl:leading-[64px] text-white tracking-[0.05em] mt-[1.3vh] h1">
               Voor lokale ondernemers.
             </h1>
           </div>
 
           <h4
-            className={`font-gotham text-[14px] sm:text-[17px] xl:text-[20px] text-white mt-[2.5vh] transition-all duration-700 ease-out ${
+            className={`text-[14px] sm:text-[17px] xl:text-[20px] text-white mt-[2.5vh] transition-all duration-700 ease-out ${
               mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
             style={{ transitionDelay: mounted ? "150ms" : "0ms" }}
@@ -59,7 +59,7 @@ const Banner = () => {
           </h4>
 
           <p
-            className={`text-white text-[14px] sm:text-[16px] xl:text-[18px] font-gotham mt-[2vh] transition-all duration-700 ease-out ${
+            className={`text-white text-[14px] sm:text-[16px] xl:text-[18px] mt-[2vh] transition-all duration-700 ease-out ${
               mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
             style={{ transitionDelay: mounted ? "280ms" : "0ms" }}
@@ -77,7 +77,7 @@ const Banner = () => {
           >
             <Link
               href={"/scan"}
-              className="group relative overflow-hidden flex justify-center items-center gap-4 font-gotham font-medium text-[15px] md:text-[13px] xl:text-[16px] text-white hover:text-[#0CC1FA] bg-[#0CC1FA] w-[250px] sm:w-[240px] xl:w-[274px] h-[52px] xl:h-[56px] rounded-[319px] transition-all duration-500 ease-out"
+              className="group relative overflow-hidden flex justify-center items-center gap-4 font-semibold text-[15px] md:text-[13px] xl:text-[16px] text-white hover:text-[#0CC1FA] bg-[#0CC1FA] w-[250px] sm:w-[240px] xl:w-[274px] h-[52px] xl:h-[56px] rounded-[319px] transition-all duration-500 ease-out"
             >
               <span className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
               <span className="relative z-10 transition-transform duration-300 ease-out">
@@ -104,7 +104,7 @@ const Banner = () => {
             <Link
               href="/#diensten"
               onClick={handleServiceClick}
-              className="group relative w-fit font-gotham font-medium text-[14px] md:text-[13px] xl:text-[16px] text-white underline-offset-4 decoration-white/60 transition-all duration-300 ease-out hover:text-[#0CC1FA] hover:decoration-[#0CC1FA]"
+              className="group relative w-fit font-bold text-[14px] md:text-[13px] xl:text-[16px] text-white underline-offset-4 decoration-white/60 transition-all duration-300 ease-out hover:text-[#0CC1FA] hover:decoration-[#0CC1FA]"
             >
               <span className="relative">
                 Ontdek onze diensten
@@ -128,7 +128,7 @@ const Banner = () => {
                     alt="check"
                     className="transition-transform duration-300 ease-out group-hover:scale-110"
                   />
-                  <h5 className="font-gotham text-[14px] xl:text-[18px] text-white transition-colors duration-300 ease-out group-hover:text-[#0CC1FA] ">
+                  <h5 className="text-[14px] xl:text-[18px] text-white transition-colors duration-300 ease-out group-hover:text-[#0CC1FA] ">
                     {item}
                   </h5>
                 </div>
@@ -143,7 +143,7 @@ const Banner = () => {
                     alt="check"
                     className="transition-transform duration-300 ease-out group-hover:scale-110"
                   />
-                  <h5 className="font-gotham text-[14px] xl:text-[18px] text-white transition-colors duration-300 ease-out group-hover:text-[#0CC1FA]">
+                  <h5 className=" text-[14px] xl:text-[18px] text-white transition-colors duration-300 ease-out group-hover:text-[#0CC1FA]">
                     {item}
                   </h5>
                 </div>

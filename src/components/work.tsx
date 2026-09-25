@@ -88,11 +88,11 @@ const card4 = useInView<HTMLDivElement>();
               : "opacity-0 translate-y-6"
           }`}
         >
-          <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
+          <h2 className="font-bold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
             Hoe we samenwerken
           </h2>
 
-          <p className="font-gotham text-[14px] xl:text-[18px] text-black mt-3 md:mt-4 2xl:mt-[1.2vh] max-w-[609px] mx-auto leading-[22.8px]">
+          <p className=" text-[14px] xl:text-[18px] text-black mt-3 md:mt-4 2xl:mt-[1.2vh] max-w-[609px] mx-auto leading-[22.8px]">
             Geen verborgen stappen. Geen weken wachten op een antwoord. Vier
             stappen, helder en transparant.
           </p>
@@ -133,17 +133,17 @@ const card4 = useInView<HTMLDivElement>();
   style={{ transitionDelay: card1.visible ? "0ms" : "0ms" }}
             >
               <div>
-                <p className="font-gotham text-[32px] sm:text-[40px] xl:text-[48px] 2xl:text-[55px] font-extrabold text-[#0000001A] absolute right-2 xl:right-3 top-1 2xl:top-auto">
+                <p className=" text-[32px] sm:text-[40px] xl:text-[48px] 2xl:text-[55px] font-semibold text-[#0000001A] absolute right-2 xl:right-3 top-1 2xl:top-auto">
                   01
                 </p>
 
-                <h3 className="font-gotham font-extrabold text-[16px] sm:text-[18px] xl:text-[20px] 2xl:text-[24px] text-black leading-[22px] sm:leading-[24px] xl:leading-[26px] 2xl:leading-[28px] 2xl:pt-12.5 pr-10">
+                <h3 className="font-semibold text-[16px] sm:text-[18px] xl:text-[20px] 2xl:text-[24px] text-black leading-[22px] sm:leading-[24px] xl:leading-[26px] 2xl:leading-[28px] 2xl:pt-12.5 pr-10">
                   Kennismaking
                   <br />
                   (30 min, gratis)
                 </h3>
 
-                <p className="font-gotham text-[14px] xl:text-[18px] leading-[149%] text-[#012549] mt-3 2xl:mt-[1vh]">
+                <p className=" text-[14px] xl:text-[18px] leading-[149%] text-[#012549] mt-3 2xl:mt-[1vh]">
                   Jij vertelt wat je wilt bereiken. Je krijgt eerlijk advies,
                   ook als we denken dat je het zelf kunt of dat er een
                   goedkopere optie is. Geen salespraat, geen druk. Gewoon een
@@ -157,15 +157,15 @@ const card4 = useInView<HTMLDivElement>();
   className={`${cardBase} ${cardAnim(card2.visible)}`}
   style={{ transitionDelay: card2.visible ? "120ms" : "0ms" }}>
               <div>
-                <p className="font-gotham text-[32px] sm:text-[40px] xl:text-[48px] 2xl:text-[55px] font-extrabold text-[#0000001A] absolute right-2 xl:right-3 top-1 2xl:top-auto">
+                <p className=" text-[32px] sm:text-[40px] xl:text-[48px] 2xl:text-[55px] font-semibold text-[#0000001A] absolute right-2 xl:right-3 top-1 2xl:top-auto">
                   02
                 </p>
 
-                <h3 className="font-gotham font-extrabold text-[16px] sm:text-[18px] xl:text-[20px] 2xl:text-[24px] text-black leading-[22px] sm:leading-[24px] xl:leading-[26px] 2xl:leading-[28px] 2xl:pt-12.5 pr-10">
+                <h3 className="font-semibold text-[16px] sm:text-[18px] xl:text-[20px] 2xl:text-[24px] text-black leading-[22px] sm:leading-[24px] xl:leading-[26px] 2xl:leading-[28px] 2xl:pt-12.5 pr-10">
                   Offerte & plan
                 </h3>
 
-                <p className="font-gotham text-[14px] xl:text-[18px] leading-[149%] text-[#012549]  mt-3 2xl:mt-[1vh]">
+                <p className=" text-[14px] xl:text-[18px] leading-[149%] text-[#012549]  mt-3 2xl:mt-[1vh]">
                   Je ontvangt een heldere offerte. Concrete tijdlijn.
                   Transparante prijzen. Jij beslist rustig, we sturen je echt
                   niet drie keer achter elkaar een mailtje.
@@ -178,15 +178,15 @@ const card4 = useInView<HTMLDivElement>();
   className={`${cardBase} ${cardAnim(card3.visible)}`}
   style={{ transitionDelay: card3.visible ? "240ms" : "0ms" }}>
               <div>
-                <p className="font-gotham text-[32px] sm:text-[40px] xl:text-[48px] 2xl:text-[55px] font-extrabold text-[#0000001A] absolute right-2 xl:right-3 top-1 2xl:top-auto">
+                <p className=" text-[32px] sm:text-[40px] xl:text-[48px] 2xl:text-[55px] font-semibold text-[#0000001A] absolute right-2 xl:right-3 top-1 2xl:top-auto">
                   03
                 </p>
 
-                <h3 className="font-gotham font-extrabold text-[16px] sm:text-[18px] xl:text-[20px] 2xl:text-[24px] text-black leading-[22px] sm:leading-[24px] xl:leading-[26px] 2xl:leading-[28px] 2xl:pt-12.5 pr-10">
+                <h3 className=" font-semibold text-[16px] sm:text-[18px] xl:text-[20px] 2xl:text-[24px] text-black leading-[22px] sm:leading-[24px] xl:leading-[26px] 2xl:leading-[28px] 2xl:pt-12.5 pr-10">
                   Aan de slag
                 </h3>
 
-                <p className="font-gotham text-[14px] xl:text-[18px] leading-[149%] text-[#012549] mt-3 2xl:mt-[1vh]">
+                <p className=" text-[14px] xl:text-[18px] leading-[149%] text-[#012549] mt-3 2xl:mt-[1vh]">
                   We starten. Wekelijkse check-ins (elke vrijdag een update).
                   Jij geeft feedback, we passen aan. Website live in 2 tot 4
                   weken, of ads direct actief. We gaan extra ver voor je,
@@ -205,15 +205,15 @@ const card4 = useInView<HTMLDivElement>();
   className={`${cardBase} ${cardAnim(card4.visible)}`}
   style={{ transitionDelay: card4.visible ? "360ms" : "0ms" }}>
               <div>
-                <p className="font-gotham text-[32px] sm:text-[40px] xl:text-[48px] 2xl:text-[55px] font-extrabold text-[#0000001A] absolute right-2 xl:right-3 top-1 2xl:top-auto">
+                <p className=" text-[32px] sm:text-[40px] xl:text-[48px] 2xl:text-[55px] font-semibold text-[#0000001A] absolute right-2 xl:right-3 top-1 2xl:top-auto">
                   04
                 </p>
 
-                <h3 className="font-gotham font-extrabold text-[16px] sm:text-[18px] xl:text-[20px] 2xl:text-[24px] text-black leading-[22px] sm:leading-[24px] xl:leading-[26px] 2xl:leading-[28px] 2xl:pt-12.5 pr-10">
+                <h3 className="font-semibold text-[16px] sm:text-[18px] xl:text-[20px] 2xl:text-[24px] text-black leading-[22px] sm:leading-[24px] xl:leading-[26px] 2xl:leading-[28px] 2xl:pt-12.5 pr-10">
                   Groei & aanpassen
                 </h3>
 
-                <p className="font-gotham text-[14px] xl:text-[18px] leading-[149%] text-[#012549] mt-3 2xl:mt-[1vh]">
+                <p className=" text-[14px] xl:text-[18px] leading-[149%] text-[#012549] mt-3 2xl:mt-[1vh]">
                   Maandelijkse rapportage in gewoon Nederlands. We kijken
                   samen wat werkt en wat niet. Werkt het niet zoals verwacht?
                   Dan stoppen we maandelijks opzegbaar, geen gezeur.
@@ -223,7 +223,7 @@ const card4 = useInView<HTMLDivElement>();
           </div>
 
           <p
-            className={`font-gotham text-[14px] xl:text-[18px] text-white mt-8 md:mt-4 xl:mt-10 2xl:mt-[5vh] max-w-[960px] mx-auto text-center leading-[22.8px] transition-all duration-700 ease-out ${
+            className={` text-[14px] xl:text-[18px] text-white mt-8 md:mt-4 xl:mt-10 2xl:mt-[5vh] max-w-[960px] mx-auto text-center leading-[22.8px] transition-all duration-700 ease-out ${
               cardsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
             style={{ transitionDelay: cardsVisible ? "480ms" : "0ms" }}

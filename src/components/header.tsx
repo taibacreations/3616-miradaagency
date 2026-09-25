@@ -194,7 +194,7 @@ const Header = () => {
             {navLinks.map((link, i) => (
               <Link
                 key={link.label}
-                className={`group relative font-gotham font-light text-[16px] 2xl:text-[18px] leading-[100%] transition-all duration-700 ease-out ${
+                className={`group relative text-[16px] 2xl:text-[18px] leading-[100%] transition-all duration-700 ease-out ${
                   isActive(link.href) ? "text-[#0CC1FA]" : "text-white"
                 }`}
                 style={{
@@ -292,7 +292,7 @@ const Header = () => {
                 key={link.label}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className={`font-gotham font-light text-[22px] transition-all duration-500 ease-out hover:pl-2 hover:text-[#0CC1FA] ${
+                className={` text-[22px] transition-all duration-500 ease-out hover:pl-2 hover:text-[#0CC1FA] ${
                   isActive(link.href) ? "text-[#0CC1FA] pl-2" : "text-white"
                 }`}
                 style={{
@@ -334,7 +334,7 @@ const ContactButton = ({
     <Link
       href={"/#contact"}
       onClick={onClick}
-      className={`group relative overflow-hidden flex justify-center items-center gap-3 font-gotham font-medium text-[16px] text-white h-[50px] rounded-[319px] transition-all duration-500 ease-out bg-[#0CC1FA] ${
+      className={`group relative overflow-hidden flex justify-center items-center gap-3 font-semibold text-[16px] text-white h-[50px] rounded-[319px] transition-all duration-500 ease-out bg-[#0CC1FA] ${
         full ? "w-[134px]" : "w-[134px]"
       }`}
     >

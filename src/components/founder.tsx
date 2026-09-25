@@ -54,23 +54,23 @@ const Founder = () => {
           }`}
         >
           <div className="max-w-full sm:max-w-[443px]">
-            <p className="font-gotham text-[16px] sm:text-[18px] xl:text-[20px] text-black capitalize">
+            <p className="text-[16px] sm:text-[18px] xl:text-[20px] text-black capitalize">
               Over mirada agency
             </p>
-            <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[34px] sm:leading-[40px] xl:leading-[46px] mt-[1vh] ">
+            <h2 className="font-bold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[34px] sm:leading-[40px] xl:leading-[46px] mt-[1vh] ">
               Het gezicht achter mirada
             </h2>
           </div>
 
           <div className="max-w-full sm:max-w-[607px] mt-[2.5vh]">
-            <p className="font-gotham text-[14px] sm:text-[16px] xl:text-[18px] leading-[129%] text-black font-normal">
+            <p className=" text-[14px] sm:text-[16px] xl:text-[18px] leading-[129%] text-black font-normal">
               Achter Mirada Agency staat Virgil Ippel. Met meer dan 15
               jaar diepgaande expertise in het leiden van complexe
               IT-omgevingen, systeemtransities en procesoptimalisaties, breng ik
               het beste van twee werelden samen naar de lokale ondernemer:
               hardcore IT-structuur en resultaatgerichte online marketing.
             </p>
-            <p className="font-gotham text-[14px] sm:text-[16px] xl:text-[18px] leading-[129%] text-black font-normal mt-[3.5vh]">
+            <p className="text-[14px] sm:text-[16px] xl:text-[18px] leading-[129%] text-black font-normal mt-[3.5vh]">
               Bij Mirada geloven we niet in ingewikkelde marketingtermen, wel in
               transparantie, korte lijnen en meetbaar resultaat in de regio. We
               introduceren nu tijdelijk exclusieve AI-pilotprojecten voor een
@@ -100,7 +100,7 @@ const Founder = () => {
                     className="w-full flex items-center justify-between gap-4 pl-6 sm:pl-8 xl:pl-5 pr-5 py-4 text-left"
                   >
                     <span
-                      className={`font-gotham font-bold text-[14px] sm:text-[16px] xl:text-[18px] transition-colors duration-300 ${
+                      className={` font-semibold text-[14px] sm:text-[16px] xl:text-[18px] transition-colors duration-300 ${
                         isOpen ? "text-white" : "text-[#0A192F]"
                       }`}
                     >
@@ -131,7 +131,7 @@ const Founder = () => {
                     style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
                   >
                     <div className="overflow-hidden">
-                      <p className="font-gotham text-[14px] sm:text-[15px] xl:text-[16px] leading-[22px] xl:leading-[24px] text-white/85 pl-6 sm:pl-8 xl:pl-5 pr-5 pb-5">
+                      <p className=" text-[14px] sm:text-[15px] xl:text-[16px] leading-[22px] xl:leading-[24px] text-white/85 pl-6 sm:pl-8 xl:pl-5 pr-5 pb-5">
                         {faq.answer}
                       </p>
                     </div>
@@ -159,10 +159,10 @@ const Founder = () => {
               alt="founder"
               className="w-[160px] sm:w-[230px] md:w-[220px] lg:w-[310px] xl:w-[373px] h-auto"
             />
-            <h3 className="font-gotham text-[22px] sm:text-[30px] md:text-[28px] lg:text-[38px] xl:text-[44px] font-extrabold text-white mt-[-1.5vh]">
+            <h3 className=" text-[22px] sm:text-[30px] md:text-[28px] lg:text-[38px] xl:text-[44px] font-bold text-white mt-[-1.5vh]">
               Virgil Ippel
             </h3>
-            <p className="font-gotham text-[15px] sm:text-[19px] md:text-[18px] lg:text-[24px] xl:text-[28px] text-white mt-[1.5vh]">
+            <p className="text-[15px] sm:text-[19px] md:text-[18px] lg:text-[24px] xl:text-[28px] text-white mt-[1.5vh]">
               Mirada Agency
             </p>
           </div>

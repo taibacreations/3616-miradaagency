@@ -89,11 +89,11 @@ const Faq = () => {
             }`}
           >
             <div className="max-w-full sm:max-w-[508px]">
-              <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[34px] sm:leading-[40px] xl:leading-[46px] max-w-full sm:max-w-[403px]">
+              <h2 className="font-bold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[34px] sm:leading-[40px] xl:leading-[46px] max-w-full sm:max-w-[403px]">
                 Alles wat
                 <br /> je wil weten
               </h2>
-              <p className="font-gotham text-[14px] sm:text-[16px] xl:text-[18px] text-black mt-[2.5vh]">
+              <p className="text-[14px] sm:text-[16px] xl:text-[18px] text-black mt-[2.5vh]">
                 Geen vage antwoorden. Gewoon eerlijk en to the point.
               </p>
             </div>
@@ -115,7 +115,7 @@ const Faq = () => {
                       className="w-full flex items-center justify-between gap-4 pl-6 sm:pl-8 xl:pl-5 pr-5 py-4 text-left"
                     >
                       <span
-                        className={`font-gotham font-bold text-[14px] sm:text-[16px] xl:text-[18px] transition-colors duration-300 ${
+                        className={` font-semibold text-[14px] sm:text-[16px] xl:text-[18px] transition-colors duration-300 ${
                           isOpen ? "text-white" : "text-[#0A192F]"
                         }`}
                       >
@@ -148,7 +148,7 @@ const Faq = () => {
                       }}
                     >
                       <div className="overflow-hidden">
-                        <p className="font-gotham text-[14px] sm:text-[15px] xl:text-[16px] leading-[22px] xl:leading-[24px] text-white/85 pl-6 sm:pl-8 xl:pl-5 pr-5 pb-5">
+                        <p className=" text-[14px] sm:text-[15px] xl:text-[16px] leading-[22px] xl:leading-[24px] text-white/85 pl-6 sm:pl-8 xl:pl-5 pr-5 pb-5">
                           {faq.answer}
                         </p>
                       </div>
@@ -158,14 +158,14 @@ const Faq = () => {
               })}
             </div>
 
-            <h4 className="font-gotham text-[14px] sm:text-[16px] xl:text-[18px] text-black mt-[3.5vh]">
+            <h4 className="text-[14px] sm:text-[16px] xl:text-[18px] text-black mt-[3.5vh]">
               Staat jouw vraag er niet bij?
             </h4>
 
             <Link
               href={"/#contact"}
               onClick={handleContactClick}
-              className={`mt-[2.5vh] group relative overflow-hidden flex justify-center items-center xl:gap-4 font-gotham font-medium text-[13px] xl:text-[16px] text-white bg-[#0CC1FA] w-full sm:w-[200px] xl:w-[250px] h-[50px] sm:h-[52px] xl:h-[56px] rounded-[319px] transition-all duration-500 ease-out ${
+              className={`mt-[2.5vh] group relative overflow-hidden flex justify-center items-center xl:gap-4 font-semibold text-[13px] xl:text-[16px] text-white bg-[#0CC1FA] w-full sm:w-[200px] xl:w-[250px] h-[50px] sm:h-[52px] xl:h-[56px] rounded-[319px] transition-all duration-500 ease-out ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
               style={{ transitionDelay: visible ? "550ms" : "0ms" }}

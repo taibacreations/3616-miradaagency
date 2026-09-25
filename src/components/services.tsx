@@ -122,11 +122,11 @@ const ServiceCard = ({
 
       {/* White box — moves from bottom-overlap to top of the image on hover/click */}
             <div className="absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[376px] top-[335px] group-hover:top-[20px] lg:group-hover:top-[150px] xl:group-hover:top-[20px] group-data-[open=true]:top-[20px] lg:group-data-[open=true]:top-[150px] xl:group-data-[open=true]:top-[20px] bg-white xl:rounded-[22px] rounded-[18px] xl:px-7 px-4 py-[1.5vh] service-shadow transition-all duration-500 ease-out overflow-hidden z-20      hover:h-auto    h-[110px] sm:h-[115px] lg:h-[100px] xl:h-[150px] 2xl:h-[135px]    group-data-[open=true]:h-auto    flex flex-col justify-center">
-        <h3 className="xl:text-[20px] text-[16px] font-gotham font-bold xl:leading-[28px] text-[#0A192F]">
+        <h3 className="xl:text-[20px] text-[16px] font-semibold xl:leading-[28px] text-[#0A192F]">
           {service.title}
         </h3>
 
-        <p className="font-gotham text-[14px] xl:text-[18px] text-black xl:leading-[22px] mt-[.5vh] transition-all duration-300 ease-out group-hover:opacity-0 group-hover:h-0 group-hover:mt-0 group-hover:overflow-hidden group-data-[open=true]:opacity-0 group-data-[open=true]:h-0 group-data-[open=true]:mt-0 group-data-[open=true]:overflow-hidden">
+        <p className=" text-[14px] xl:text-[18px] text-black xl:leading-[22px] mt-[.5vh] transition-all duration-300 ease-out group-hover:opacity-0 group-hover:h-0 group-hover:mt-0 group-hover:overflow-hidden group-data-[open=true]:opacity-0 group-data-[open=true]:h-0 group-data-[open=true]:mt-0 group-data-[open=true]:overflow-hidden">
           {service.description}
         </p>
 
@@ -139,7 +139,7 @@ const ServiceCard = ({
               {service.bullets.map((bullet) => (
 <li
   key={bullet}
-  className="flex items-start gap-2 font-gotham text-[14px] text-[#0A192F]"
+  className="flex items-start gap-2 text-[14px] text-[#0A192F]"
 >
   <span className="mt-[6px] w-[6px] h-[6px] rounded-full bg-[#0CC1FA] shrink-0" />
   {bullet}
@@ -185,10 +185,10 @@ const Services = () => {
                 : "opacity-0 translate-y-6"
             }`}
           >
-            <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] 2xl:max-w-[511px] max-w-[480px] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
+            <h2 className=" font-bold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] 2xl:max-w-[511px] max-w-[480px] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
               Waar we jouw bedrijf mee laten groeien
             </h2>
-            <h4 className="font-gotham font-normal text-[16px] xl:text-[18px] max-w-[546px] leading-[22.8px]">
+            <h4 className=" font-normal text-[16px] xl:text-[18px] max-w-[546px] leading-[22.8px]">
               Geen vage marketingpraat, wel keiharde systemen die voor regionaal
               rendement werken.
             </h4>

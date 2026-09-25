@@ -76,10 +76,10 @@ const Contact = () => {
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
-            <h2 className="font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[30px] sm:leading-[38px] xl:leading-[46px]">
+            <h2 className=" font-bold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[30px] sm:leading-[38px] xl:leading-[46px]">
               Laten we kennismaken
             </h2>
-            <p className="font-gotham text-[14px] sm:text-[16px] xl:text-[18px] text-black mt-[1.2vh]">
+            <p className=" text-[14px] sm:text-[16px] xl:text-[18px] text-black mt-[1.2vh]">
               Benieuwd wat AI en automatisering voor jouw bedrijf kunnen
               betekenen? Neem contact op voor een gratis kennismakingsgesprek.
             </p>
@@ -93,13 +93,13 @@ const Contact = () => {
               }`}
               style={{ transitionDelay: visible ? "150ms" : "0ms" }}
             >
-              <h4 className="font-monument font-bold text-[16px] sm:text-[18px] xl:text-[20px] text-[#0A192F]">
+              <h4 className="font-bold text-[28px] sm:text-[32px] xl:text-[34px] text-[#0A192F]">
                 Stuur een bericht
               </h4>
 
               <form onSubmit={handleSubmit} className="mt-[2.3vh]">
                 <div>
-                  <label className="font-monument text-[13px] sm:text-[14px] text-[#333333]">
+                  <label className=" text-[14px] sm:text-[16px] xl:text-[18px] text-black">
                     Naam
                   </label>
                   <input
@@ -109,12 +109,12 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="Je naam"
                     required
-                    className="w-full mt-2 border border-[#E5E7EB] rounded-[10px] px-4 py-3 font-gotham text-[14px] sm:text-[16px] text-[#0A192F] placeholder:text-black placeholder:font-gotham placeholder:text-[14px] sm:placeholder:text-[16px] outline-none transition-all duration-300 focus:border-[#0CC1FA] focus:ring-2 focus:ring-[#0CC1FA]/20"
+                    className="w-full mt-2 border border-[#E5E7EB] rounded-[10px] px-4 py-3 text-[14px] sm:text-[16px] text-[#0A192F] placeholder:text-[#484848]   placeholder:text-[14px] sm:placeholder:text-[16px] outline-none transition-all duration-300 focus:border-[#0CC1FA] focus:ring-2 focus:ring-[#0CC1FA]/20"
                   />
                 </div>
 
                 <div className="mt-[1vh]">
-                  <label className="font-monument text-[13px] sm:text-[14px] text-[#333333]">
+                  <label className=" text-[14px] sm:text-[16px] xl:text-[18px] text-black">
                     Email
                   </label>
                   <input
@@ -124,12 +124,12 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="je@email.nl"
                     required
-                    className="w-full mt-2 border border-[#E5E7EB] rounded-[10px] px-4 py-3 font-gotham text-[14px] sm:text-[16px] text-[#0A192F] placeholder:text-black placeholder:font-gotham placeholder:text-[14px] sm:placeholder:text-[16px] outline-none transition-all duration-300 focus:border-[#0CC1FA] focus:ring-2 focus:ring-[#0CC1FA]/20"
+                    className="w-full mt-2 border border-[#E5E7EB] rounded-[10px] px-4 py-3 text-[14px] sm:text-[16px] text-[#0A192F] placeholder:text-[#484848]   placeholder:text-[14px] sm:placeholder:text-[16px] outline-none transition-all duration-300 focus:border-[#0CC1FA] focus:ring-2 focus:ring-[#0CC1FA]/20"
                   />
                 </div>
 
                 <div className="mt-[1vh]">
-                  <label className="font-monument text-[13px] sm:text-[14px] text-[#333333]">
+                  <label className="text-[14px] sm:text-[16px] xl:text-[18px] text-black">
                     Telefoon (optioneel)
                   </label>
                   <input
@@ -138,12 +138,12 @@ const Contact = () => {
                     value={formData.telefoon}
                     onChange={handleChange}
                     placeholder="+31 6 12345678"
-                    className="w-full mt-2 border border-[#E5E7EB] rounded-[10px] px-4 py-3 font-gotham text-[14px] sm:text-[16px] text-[#0A192F] placeholder:text-black placeholder:font-gotham placeholder:text-[14px] sm:placeholder:text-[16px] outline-none transition-all duration-300 focus:border-[#0CC1FA] focus:ring-2 focus:ring-[#0CC1FA]/20"
+                    className="w-full mt-2 border border-[#E5E7EB] rounded-[10px] px-4 py-3 text-[14px] sm:text-[16px] text-[#0A192F] placeholder:text-[#484848]   placeholder:text-[14px] sm:placeholder:text-[16px] outline-none transition-all duration-300 focus:border-[#0CC1FA] focus:ring-2 focus:ring-[#0CC1FA]/20"
                   />
                 </div>
 
                 <div className="mt-[1vh]">
-                  <label className="font-monument text-[13px] sm:text-[14px] text-[#333333]">
+                  <label className="text-[14px] sm:text-[16px] xl:text-[18px] text-black">
                     Bericht
                   </label>
                   <textarea
@@ -153,14 +153,14 @@ const Contact = () => {
                     placeholder="Vertel iets over je bedrijf en waar je hulp bij nodig hebt..."
                     required
                     rows={4}
-                    className="w-full mt-2 border border-[#E5E7EB] rounded-[10px] px-4 py-3 font-gotham text-[14px] sm:text-[16px] text-[#0A192F] placeholder:text-black placeholder:font-gotham placeholder:text-[14px] sm:placeholder:text-[16px] outline-none transition-all duration-300 focus:border-[#0CC1FA] focus:ring-2 focus:ring-[#0CC1FA]/20 resize-none placeholder:max-w-[399px]"
+                    className="w-full mt-2 border border-[#E5E7EB] rounded-[10px] px-4 py-3  text-[14px] sm:text-[16px] text-[#0A192F] placeholder:text-[#484848]  placeholder:text-[14px] sm:placeholder:text-[16px] outline-none transition-all duration-300 focus:border-[#0CC1FA] focus:ring-2 focus:ring-[#0CC1FA]/20 resize-none placeholder:max-w-[399px]"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="group relative overflow-hidden mt-[1.5vh] w-full h-[48px] sm:h-[52px] xl:h-[54px] rounded-[319px] bg-[#0CC1FA] font-gotham font-bold text-[15px] md:text-[13px] xl:text-[16px] text-white flex items-center justify-center gap-2 transition-all duration-500 ease-out disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="group relative overflow-hidden mt-[1.5vh] w-full h-[48px] sm:h-[52px] xl:h-[54px] rounded-[319px] bg-[#0CC1FA] font-semibold text-[15px] md:text-[13px] xl:text-[16px] text-white flex items-center justify-center gap-2 transition-all duration-500 ease-out disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   <span className="absolute inset-0 bg-[#012549] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
                   <span className="relative z-10 flex items-center gap-2">
@@ -195,12 +195,12 @@ const Contact = () => {
                 </button>
 
                 {status === "success" && (
-                  <p className="mt-3 font-gotham text-[13px] sm:text-[14px] text-green-600 text-center">
+                  <p className="mt-3  text-[13px] sm:text-[14px] text-green-600 text-center">
                     Bedankt! We nemen zo snel mogelijk contact met je op.
                   </p>
                 )}
                 {status === "error" && (
-                  <p className="mt-3 font-gotham text-[13px] sm:text-[14px] text-red-600 text-center">
+                  <p className="mt-3 text-[13px] sm:text-[14px] text-red-600 text-center">
                     Er ging iets mis. Probeer het later opnieuw.
                   </p>
                 )}

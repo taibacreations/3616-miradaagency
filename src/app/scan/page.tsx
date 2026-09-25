@@ -140,8 +140,8 @@ const analysisPoints = [
 
 // Contact section wali exact classes
 const inputClass =
-  "w-full mt-2 border border-[#E5E7EB] rounded-[10px] px-4 py-3 font-gotham text-[14px] sm:text-[16px] text-[#0A192F] placeholder:text-black placeholder:font-gotham placeholder:text-[14px] sm:placeholder:text-[16px] outline-none transition-all duration-300 focus:border-[#0CC1FA] focus:ring-2 focus:ring-[#0CC1FA]/20";
-const labelClass = "font-monument text-[13px] sm:text-[14px] text-[#333333]";
+  "w-full mt-2 border border-[#E5E7EB] rounded-[10px] px-4 py-3  text-[14px] sm:text-[16px] text-[#0A192F] placeholder:text-[#484848]  placeholder:text-[14px] sm:placeholder:text-[16px] outline-none transition-all duration-300 focus:border-[#0CC1FA] focus:ring-2 focus:ring-[#0CC1FA]/20";
+const labelClass = " text-[14px] sm:text-[16px] xl:text-[18px] text-black";
 
 const fadeUp = (show: boolean, distance = "translate-y-10") =>
   `transition-all duration-700 ease-out ${
@@ -211,17 +211,17 @@ export default function ScanPage() {
             >
               <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#0CC1FA]/40 bg-[#0CC1FA]/10 px-4 py-2 mx-auto">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#0CC1FA]" />
-                <span className="font-gotham font-bold text-[12px] text-[#0CC1FA] sm:text-[13px]">
+                <span className=" font-semibold text-[12px] text-[#0CC1FA] sm:text-[13px]">
                   100% gratis · Geen verplichtingen
                 </span>
               </div>
 
-              <h1 className="md:mb-6 mb-3 w-full md:max-w-[700px] text-center mx-auto break-words font-monument font-extrabold leading-[1.15] text-white text-[26px] sm:text-[30px] md:text-[24px] lg:text-[30px] xl:text-[36px] 2xl:text-[44px]">
+              <h1 className="md:mb-6 mb-3 w-full md:max-w-[700px] text-center mx-auto break-words  font-bold leading-[1.15] text-white text-[26px] sm:text-[30px] md:text-[24px] lg:text-[30px] xl:text-[36px] 2xl:text-[44px]">
                 Claim jouw gratis{" "}
                 <span className="text-[#0CC1FA]">pixel &amp; conversiescan</span>
               </h1>
 
-              <p className="w-full md:max-w-[950px] text-center mx-auto font-gotham font-normal text-[16px] leading-relaxed text-white/80 xl:text-[18px]">
+              <p className="w-full md:max-w-[950px] text-center mx-auto font-normal text-[16px] leading-relaxed text-white/80 xl:text-[18px]">
                 Ontdek binnen 24 uur waar de digitale lead-lekken van jouw lokale onderneming zitten.
                 Vul je gegevens in en ons systeem start direct de analyse van je website,
                 tracking-pixels en mobiele conversie.
@@ -290,7 +290,7 @@ export default function ScanPage() {
                       placeholder="www.jouwbedrijf.nl"
                       className={inputClass}
                     />
-                    <p className="mt-2 font-gotham font-normal text-[12px] text-black/40 sm:text-[13px]">
+                    <p className="mt-2 font-normal text-[12px] text-black/40 sm:text-[13px]">
                       &quot;https://&quot; hoeft niet, die vullen we automatisch aan.
                     </p>
                   </div>
@@ -299,7 +299,7 @@ export default function ScanPage() {
                   <button
                     type="submit"
                     disabled={status === "loading"}
-                    className="group relative overflow-hidden mt-[1.5vh] w-full h-[48px] sm:h-[52px] xl:h-[54px] rounded-[319px] bg-[#0CC1FA] font-gotham font-bold text-[15px] md:text-[13px] xl:text-[16px] text-white flex items-center justify-center gap-2 transition-all duration-500 ease-out active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="group relative overflow-hidden mt-[1.5vh] w-full h-[48px] sm:h-[52px] xl:h-[54px] rounded-[319px] bg-[#0CC1FA]  font-semibold text-[15px] md:text-[13px] xl:text-[16px] text-white flex items-center justify-center gap-2 transition-all duration-500 ease-out active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     <span className="absolute inset-0 bg-[#012549] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
                     <span className="relative z-10 flex items-center gap-2">
@@ -341,7 +341,7 @@ export default function ScanPage() {
                   {status === "error" && (
                     <p
                       role="alert"
-                      className="mt-3 font-gotham text-[13px] sm:text-[14px] text-red-600 text-center"
+                      className="mt-3 text-[13px] sm:text-[14px] text-red-600 text-center"
                     >
                       Er ging iets mis. Probeer het opnieuw.
                     </p>
@@ -355,7 +355,7 @@ export default function ScanPage() {
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
                         {stat.icon}
                       </svg>
-                      <span className="font-gotham font-normal text-[11px] leading-tight text-black/70 sm:text-[13px]">
+                      <span className=" font-normal text-[11px] leading-tight text-black/70 sm:text-[13px]">
                         {stat.label}
                       </span>
                     </div>
@@ -384,7 +384,7 @@ export default function ScanPage() {
         <div className="max-w-[1200px] mx-auto xl:px-15 md:px-6 px-4 pt-[50px] md:pt-[80px] lg:pt-[100px]">
           <h2
             ref={heading.ref}
-            className={`text-center font-monument font-extrabold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[34px] sm:leading-[40px] xl:leading-[46px] ${fadeUp(heading.visible, "translate-y-6")}`}
+            className={`text-center font-bold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[34px] sm:leading-[40px] xl:leading-[46px] ${fadeUp(heading.visible, "translate-y-6")}`}
           >
             Wat analyseren wij?
           </h2>
@@ -416,7 +416,7 @@ export default function ScanPage() {
 
                   {/* Card */}
                   <div className="relative flex-1 overflow-hidden rounded-[24px] border border-black/5 bg-white px-6 pb-7 pt-12 text-center shadow-[0px_4px_29.8px_0px_#00000012] transition-shadow duration-500 ease-out group-hover:shadow-[0_20px_50px_rgba(12,193,250,0.18)] md:px-4 md:pb-6 md:pt-10 xl:px-8 xl:pb-9 xl:pt-14">
-                    <p className="font-gotham leading-[149%] text-[#012549] text-[16px] xl:text-[18px]">
+                    <p className="leading-[149%] text-[#012549] text-[16px] xl:text-[18px]">
                       {point.text}
                     </p>
                   </div>

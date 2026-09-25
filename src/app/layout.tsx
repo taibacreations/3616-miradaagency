@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import localFont from "next/font/local";
+import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -17,36 +16,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const monument = localFont({
-  src: [
-    {
-      path: "./fonts/MonumentExtended-Regular.otf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "./fonts/MonumentExtended-Ultrabold.otf",
-      weight: "800",
-      style: "extrabold",
-    },
-  ],
-  variable: "--font-monument",
-  display: "swap",
-});
-
-const gotham = localFont({
-  src: [
-    { path: "./fonts/Gotham-XLight.otf", weight: "200", style: "normal" },
-    { path: "./fonts/Gotham-Light.otf", weight: "300", style: "normal" },
-    { path: "./fonts/GothamBook.ttf", weight: "400", style: "normal" },
-    { path: "./fonts/GothamMedium.ttf", weight: "500", style: "normal" },
-    { path: "./fonts/Gotham-Bold.otf", weight: "700", style: "normal" },
-    { path: "./fonts/Gotham-Black.otf", weight: "900", style: "normal" },
-    { path: "./fonts/GothamBookItalic.ttf", weight: "400", style: "italic" },
-    { path: "./fonts/GothamMediumItalic.ttf", weight: "500", style: "italic" },
-    { path: "./fonts/GothamBoldItalic.ttf", weight: "700", style: "italic" },
-  ],
-  variable: "--font-gotham",
+const outfit = Outfit({
+  variable: "--font-outfit",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -61,7 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       data-scroll-behavior="smooth"
       lang="nl"
-      className={`${geistSans.variable} ${geistMono.variable} ${monument.variable} ${gotham.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} h-full antialiased`}
     >
       <head>
         <Script
@@ -72,6 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           strategy="beforeInteractive"
         />
       </head>
+
       <body className="min-h-full flex flex-col overflow-x-hidden">
         <SmoothScroll>
           <main>
