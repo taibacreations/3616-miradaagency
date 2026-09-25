@@ -260,7 +260,7 @@ const Choose = () => {
                   i === 1 ? "lg:w-[94%] xl:w-[94%] lg:ml-auto xl:ml-auto" : ""
                 } ${
                   i === 0 || i === 2 ? "-translate-x-0 lg:-translate-x-4" : ""
-                } lg:max-w-full xl:max-w-full min-h-[130px] lg:min-h-[140px] xl:min-h-[145px] h-auto rounded-[18px] bg-white flex flex-col md:text-left text-center lg:flex-row lg:items-center gap-2 xl:gap-6.5 px-4 sm:px-5 xl:px-5.5 py-4 lg:py-4 transition-colors duration-500 ease-out hover:bg-[#012549] cursor-pointer ${
+                } lg:max-w-full xl:max-w-full min-h-[130px] lg:min-h-[140px] xl:min-h-[145px] h-auto rounded-[18px] bg-white flex flex-col md:text-left text-center xl:flex-row xl:items-center gap-2 xl:gap-6.5 px-4 sm:px-5 xl:px-5.5 py-4 lg:py-4 transition-colors duration-500 ease-out hover:bg-[#012549] cursor-pointer ${
                   visible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-x-8"
