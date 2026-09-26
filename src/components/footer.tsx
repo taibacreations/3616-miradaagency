@@ -269,13 +269,13 @@ const Footer = () => {
             ${anim(visible)}`}
             style={{ transitionDelay: visible ? "450ms" : "0ms" }}
           >
-            <div className="max-w-[1600px] mx-auto w-full xl:px-15 md:px-6 px-4 flex flex-col md:flex-row md:justify-between items-center text-center md:text-left gap-1 md:gap-3">
-              <span>
+            <div className="max-w-[1600px] mx-auto w-full xl:px-15 md:px-6 px-4 flex flex-col-reverse md:flex-row md:justify-between items-center text-center md:text-left gap-1 md:gap-3">
+              <span className="md:mt-0 mt-[1vh]">
                 © 2026 Mirada management B.V. alle rechten voorbehouden. | KvK:
                 42084347
               </span>
 
-              <div className="flex flex-row items-center gap-3 md:mt-0 mt-[1vh]">
+              <div className="flex flex-row items-center gap-3">
                 <button
                   type="button"
                   onClick={() => window.Cookiebot?.renew()}
