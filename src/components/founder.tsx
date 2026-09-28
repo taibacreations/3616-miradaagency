@@ -55,10 +55,10 @@ const Founder = () => {
         >
           <div className="max-w-full sm:max-w-[443px]">
             <p className="text-[16px] sm:text-[18px] xl:text-[20px] text-black capitalize">
-              Over mirada agency
+              Over Mirada Agency
             </p>
             <h2 className="font-bold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[34px] sm:leading-[40px] xl:leading-[46px] mt-[1vh] ">
-              Het gezicht achter mirada
+              Het gezicht achter Mirada Agency
             </h2>
           </div>
 
@@ -71,7 +71,7 @@ const Founder = () => {
               hardcore IT-structuur en resultaatgerichte online marketing.
             </p>
             <p className="text-[14px] sm:text-[16px] xl:text-[18px] leading-[129%] text-black font-normal mt-[3.5vh]">
-              Bij Mirada geloven we niet in ingewikkelde marketingtermen, wel in
+              Bij Mirada Agency geloven we niet in ingewikkelde marketingtermen, wel in
               transparantie, korte lijnen en meetbaar resultaat in de regio. We
               introduceren nu tijdelijk exclusieve AI-pilotprojecten voor een
               geselecteerd aantal ambitieuze lokale bedrijven om de keiharde

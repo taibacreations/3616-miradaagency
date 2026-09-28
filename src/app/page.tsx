@@ -18,8 +18,9 @@ export default function Home() {
       <Choose />
       <Points />
       <Offers />
-      <Faq />
       <Work />
+      <Faq />
+      
       <Founder />
       <Result />
       <Gurantee />

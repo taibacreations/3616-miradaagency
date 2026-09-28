@@ -19,9 +19,9 @@ const services = [
   },
   {
     image: "/services2.png",
-    title: "AI & workflow automation",
+    title: "AI & Workflow Automatisering",
     description:
-      "Eliminate repetitive manual work in your...",
+      "Elimineer repetitief handmatig werk in je...",
     fullDescription:
       "Elimineer repetitief handmatig werk in je onderneming. Wij bouwen slimme AI-workflows en koppelingen die je leadopvolging, administratie of klantbeheer 24/7 automatisch laten draaien. Meer rust, minder overhead.",
     bullets: [
@@ -46,9 +46,9 @@ const services = [
     ],
   },
   {
-    image: "/services3.png",
-    title: "Regional marketing & retargeting",
-    description: "We drive targeted traffic to your business via...",
+    image: "/services3-2.0.png",
+    title: "Regionale Marketing & Retargeting",
+    description: "Wij brengen gericht verkeer naar je bedrijf via...",
     fullDescription:
       "Wij brengen gericht verkeer naar je bedrijf via strategische, lokale campagnes (Meta & Google) op jouw verzorgingsgebied. Met de juiste tracking zorgen we dat misgelopen bezoekers uit de regio alsnog converteren.",
     bullets: [

@@ -10,12 +10,12 @@ const faqs = [
       "We analyseren jouw huidige online aanwezigheid: waar verlies je potentiële klanten? Denk aan tracking-fouten, trage laadtijden, ontbrekende pixels, of campagnes die niet optimaal draaien. Je krijgt binnen 24 uur een concreet rapport, zonder verplichtingen.",
   },
   {
-    question: "Ik heb al een website. Kan Mirada toch helpen?",
+    question: "Ik heb al een website. Kan Mirada Agency toch helpen?",
     answer:
       "Absoluut. We werken ook met bestaande websites. We kunnen je huidige site optimaliseren, er automatiseringen op aansluiten, of gerichte advertenties inzetten om meer bezoekers aan te trekken. We starten altijd met de scan om te zien wat de grootste kansen zijn.",
   },
   {
-    question: "Moet ik al technisch onderlegd zijn?",
+    question: "Moet ik technisch onderlegd zijn?",
     answer:
       "Nee, helemaal niet. Wij regelen alles technisch. Jij hoeft alleen te vertellen wat je wil bereiken, en wij zorgen dat het werkt. We leggen alles uit in gewone taal, zonder jargon.",
   },

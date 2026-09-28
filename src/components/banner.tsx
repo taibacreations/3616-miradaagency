@@ -45,7 +45,7 @@ const Banner = () => {
               Slimme AI-workflows & converterende websites
             </h4>
             <h1 className="font-extrabold text-[30px] leading-[34px] sm:text-[44px] sm:leading-[48px] md:text-[52px] md:leading-[56px] 2xl:text-[60px] xl:leading-[64px] text-white tracking-[0.05em] mt-[1.3vh] h1">
-              Voor lokale ondernemers.
+              Voor lokale ondernemers
             </h1>
           </div>
 

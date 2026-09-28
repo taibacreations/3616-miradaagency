@@ -93,7 +93,7 @@ overhoudt voor wat écht telt.
           >
             <div className="bg-[url(/green.png)] bg-cover bg-center bg-no-repeat w-[215px] h-[50px] sm:w-[250px] sm:h-[58px] md:w-[290px] md:h-[67px] xl:w-[394px] xl:h-[91px] flex justify-center items-center absolute left-1/2 -translate-x-1/2 top-[-25px] md:top-[-33px] xl:top-[-23%]">
               <h3 className="font-semibold text-[14px] sm:text-[16px] md:text-[18px] xl:text-[24px] text-white relative top-[-25%] xl:top-[-13%]">
-                Met mirada agency
+                Met Mirada Agency
               </h3>
             </div>
             <div className="bg-[#F5F9FC] rounded-[18px] xl:rounded-[24px] w-full 2xl:w-[648px] md:h-full xl:min-h-[291px] 2xl:h-[291px] h-auto flex justify-center flex-col gap-3 sm:gap-4 xl:gap-5 px-4 sm:px-5 xl:pl-8.5 xl:pr-0 py-6 sm:py-7 xl:py-6 2xl:py-0 z-10 relative">
