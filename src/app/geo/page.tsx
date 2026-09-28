@@ -217,7 +217,7 @@ const oldVsNew = {
     "Geen controle over hoe AI jouw bedrijf beschrijft",
   ],
   new: [
-    "Klant vraagt het rechtstreeks aan ChatGPT of Gemini",
+    "Klant vraagt het rechtstreeks aan ChatGPT, Claude of Gemini",
     "AI geeft direct één (of een paar) aanbevelingen",
     "GEO structureert content zodat AI 'm begrijpt en citeert",
     "Wij zorgen dat AI jouw bedrijf correct en positief noemt",
