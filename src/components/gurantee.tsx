@@ -61,7 +61,7 @@ const Gurantee = () => {
                 className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
               />
               <h4 className=" text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
-                Technisch waterdichte implementatie
+                Technisch sterke en betrouwbare uitvoering
               </h4>
             </div>
             <div className="flex items-start gap-3">
@@ -71,7 +71,7 @@ const Gurantee = () => {
                 className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
               />
               <h4 className=" text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
-                Wekelijks contact over de voortgang
+                Slimme automatisering van digitale processen
               </h4>
             </div>
             <div className="flex items-start gap-3">
@@ -81,7 +81,7 @@ const Gurantee = () => {
                 className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
               />
               <h4 className=" text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
-                Transparante rapportages in begrijpelijk Nederlands
+                Transparante rapportages en duidelijke inzichten
               </h4>
             </div>
             <div className="flex items-start gap-3">
@@ -101,7 +101,7 @@ const Gurantee = () => {
                 className="w-[16px] sm:w-[17px] xl:w-[19px] h-auto"
               />
               <h4 className=" text-black text-[16px] sm:text-[18px] xl:text-[20px] -mt-[5px] md:-mt-[6px] lg:-mt-[5px]">
-                Geen lange contracten, flexibel en schaalbaar
+                Schaalbare oplossingen zonder onnodige verplichtingen
               </h4>
             </div>
           </div>

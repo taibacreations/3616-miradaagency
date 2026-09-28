@@ -8,8 +8,8 @@ import { useRouter, usePathname } from "next/navigation";
 const navLinks = [
   { label: "Diensten", href: "/#diensten" },
   { label: "Werkwijze", href: "/#werkwijze" },
-  { label: "GEO", href: "/geo" },
   { label: "Gratis scan", href: "/scan" },
+  { label: "GEO", href: "/geo" },
   { label: "Over mij", href: "/#over" },
 ];
 
@@ -125,25 +125,29 @@ const Header = () => {
 
   // Click par offset ke sath smooth scroll; doosre page par ho to pehle home navigate karo
   const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string,
-  ) => {
-    if (!href.includes("#")) return;
-
-    const id = href.split("#")[1];
-
-    if (pathname !== "/") {
-      e.preventDefault();
-      pendingScrollId.current = id;
-      router.push("/");
-      setIsOpen(false);
-      return;
-    }
-
-    e.preventDefault();
-    scrollToSection(id);
+  e: React.MouseEvent<HTMLAnchorElement>,
+  href: string,
+) => {
+  // Separate pages: navigate normally and close mobile menu
+  if (!href.includes("#")) {
     setIsOpen(false);
-  };
+    return;
+  }
+
+  const id = href.split("#")[1];
+
+  if (pathname !== "/") {
+    e.preventDefault();
+    pendingScrollId.current = id;
+    router.push("/");
+    setIsOpen(false);
+    return;
+  }
+
+  e.preventDefault();
+  scrollToSection(id);
+  setIsOpen(false);
+};
 
   const isActive = (href: string) => {
   // Section links (/#service etc.) -> scrollspy se

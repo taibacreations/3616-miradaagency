@@ -290,6 +290,13 @@ const Footer = () => {
                 >
                   Privacybeleid
                 </Link>
+                <span className="h-4 w-px bg-white/50" aria-hidden="true" />
+                <Link
+                  href="/geo"
+                  className="underline underline-offset-2 hover:text-[#04213D] transition-colors duration-300"
+                >
+                  GEO
+                </Link>
               </div>
             </div>
           </div>

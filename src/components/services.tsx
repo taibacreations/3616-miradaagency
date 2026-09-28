@@ -18,7 +18,7 @@ const services = [
     ],
   },
   {
-    image: "/services2.png",
+    image: "/services2-2.0.png",
     title: "AI & Workflow Automatisering",
     description:
       "Elimineer repetitief handmatig werk in je...",
