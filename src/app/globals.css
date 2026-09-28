@@ -98,18 +98,22 @@ body {
 
 }
 
-html {
 
-  scroll-behavior: smooth;
-
+html.lenis,
+html.lenis body {
+  height: auto;
 }
 
-@media (prefers-reduced-motion: reduce) {
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
 
-  html {
+.lenis [data-lenis-prevent],
+.lenis [data-lenis-prevent-wheel],
+.lenis [data-lenis-prevent-touch] {
+  overscroll-behavior: contain;
+}
 
-    scroll-behavior: auto;
-
-  }
-
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }

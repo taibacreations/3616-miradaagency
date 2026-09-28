@@ -183,7 +183,7 @@ const Header = () => {
               alt="Logo"
               className={`h-auto transition-all duration-500 ease-out ${
                 scrolled
-                  ? "w-[90px] lg:w-[120px]"
+                  ? "w-[90px] lg:w-[120px] xl:mt-0 mt-[-10px]"
                   : "w-[120px] xl:w-[140px] 2xl:w-[168px]"
               }`}
             />
