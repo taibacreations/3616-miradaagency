@@ -158,41 +158,43 @@ const Contact = () => {
                 </div>
 
                 <button
-                  type="submit"
-                  disabled={status === "loading"}
-                  className="group relative overflow-hidden mt-[1.5vh] w-full h-[48px] sm:h-[52px] xl:h-[54px] rounded-[319px] bg-[#0CC1FA] font-semibold text-[15px] md:text-[13px] xl:text-[16px] text-white flex items-center justify-center gap-2 transition-all duration-500 ease-out disabled:opacity-70 disabled:cursor-not-allowed"
-                >
-                  <span className="absolute inset-0 bg-[#012549] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
-                  <span className="relative z-10 flex items-center gap-2">
-                    {status === "loading" && (
-                      <svg
-                        className="animate-spin h-4 w-4 text-white"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <circle
-                          className="opacity-25"
-                          cx="12"
-                          cy="12"
-                          r="10"
-                          stroke="currentColor"
-                          strokeWidth="4"
-                        />
-                        <path
-                          className="opacity-75"
-                          fill="currentColor"
-                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
-                        />
-                      </svg>
-                    )}
-                    {status === "loading"
-                      ? "Versturen..."
-                      : status === "success"
-                        ? "Verstuurd!"
-                        : "Verstuur bericht"}
-                  </span>
-                </button>
+  type="submit"
+  disabled={status === "loading"}
+  className="group relative overflow-hidden mt-[1.5vh] w-full h-[48px] sm:h-[52px] xl:h-[54px] rounded-[319px] bg-[#0CC1FA] border-2 border-[#0CC1FA] font-semibold text-[15px] md:text-[13px] xl:text-[16px] text-white flex items-center justify-center gap-2 transition-all duration-500 ease-out disabled:opacity-70 disabled:cursor-not-allowed"
+>
+  <span className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+
+  <span className="relative z-10 flex items-center gap-2 transition-colors duration-300 ease-out group-hover:text-[#0CC1FA]">
+    {status === "loading" && (
+      <svg
+        className="animate-spin h-4 w-4 text-white group-hover:text-[#0CC1FA]"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <circle
+          className="opacity-25"
+          cx="12"
+          cy="12"
+          r="10"
+          stroke="currentColor"
+          strokeWidth="4"
+        />
+        <path
+          className="opacity-75"
+          fill="currentColor"
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+        />
+      </svg>
+    )}
+
+    {status === "loading"
+      ? "Versturen..."
+      : status === "success"
+        ? "Verstuurd!"
+        : "Verstuur bericht"}
+  </span>
+</button>
 
                 {status === "success" && (
                   <p className="mt-3  text-[13px] sm:text-[14px] text-green-600 text-center">
