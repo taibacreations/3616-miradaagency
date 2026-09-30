@@ -65,18 +65,10 @@ const Founder = () => {
 
           <div className="max-w-full sm:max-w-[607px] mt-[2.5vh]">
             <p className="text-[14px] sm:text-[16px] xl:text-[18px] leading-[129%] text-black font-normal">
-              Achter Mirada Agency staat Virgil Ippel. Vanuit zijn jarenlange
-              ervaring met het leiden van complexe IT-omgevingen,
-              systeemtransities en procesoptimalisaties, brengt hij het beste van
-              twee werelden samen voor de lokale ondernemer: hardcore
-              IT-structuur en resultaatgerichte online marketing.
+              Achter Mirada Agency staat Virgil Ippel. Vanuit zijn jarenlange ervaring met het leiden van complexe IT-omgevingen, systeemtransities en procesoptimalisaties, brengt hij het beste van twee werelden samen voor de lokale ondernemer: hardcore IT-structuur en resultaatgerichte online marketing.
             </p>
             <p className="text-[14px] sm:text-[16px] xl:text-[18px] leading-[129%] text-black font-normal mt-[3.5vh]">
-              Bij Mirada Agency geloven we niet in ingewikkelde marketingtermen,
-              wel in transparantie, korte lijnen en meetbaar resultaat in de
-              regio. We introduceren nu tijdelijk exclusieve AI-pilotprojecten
-              voor een geselecteerd aantal ambitieuze lokale bedrijven om de
-              keiharde kracht van onze geautomatiseerde workflows te bewijzen.
+              Bij Mirada Agency geloven we niet in ingewikkelde marketingtermen, maar in transparantie, korte lijnen en meetbaar resultaat in de regio. Momenteel introduceert Mirada Agency tijdelijk exclusieve AI-pilotprojecten voor een geselecteerd aantal ambitieuze lokale bedrijven, om de kracht van geautomatiseerde workflows in de praktijk te bewijzen.
             </p>
           </div>
         </div>
