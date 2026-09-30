@@ -1,10 +1,26 @@
 "use client";
 
+const faqs = [
+  {
+    question: "Werken jullie voor specifieke branches?",
+    answer:
+      "Mirada Agency helpt lokale ondernemers, high-ticket dienstverleners en regionale bedrijven die willen opschalen. Of je nu een exclusieve praktijk runt, een high-end servicebedrijf of een lokaal autobedrijf, onze systemen en AI-workflows zijn flexibel en worden volledig op maat ingericht voor jouw specifieke bedrijfsproces.",
+  },
+  {
+    question: "Wat houdt de gratis scan precies in?",
+    answer:
+      "We controleren de website van jouw bedrijf op de drie belangrijkste conversie-pijlers: de aanwezigheid en correcte installatie van tracking-pixels (zoals de Meta Pixel), de mobiele gebruiksvriendelijkheid in de praktijk, en technische lead-lekken (zoals SSL-beveiliging en laadsnelheid). Je ontvangt een concreet actieplan om dit direct te dichten.",
+  },
+  {
+    question: "Wat is een AI-pilotproject?",
+    answer:
+      "Omdat we geloven in het bewijzen van waarde aan ondernemers in de regio, starten we met een aantal geselecteerde bedrijven een kortstondig pilotproject. Hierin automatiseren we één specifiek knelpunt in je organisatie (bijvoorbeeld de automatische opvolging van lokale leads) tegen een gereduceerd tarief, zodat je direct de ROI ervaart.",
+  },
+];
+
 import { useEffect, useRef, useState } from "react";
 
 const Founder = () => {
-  const [openIndex, setOpenIndex] = useState<number>(0);
-
   const sectionRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -28,8 +44,9 @@ const Founder = () => {
     <section
       id="over"
       ref={sectionRef}
-      className="bg-white min-h-auto pt-[8vh] sm:pt-[10vh] pb-[4vh] sm:pb-[4vh] xl:pt-[13vh] xl:pb-[8vh] 2xl:pb-[15vh]"
+      className="bg-white min-h-auto pt-[8vh] sm:pt-[10vh] pb-[3vh] sm:pb-[4vh] xl:pt-[13vh] xl:pb-[7vh] 2xl:pb-[6vh]"
     >
+      {/* TEXT + IMAGE ROW (unchanged) */}
       <div className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 flex flex-col md:flex-row justify-between gap-10 md:gap-6 xl:gap-10 items-center md:items-stretch">
         {/* TEXT BOX */}
         <div
@@ -92,6 +109,42 @@ const Founder = () => {
           </div>
         </div>
       </div>
+
+      {/* FAQ CARDS */}
+<div
+  className={`max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 mt-[5vh] lg:mt-[4vh] xl:mt-[6vh] transition-all duration-700 ease-out ${
+    visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+  }`}
+  style={{ transitionDelay: visible ? "300ms" : "0ms" }}
+>
+  <p className="text-[16px] sm:text-[18px] xl:text-[20px] text-black font-semibold">
+    Veelgestelde vragen:
+  </p>
+
+  <div className="mt-[3vh] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 xl:gap-6">
+    {faqs.map((faq, i) => (
+      <div
+        key={faq.question}
+        className={`transition-all duration-700 ease-out ${
+          visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+        style={{ transitionDelay: visible ? `${i * 120}ms` : "0ms" }}
+      >
+        <div className="group relative h-full w-full cursor-pointer rounded-[24px] bg-[#F5F9FC] p-6 xl:p-7 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_10px_25px_rgba(12,193,250,0.18)]">
+          <h3 className="font-semibold text-[16px] sm:text-[18px] xl:text-[20px] leading-[26px] xl:leading-[28px] text-[#0A192F]">
+            {faq.question}
+          </h3>
+
+          
+
+          <p className="text-[14px] sm:text-[15px] xl:text-[16px] leading-[24px] xl:leading-[26px] text-black mt-5 xl:mt-6">
+            {faq.answer}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
     </section>
   );
 };

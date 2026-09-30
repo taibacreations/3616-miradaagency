@@ -34,21 +34,7 @@ const faqs = [
     answer:
       "Onze focus ligt op lokale en regionale ondernemers in Nederland. Maar we helpen ook bedrijven die nationaal actief zijn. Zolang je ambitieus bent en meetbaar wil groeien, kunnen we samenwerken.",
   },
-  {
-    question: "Werken jullie voor specifieke branches?",
-    answer:
-      "Mirada Agency helpt lokale ondernemers, high-ticket dienstverleners en regionale bedrijven die willen opschalen. Of je nu een exclusieve praktijk runt, een high-end servicebedrijf of een lokaal autobedrijf, onze systemen en AI-workflows zijn flexibel en worden volledig op maat ingericht voor jouw specifieke bedrijfsproces.",
-  },
-  {
-    question: "Wat houdt de gratis scan precies in?",
-    answer:
-      "We controleren de website van jouw bedrijf op de drie belangrijkste conversie-pijlers: de aanwezigheid en correcte installatie van tracking-pixels (zoals de Meta Pixel), de mobiele gebruiksvriendelijkheid in de praktijk, en technische lead-lekken (zoals SSL-beveiliging en laadsnelheid). Je ontvangt een concreet actieplan om dit direct te dichten.",
-  },
-  {
-    question: "Wat is een AI-pilotproject?",
-    answer:
-      "Omdat we geloven in het bewijzen van waarde aan ondernemers in de regio, starten we met een aantal geselecteerde bedrijven een kortstondig pilotproject. Hierin automatiseren we één specifiek knelpunt in je organisatie (bijvoorbeeld de automatische opvolging van lokale leads) tegen een gereduceerd tarief, zodat je direct de ROI ervaart.",
-  },
+ 
 ];
 
 const Faq = () => {

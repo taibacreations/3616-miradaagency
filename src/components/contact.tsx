@@ -68,7 +68,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" ref={sectionRef} className=" pt-[8vh] sm:pt-[10vh] lg:pt-[7vh] xl:pt-[12.8vh]">
+    <section id="contact" ref={sectionRef} className=" pt-[7vh] sm:pt-[7vh] xl:pt-[12.8vh]">
       <div>
         <div className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4">
           <div
