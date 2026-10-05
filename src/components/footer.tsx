@@ -15,6 +15,7 @@ const services = [
   "AI chatbots",
   "Website ontwikkeling",
   "Online advertenties (Google & Meta)",
+  "GEO"
 ];
 
 const ArrowIcon = () => (
@@ -220,7 +221,7 @@ const Footer = () => {
                           <ArrowIcon />
                           <Link
                             href="/#diensten"
-                            onClick={(e) => handleFooterClick(e, "service")}
+                            onClick={(e) => handleFooterClick(e, "diensten")}
                             className={linkText}
                           >
                             {label}
@@ -290,13 +291,7 @@ const Footer = () => {
                 >
                   Privacybeleid
                 </Link>
-                <span className="h-4 w-px bg-white/50" aria-hidden="true" />
-                <Link
-                  href="/geo"
-                  className="underline underline-offset-2 hover:text-[#04213D] transition-colors duration-300"
-                >
-                  GEO
-                </Link>
+                
               </div>
             </div>
           </div>

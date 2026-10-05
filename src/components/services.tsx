@@ -45,6 +45,12 @@ const services = [
       "Minder telefoontjes, meer gekwalificeerde leads",
     ],
   },
+  
+];
+
+
+const services2 = [
+
   {
     image: "/services3-2.0.png",
     title: "Regionale Marketing & Retargeting",
@@ -56,6 +62,22 @@ const services = [
       "Meta Pixel correct geïnstalleerd",
       "Retargeting van website-bezoekers",
       "Maandelijkse rapportage in helder Nederlands",
+    ],
+  },
+
+  {
+    image: "/service4.jfif",
+  
+    title: "GEO – AI Zichtbaarheid",
+    description:
+      "Word zichtbaar en aanbevolen door ChatGPT, Gemini, Claude & Google AI.",
+    fullDescription:
+      "Wij analyseren hoe zichtbaar jouw bedrijf is in AI-zoekresultaten en optimaliseren je content en structuur zodat AI-modellen jouw bedrijf beter begrijpen, citeren en aanbevelen.",
+    bullets: [
+      "AI-zichtbaarheid in kaart gebracht",
+      "Content & structuur optimalisatie",
+      "Beter zichtbaar in AI-resultaten",
+      "Maandelijkse AI-rapportage",
     ],
   },
 ];
@@ -153,6 +175,8 @@ const ServiceCard = ({
   );
 };
 
+const allServices = [...services, ...services2];
+
 const Services = () => {
   const headerRef = useRef<HTMLDivElement>(null);
   const [headerVisible, setHeaderVisible] = useState(false);
@@ -174,7 +198,10 @@ const Services = () => {
   }, []);
 
   return (
-    <section id="diensten" className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 2xl:pt-[12.5vh] 2xl:pb-[12.5vh] xl:pt-[10vh] xl:pb-[15.5vh] lg:pb-[10px] lg:pt-[80px] md:py-[80px] py-[50px]">
+    <section
+      id="diensten"
+      className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 2xl:pt-[12.5vh] 2xl:pb-[12.5vh] xl:pt-[10vh] xl:pb-[15.5vh] lg:pb-[10px] lg:pt-[80px] md:py-[80px] py-[50px]"
+    >
       <div>
         <div>
           <div
@@ -185,18 +212,24 @@ const Services = () => {
                 : "opacity-0 translate-y-6"
             }`}
           >
-            <h2 className=" font-bold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] 2xl:max-w-[511px] max-w-[480px] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
+            <h2 className="font-bold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] 2xl:max-w-[511px] max-w-[480px] leading-[34px] sm:leading-[40px] xl:leading-[46px]">
               Waar we jouw bedrijf mee laten groeien
             </h2>
-            <h4 className=" font-normal text-[16px] xl:text-[18px] max-w-[546px] leading-[22.8px]">
+            <h4 className="font-normal text-[16px] xl:text-[18px] max-w-[546px] leading-[22.8px]">
               Geen vage marketingpraat, wel keiharde systemen die voor regionaal
               rendement werken.
             </h4>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-y-12 gap-x-6 md:mt-[5vh] mt-[2vh]">
-            {services.map((service, i) => (
-              <ServiceCard service={service} index={i} key={service.title} />
+          {/* Eén container: wrap + center = geen lege ruimte naast een los kaartje */}
+          <div className="flex flex-wrap justify-center gap-y-12 lg:gap-y-7  xl:gap-y-20 2xl:gap-y-17 gap-x-6  md:mt-[5vh] mt-[4vh]">
+            {allServices.map((service, i) => (
+              <div
+                key={service.title}
+                className="w-full md:w-[calc((100%-1.5rem)/2)] xl:w-[calc((100%-3rem)/3)] flex justify-center"
+              >
+                <ServiceCard service={service} index={i % 3} />
+              </div>
             ))}
           </div>
         </div>

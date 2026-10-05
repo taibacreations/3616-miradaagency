@@ -31,9 +31,9 @@ const Banner = () => {
 
 
   return (
-    <section id="home" className='relative w-full min-h-screen bg-cover md:bg-center bg-no-repeat bg-[url("/banner.png")] bg-position-[70%] pb-[5vh]'>
+    <section id="home" className='relative w-full min-h-screen bg-cover md:bg-center bg-no-repeat bg-[url("/banner2.png")] bg-position-[70%] pb-[5vh]'>
   {/* Dark overlay — mobile only, so text stays readable over the image */}
-  <div className="absolute inset-0 bg-black/30 xl:hidden pointer-events-none" />
+  <div className="absolute inset-0 bg-black/30 pointer-events-none" />
       <div className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 pt-[22vh] sm:pt-[25vh] xl:pt-[28vh]">
         <div className="max-w-full sm:max-w-[520px] xl:max-w-[653px]">
           <div
@@ -120,12 +120,23 @@ const Banner = () => {
           </div>
 
           <div
-            className={`bg-[url(/banner-blur.png)] bg-content xl:bg-cover bg-[length:100%_70%] xl:bg-[length:100%_100%] bg-center bg-no-repeat w-full sm:w-[440px] xl:w-[529px] h-auto xl:h-[123px] flex flex-col justify-center py-4 xl:py-0 pl-4 xl:pl-7 mt-[4vh] xl:mt-[5vh] transition-all duration-700 ease-out pb-[5vh] ${
-              mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-            }`}
+            className={`w-full sm:w-[440px] xl:w-[529px] h-auto xl:h-[123px]
+    flex flex-col justify-center
+    py-4 xl:py-0 pl-4 xl:pl-7
+    mt-[4vh] xl:mt-[5vh]
+    rounded-[24px]
+    border border-white/70
+    bg-white/[0.08]
+    backdrop-blur-[21.6px]
+    transition-all duration-700 ease-out
+    ${
+      mounted
+        ? "opacity-100 translate-y-0"
+        : "opacity-0 translate-y-6"
+    }`}
             style={{ transitionDelay: mounted ? "560ms" : "0ms" }}
           >
-            <div className="flex flex-wrap flex-col md:flex-row items-start md:items-center gap-x-5 gap-y-2 pt-6 xl:pt-0">
+            <div className="flex flex-wrap flex-col md:flex-row items-start md:items-center gap-x-5 gap-y-2">
               {checklist[0].map((item) => (
                 <div key={item} className="group flex items-center gap-2">
                   <img

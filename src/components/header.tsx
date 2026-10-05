@@ -6,11 +6,11 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 
 const navLinks = [
-  { label: "Diensten", href: "/#diensten" },
-  { label: "Werkwijze", href: "/#werkwijze" },
-  { label: "Gratis scan", href: "/scan" },
-  { label: "GEO", href: "/geo" },
-  { label: "Over mij", href: "/#over" },
+  { label: "Diensten", href: "/#diensten", isGeo: false },
+  { label: "Werkwijze", href: "/#werkwijze", isGeo: false },
+  { label: "Gratis scan", href: "/scan", isGeo: false },
+  { label: "GEO", href: "/#diensten", isGeo: true },
+  { label: "Over mij", href: "/#over", isGeo: false },
 ];
 
 const SCROLL_OFFSET_RATIO = 0.1; // top se space
@@ -20,10 +20,14 @@ const Header = () => {
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
+  const [geoSelected, setGeoSelected] = useState(false);
 
   const router = useRouter();
   const pathname = usePathname();
   const pendingScrollId = useRef<string | null>(null);
+  const pendingGeo = useRef(false);
+  const autoScrolling = useRef(false);
+  const autoScrollTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -47,13 +51,18 @@ const Header = () => {
   useEffect(() => {
     if (pathname !== "/") return;
 
-    const sectionIds = navLinks
-      .filter((link) => link.href.includes("#"))
-      .map((link) => link.href.split("#")[1]);
+    const sectionIds = Array.from(
+      new Set(
+        navLinks
+          .filter((link) => link.href.includes("#"))
+          .map((link) => link.href.split("#")[1]),
+      ),
+    );
 
     const sections = sectionIds
       .map((id) => document.getElementById(id))
-      .filter((el): el is HTMLElement => el !== null);
+      .filter((el): el is HTMLElement => el !== null)
+      .sort((a, b) => a.offsetTop - b.offsetTop);
 
     if (sections.length === 0) return;
 
@@ -69,6 +78,11 @@ const Header = () => {
         } else {
           break;
         }
+      }
+
+      // User manually diensten section se bahar gaya to GEO selection hata do
+      if (current !== "diensten" && !autoScrolling.current) {
+        setGeoSelected(false);
       }
 
       setActiveSection(current);
@@ -97,8 +111,10 @@ const Header = () => {
     if (pathname === "/" && pendingScrollId.current) {
       const id = pendingScrollId.current;
       const timer = setTimeout(() => {
+        setGeoSelected(pendingGeo.current);
         scrollToSection(id);
         pendingScrollId.current = null;
+        pendingGeo.current = false;
       }, 100);
       return () => clearTimeout(timer);
     }
@@ -108,6 +124,7 @@ const Header = () => {
   useEffect(() => {
     if (pathname !== "/") {
       setActiveSection("");
+      setGeoSelected(false);
     }
   }, [pathname]);
 
@@ -118,6 +135,13 @@ const Header = () => {
     const offset = window.innerHeight * SCROLL_OFFSET_RATIO;
     const top = target.getBoundingClientRect().top + window.scrollY - offset;
 
+    // Smooth scroll ke dauran spy GEO ko reset na kare
+    autoScrolling.current = true;
+    if (autoScrollTimer.current) clearTimeout(autoScrollTimer.current);
+    autoScrollTimer.current = setTimeout(() => {
+      autoScrolling.current = false;
+    }, 1000);
+
     window.scrollTo({ top, behavior: "smooth" });
     setActiveSection(id);
     return true;
@@ -125,39 +149,51 @@ const Header = () => {
 
   // Click par offset ke sath smooth scroll; doosre page par ho to pehle home navigate karo
   const handleNavClick = (
-  e: React.MouseEvent<HTMLAnchorElement>,
-  href: string,
-) => {
-  // Separate pages: navigate normally and close mobile menu
-  if (!href.includes("#")) {
-    setIsOpen(false);
-    return;
-  }
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+    isGeo = false,
+  ) => {
+    // Separate pages: navigate normally and close mobile menu
+    if (!href.includes("#")) {
+      setIsOpen(false);
+      return;
+    }
 
-  const id = href.split("#")[1];
+    const id = href.split("#")[1];
 
-  if (pathname !== "/") {
+    if (pathname !== "/") {
+      e.preventDefault();
+      pendingScrollId.current = id;
+      pendingGeo.current = isGeo;
+      router.push("/");
+      setIsOpen(false);
+      return;
+    }
+
     e.preventDefault();
-    pendingScrollId.current = id;
-    router.push("/");
+    setGeoSelected(isGeo);
+    scrollToSection(id);
     setIsOpen(false);
-    return;
-  }
+  };
 
-  e.preventDefault();
-  scrollToSection(id);
-  setIsOpen(false);
-};
+  const isActive = (link: (typeof navLinks)[number]) => {
+    const { href, isGeo } = link;
 
-  const isActive = (href: string) => {
-  // Section links (/#service etc.) -> scrollspy se
-  if (href.includes("#")) {
-    return pathname === "/" && activeSection === href.split("#")[1];
-  }
+    // Section links (/#diensten etc.) -> scrollspy se
+    if (href.includes("#")) {
+      if (pathname !== "/") return false;
+      const inSection = activeSection === href.split("#")[1];
 
-  // Alag pages (/scan) -> current page se
-  return pathname === href || pathname.startsWith(`${href}/`);
-};
+      // diensten section mein: GEO tabhi active jab uspe click hua ho
+      if (href === "/#diensten") {
+        return isGeo ? inSection && geoSelected : inSection && !geoSelected;
+      }
+      return inSection;
+    }
+
+    // Alag pages (/scan) -> current page se
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
 
   return (
     <section>
@@ -193,13 +229,13 @@ const Header = () => {
             />
           </Link>
 
-          {/* Desktop Nav — visible only lg+ */}
+          {/* Desktop Nav — visible only xl+ */}
           <nav className="hidden xl:flex gap-10 items-center">
             {navLinks.map((link, i) => (
               <Link
                 key={link.label}
                 className={`group relative text-[16px] 2xl:text-[18px] leading-[100%] transition-all duration-700 ease-out ${
-                  isActive(link.href) ? "text-[#0CC1FA]" : "text-white"
+                  isActive(link) ? "text-[#0CC1FA]" : "text-white"
                 }`}
                 style={{
                   transitionDelay: mounted ? `${150 + i * 80}ms` : "0ms",
@@ -207,12 +243,12 @@ const Header = () => {
                   transform: mounted ? "translateY(0)" : "translateY(-10px)",
                 }}
                 href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
+                onClick={(e) => handleNavClick(e, link.href, link.isGeo)}
               >
                 {link.label}
                 <span
                   className={`absolute left-0 -bottom-1 h-[1px] bg-[#0CC1FA] transition-all duration-300 ease-out ${
-                    isActive(link.href) ? "w-full" : "w-0 group-hover:w-full"
+                    isActive(link) ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 />
               </Link>
@@ -264,7 +300,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile / Tablet Sidebar — up to lg */}
+      {/* Mobile / Tablet Sidebar — below xl */}
       <div
         className={`fixed inset-0 z-[60] xl:hidden transition-opacity duration-500 ease-out ${
           isOpen
@@ -295,9 +331,9 @@ const Header = () => {
               <Link
                 key={link.label}
                 href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
+                onClick={(e) => handleNavClick(e, link.href, link.isGeo)}
                 className={` text-[22px] transition-all duration-500 ease-out hover:pl-2 hover:text-[#0CC1FA] ${
-                  isActive(link.href) ? "text-[#0CC1FA] pl-2" : "text-white"
+                  isActive(link) ? "text-[#0CC1FA] pl-2" : "text-white"
                 }`}
                 style={{
                   transitionDelay: isOpen ? `${150 + i * 80}ms` : "0ms",
@@ -318,7 +354,10 @@ const Header = () => {
                 transform: isOpen ? "translateY(0)" : "translateY(12px)",
               }}
             >
-              <ContactButton full onClick={(e) => handleNavClick(e, "/#contact")} />
+              <ContactButton
+                full
+                onClick={(e) => handleNavClick(e, "/#contact")}
+              />
             </div>
           </nav>
         </div>
@@ -349,21 +388,21 @@ const ContactButton = ({
       </span>
 
       <div className="relative z-10 bg-white group-hover:bg-[#0CC1FA] rounded-full w-[30px] h-[30px] flex justify-center items-center shrink-0 transition-colors duration-500 ease-out">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="10"
-      height="10"
-      viewBox="0 0 10 10"
-      fill="none"
-      className="transition-transform duration-500 ease-out group-hover:rotate-[45deg]"
-    >
-      <path
-        d="M9.28027 0.750001C9.28027 0.335787 8.94449 4.2594e-07 8.53027 5.73454e-07L1.78027 1.51986e-07C1.36606 1.51986e-07 1.03027 0.335786 1.03027 0.75C1.03027 1.16421 1.36606 1.5 1.78027 1.5H7.78027V7.5C7.78027 7.91421 8.11606 8.25 8.53027 8.25C8.94449 8.25 9.28027 7.91421 9.28027 7.5L9.28027 0.750001ZM0.530273 8.75L1.0606 9.28033L9.0606 1.28033L8.53027 0.75L7.99994 0.21967L-5.66393e-05 8.21967L0.530273 8.75Z"
-        fill="#0CC1FA"
-        className="transition-colors duration-500 group-hover:fill-white"
-      />
-    </svg>
-  </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="10"
+          height="10"
+          viewBox="0 0 10 10"
+          fill="none"
+          className="transition-transform duration-500 ease-out group-hover:rotate-[45deg]"
+        >
+          <path
+            d="M9.28027 0.750001C9.28027 0.335787 8.94449 4.2594e-07 8.53027 5.73454e-07L1.78027 1.51986e-07C1.36606 1.51986e-07 1.03027 0.335786 1.03027 0.75C1.03027 1.16421 1.36606 1.5 1.78027 1.5H7.78027V7.5C7.78027 7.91421 8.11606 8.25 8.53027 8.25C8.94449 8.25 9.28027 7.91421 9.28027 7.5L9.28027 0.750001ZM0.530273 8.75L1.0606 9.28033L9.0606 1.28033L8.53027 0.75L7.99994 0.21967L-5.66393e-05 8.21967L0.530273 8.75Z"
+            fill="#0CC1FA"
+            className="transition-colors duration-500 group-hover:fill-white"
+          />
+        </svg>
+      </div>
     </Link>
   );
 };
