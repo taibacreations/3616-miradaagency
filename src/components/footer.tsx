@@ -13,9 +13,10 @@ declare global {
 const services = [
   "AI automatiseringen",
   "AI chatbots",
+  "GEO",
   "Website ontwikkeling",
-  "Online advertenties (Google & Meta)",
-  "GEO"
+  "Online advertenties (Google & Meta)"
+  
 ];
 
 const ArrowIcon = () => (

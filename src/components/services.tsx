@@ -31,39 +31,6 @@ const services = [
       "Schaalbaar mee met je groei",
     ],
   },
-  {
-    image: "/services4.webp",
-    title: "AI chatbots",
-    description:
-      "Een slimme chatbot op je website die bezoekers direct antwoord geeft...",
-    fullDescription:
-      "Een slimme chatbot op je website die bezoekers direct antwoord geeft, ook 's avonds en in het weekend. Hij vangt terugkerende vragen over openingstijden, tarieven en beschikbaarheid automatisch op, en schakelt door naar jou zodra er een echte aanvraag binnenkomt.",
-    bullets: [
-      "Beantwoordt standaardvragen 24/7",
-      "Getraind op jouw diensten en tarieven",
-      "Schakelt door naar jou bij echte aanvragen",
-      "Minder telefoontjes, meer gekwalificeerde leads",
-    ],
-  },
-  
-];
-
-
-const services2 = [
-
-  {
-    image: "/services3-2.0.png",
-    title: "Regionale Marketing & Retargeting",
-    description: "Wij brengen gericht verkeer naar je bedrijf via...",
-    fullDescription:
-      "Wij brengen gericht verkeer naar je bedrijf via strategische, lokale campagnes (Meta & Google) op jouw verzorgingsgebied. Met de juiste tracking zorgen we dat misgelopen bezoekers uit de regio alsnog converteren.",
-    bullets: [
-      "Lokale Google & Meta campagnes",
-      "Meta Pixel correct geïnstalleerd",
-      "Retargeting van website-bezoekers",
-      "Maandelijkse rapportage in helder Nederlands",
-    ],
-  },
 
   {
     image: "/service4.jfif",
@@ -80,6 +47,43 @@ const services2 = [
       "Maandelijkse AI-rapportage",
     ],
   },
+  
+  
+];
+
+
+const services2 = [
+
+  {
+    image: "/services4.webp",
+    title: "AI chatbots",
+    description:
+      "Een slimme chatbot op je website die bezoekers direct antwoord geeft...",
+    fullDescription:
+      "Een slimme chatbot op je website die bezoekers direct antwoord geeft, ook 's avonds en in het weekend. Hij vangt terugkerende vragen over openingstijden, tarieven en beschikbaarheid automatisch op, en schakelt door naar jou zodra er een echte aanvraag binnenkomt.",
+    bullets: [
+      "Beantwoordt standaardvragen 24/7",
+      "Getraind op jouw diensten en tarieven",
+      "Schakelt door naar jou bij echte aanvragen",
+      "Minder telefoontjes, meer gekwalificeerde leads",
+    ],
+  },
+
+  {
+    image: "/services3-2.0.png",
+    title: "Regionale Marketing & Retargeting",
+    description: "Wij brengen gericht verkeer naar je bedrijf via...",
+    fullDescription:
+      "Wij brengen gericht verkeer naar je bedrijf via strategische, lokale campagnes (Meta & Google) op jouw verzorgingsgebied. Met de juiste tracking zorgen we dat misgelopen bezoekers uit de regio alsnog converteren.",
+    bullets: [
+      "Lokale Google & Meta campagnes",
+      "Meta Pixel correct geïnstalleerd",
+      "Retargeting van website-bezoekers",
+      "Maandelijkse rapportage in helder Nederlands",
+    ],
+  },
+
+  
 ];
 
 const ServiceCard = ({
