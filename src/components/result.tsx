@@ -24,7 +24,7 @@ const Result = () => {
   }, []);
 
   return (
-    <section className="bg-white pt-[6vh]">
+    <section id="resultaat" className="bg-white pt-[6vh]">
       <div
         ref={ref}
         className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4"

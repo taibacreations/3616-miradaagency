@@ -46,7 +46,7 @@ const Offers = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-white">
+    <section id="voordelen" ref={sectionRef} className="bg-white">
       <div>
         <div className="grid grid-cols-2 md:grid-cols-2 lg:flex lg:justify-between lg:items-center gap-y-10 md:gap-y-17 lg:gap-y-10 gap-x-4 md:gap-x-6 lg:gap-x-4 xl:gap-x-6 max-w-[1530px] xl:px-10 md:px-6 px-4 mx-auto pt-[10vh] md:pt-[14vh] xl:pt-[18vh] lg:pb-[10vh]">
           {offers.map((offer, i) => (

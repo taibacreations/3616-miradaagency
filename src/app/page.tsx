@@ -8,6 +8,7 @@ import Offers from "@/components/offers";
 import Points from "@/components/points";
 import Result from "@/components/result";
 import Services from "@/components/services";
+import Testimonials from "@/components/testimonials";
 import Work from "@/components/work";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Points />
       <Offers />
       <Work />
+      <Testimonials />
       <Faq />
       <Founder />
       <Result />

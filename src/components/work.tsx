@@ -139,15 +139,11 @@ const card4 = useInView<HTMLDivElement>();
 
                 <h3 className="font-semibold text-[16px] sm:text-[18px] xl:text-[20px] 2xl:text-[24px] text-black leading-[22px] sm:leading-[24px] xl:leading-[26px] 2xl:leading-[28px] 2xl:pt-12.5 pr-10">
                   Kennismaking
-                  <br />
-                  (30 min, gratis)
                 </h3>
 
                 <p className=" text-[14px] xl:text-[18px] leading-[149%] text-[#012549] mt-3 2xl:mt-[1vh]">
-                  Jij vertelt wat je wilt bereiken. Je krijgt eerlijk advies,
-                  ook als we denken dat je het zelf kunt of dat er een
-                  goedkopere optie is. Geen salespraat, geen druk. Gewoon een
-                  open gesprek.
+                  We bespreken jouw plannen en doelen in een gratis gesprek van 30
+                  minuten. Je krijgt eerlijk advies, zonder druk of verplichtingen.
                 </p>
               </div>
             </div>

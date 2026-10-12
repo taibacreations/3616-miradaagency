@@ -129,7 +129,7 @@ const Choose = () => {
   ];
 
   return (
-    <section
+    <section id="waarom-wij"
       ref={sectionRef}
       className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 2xl:pb-[12vh] xl:pb-[90px] md:pb-[80px] pb-[60px] 2xl:pt-[5vh] xl:pt-[45px] lg:pt-[80px] pt-[30px] overflow-hidden relative"
     >

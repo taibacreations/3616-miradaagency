@@ -1,24 +1,25 @@
 "use client";
 import Link from "next/link";
+import { scrollToSectionId } from "@/lib/scroll";
 
 import { useEffect, useRef, useState } from "react";
 
 const faqs = [
+  // Gratis scan
   {
-    question: "Wat is die gratis scan precies?",
+    question: "Wat houdt de gratis scan precies in?",
     answer:
-      "We analyseren jouw huidige online aanwezigheid: waar verlies je potentiële klanten? Denk aan tracking-fouten, trage laadtijden, ontbrekende pixels, of campagnes die niet optimaal draaien. Je krijgt binnen 24 uur een concreet rapport, zonder verplichtingen.",
+      "We analyseren jouw huidige online aanwezigheid: waar verlies je potentiële klanten? Denk aan tracking-fouten, trage laadtijden, ontbrekende pixels, of campagnes die niet optimaal draaien. We controleren ook de drie belangrijkste conversie-pijlers: de aanwezigheid en correcte installatie van tracking-pixels (zoals de Meta Pixel), de mobiele gebruiksvriendelijkheid in de praktijk, en technische lead-lekken (zoals SSL-beveiliging en laadsnelheid). Je krijgt binnen 24 uur een concreet rapport en actieplan om dit direct te verbeteren, zonder verplichtingen.",
   },
+
+  // Website en online groei
   {
     question: "Ik heb al een website. Kan Mirada Agency toch helpen?",
     answer:
       "Absoluut. We werken ook met bestaande websites. We kunnen je huidige site optimaliseren, er automatiseringen op aansluiten, of gerichte advertenties inzetten om meer bezoekers aan te trekken. We starten altijd met de scan om te zien wat de grootste kansen zijn.",
   },
-  {
-    question: "Moet ik technisch onderlegd zijn?",
-    answer:
-      "Nee, helemaal niet. Wij regelen alles technisch. Jij hoeft alleen te vertellen wat je wil bereiken, en wij zorgen dat het werkt. We leggen alles uit in gewone taal, zonder jargon.",
-  },
+
+  // Werkwijze en resultaten
   {
     question: "Hoe snel zie ik resultaten?",
     answer:
@@ -30,6 +31,18 @@ const faqs = [
       "Nee. Maandelijkse diensten zijn per maand opzegbaar. Projecten (website, automatisering) worden met een vaste prijs afgesproken zonder langlopend contract. Flexibel en eerlijk, zo hoort het.",
   },
   {
+    question: "Wat is een AI-pilotproject?",
+    answer:
+      "Omdat we geloven in het bewijzen van waarde aan ondernemers in de regio, starten we met een aantal geselecteerde bedrijven een kortstondig pilotproject. Hierin automatiseren we één specifiek knelpunt in je organisatie (bijvoorbeeld de automatische opvolging van lokale leads) tegen een gereduceerd tarief, zodat je direct de ROI ervaart.",
+  },
+
+  // Doelgroep en samenwerking
+  {
+    question: "Moet ik technisch onderlegd zijn?",
+    answer:
+      "Nee, helemaal niet. Wij regelen alles technisch. Jij hoeft alleen te vertellen wat je wil bereiken, en wij zorgen dat het werkt. We leggen alles uit in gewone taal, zonder jargon.",
+  },
+  {
     question: "Werken jullie alleen lokaal of ook nationaal?",
     answer:
       "Onze focus ligt op lokale en regionale ondernemers in Nederland. Maar we helpen ook bedrijven die nationaal actief zijn. Zolang je ambitieus bent en meetbaar wil groeien, kunnen we samenwerken.",
@@ -38,16 +51,6 @@ const faqs = [
     question: "Werken jullie voor specifieke branches?",
     answer:
       "Mirada Agency helpt lokale ondernemers, high-ticket dienstverleners en regionale bedrijven die willen opschalen. Of je nu een exclusieve praktijk runt, een high-end servicebedrijf of een lokaal autobedrijf, onze systemen en AI-workflows zijn flexibel en worden volledig op maat ingericht voor jouw specifieke bedrijfsproces.",
-  },
-  {
-    question: "Wat houdt de gratis scan precies in?",
-    answer:
-      "We controleren de website van jouw bedrijf op de drie belangrijkste conversie-pijlers: de aanwezigheid en correcte installatie van tracking-pixels (zoals de Meta Pixel), de mobiele gebruiksvriendelijkheid in de praktijk, en technische lead-lekken (zoals SSL-beveiliging en laadsnelheid). Je ontvangt een concreet actieplan om dit direct te dichten.",
-  },
-  {
-    question: "Wat is een AI-pilotproject?",
-    answer:
-      "Omdat we geloven in het bewijzen van waarde aan ondernemers in de regio, starten we met een aantal geselecteerde bedrijven een kortstondig pilotproject. Hierin automatiseren we één specifiek knelpunt in je organisatie (bijvoorbeeld de automatische opvolging van lokale leads) tegen een gereduceerd tarief, zodat je direct de ROI ervaart.",
   },
 ];
 
@@ -74,20 +77,13 @@ const Faq = () => {
   }, []);
 
 
-  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
   e.preventDefault();
-
-  const target = document.getElementById("contact");
-  if (!target) return;
-
-  const offset = window.innerHeight * 0.1; // header/nav wala hi 10% offset
-  const top = target.getBoundingClientRect().top + window.scrollY - offset;
-
-  window.scrollTo({ top, behavior: "smooth" });
+  scrollToSectionId("contact");
 };
 
   return (
-    <section ref={sectionRef} className="bg-white relative pt-[1vh] sm:pt-[8vh] xl:pt-[10vh]">
+    <section id="faq" ref={sectionRef} className="bg-white relative pt-[1vh] sm:pt-[8vh] xl:pt-[10vh]">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <img
           src="/faq-vector.png"

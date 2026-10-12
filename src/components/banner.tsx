@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { scrollToSectionId } from "@/lib/scroll";
 
 const checklist = [
   ["Transparante werkwijze", "Technisch waterdicht"],
@@ -16,18 +17,10 @@ const Banner = () => {
   }, []);
 
 
-  const handleServiceClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+const handleServiceClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
   e.preventDefault();
-
-  const target = document.getElementById("service");
-  if (!target) return;
-
-  const offset = window.innerHeight * 0.1; // header/nav wala hi 10% offset
-  const top = target.getBoundingClientRect().top + window.scrollY - offset;
-
-  window.scrollTo({ top, behavior: "smooth" });
+  scrollToSectionId("diensten");
 };
-
 
 
   return (
@@ -45,7 +38,7 @@ const Banner = () => {
               Slimme AI-workflows & converterende websites
             </h4>
             <h1 className="font-extrabold text-[30px] leading-[34px] sm:text-[44px] sm:leading-[48px] md:text-[52px] md:leading-[56px] 2xl:text-[60px] xl:leading-[64px] text-white tracking-[0.05em] mt-[1.3vh] h1">
-              Voor lokale ondernemers
+              Van bezoeker naar klant.
             </h1>
           </div>
 

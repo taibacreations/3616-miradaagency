@@ -39,7 +39,7 @@ const Points = () => {
   }, []);
 
   return (
-    <section
+    <section id="automatisering"
       ref={sectionRef}
       className="bg-[url(/points.png)] bg-cover bg-center bg-no-repeat pb-[10vh] xl:pb-[21vh]"
     >

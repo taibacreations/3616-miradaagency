@@ -38,8 +38,8 @@ const Founder = () => {
           }`}
         >
           <div className="max-w-full sm:max-w-[443px]">
-            <p className="text-[16px] sm:text-[18px] xl:text-[20px] text-black capitalize">
-              Over Mirada Agency
+            <p data-anchor  className="text-[16px] sm:text-[18px] xl:text-[20px] text-black capitalize">
+              Over Mij
             </p>
             <h2 className="font-bold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[34px] sm:leading-[40px] xl:leading-[46px] mt-[1vh]">
               Het gezicht achter Mirada Agency
@@ -48,18 +48,19 @@ const Founder = () => {
 
           <div className="max-w-full sm:max-w-[607px] mt-[2.5vh]">
             <p className="text-[14px] sm:text-[16px] xl:text-[18px] leading-[129%] text-black font-normal">
-              Achter Mirada Agency staat Virgil Ippel. Vanuit zijn jarenlange
+              Achter Mirada Agency sta ik, Virgil Ippel. Vanuit mijn jarenlange
               ervaring met het leiden van complexe IT-omgevingen,
-              systeemtransities en procesoptimalisaties, brengt hij het beste van
-              twee werelden samen voor de lokale ondernemer: hardcore
-              IT-structuur en resultaatgerichte online marketing.
+              systeemtransities en procesoptimalisaties combineer ik het beste
+              van twee werelden voor lokale ondernemers: een sterke IT-structuur
+              en resultaatgerichte online marketing.
             </p>
             <p className="text-[14px] sm:text-[16px] xl:text-[18px] leading-[129%] text-black font-normal mt-[3.5vh]">
-              Bij Mirada Agency geloven we niet in ingewikkelde marketingtermen,
-              wel in transparantie, korte lijnen en meetbaar resultaat in de
-              regio. We introduceren nu tijdelijk exclusieve AI-pilotprojecten
-              voor een geselecteerd aantal ambitieuze lokale bedrijven om de
-              keiharde kracht van onze geautomatiseerde workflows te bewijzen.
+              Bij Mirada Agency geloof ik niet in ingewikkelde marketingtermen,
+              maar in transparantie, korte lijnen en meetbare resultaten in de
+              regio. Daarom introduceer ik tijdelijk exclusieve
+              AI-pilotprojecten voor een geselecteerd aantal ambitieuze lokale
+              bedrijven. Zo wil ik laten zien welke concrete resultaten mijn
+              geautomatiseerde workflows kunnen opleveren.
             </p>
           </div>
         </div>

@@ -23,7 +23,7 @@ const Gurantee = () => {
   }, []);
 
   return (
-    <section className="bg-white pt-[5vh] lg:pt-[3vh] xl:pt-[9vh] 2xl:pt-[7vh] pb-[8vh] xl:pb-[13vh]">
+    <section id="garantie" className="bg-white pt-[5vh] lg:pt-[3vh] xl:pt-[9vh] 2xl:pt-[7vh] pb-[8vh] xl:pb-[13vh]">
       {/* md:items-stretch -> dono columns ki height hamesha barabar */}
       <div
         ref={ref}

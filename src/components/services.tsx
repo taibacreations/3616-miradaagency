@@ -107,7 +107,7 @@ const ServiceCard = ({
           observer.disconnect();
         }
       },
-      { threshold: 0.15 },
+      { threshold: 0.05 },
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -127,7 +127,7 @@ const ServiceCard = ({
           setOpen((prev) => !prev);
         }
       }}
-      className={`group relative w-full h-[430px] cursor-pointer transition-all duration-700 ease-out ${
+      className={`group relative w-full h-[430px] cursor-pointer transition-all duration-400 ease-out ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
       style={{ transitionDelay: visible ? `${index * 120}ms` : "0ms" }}
