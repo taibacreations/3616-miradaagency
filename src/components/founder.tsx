@@ -1,12 +1,19 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { scrollToSectionId } from "@/lib/scroll";
 
 const Founder = () => {
   const [openIndex, setOpenIndex] = useState<number>(0);
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  e.preventDefault();
+  scrollToSectionId("contact");
+};
 
   useEffect(() => {
     const el = sectionRef.current;
@@ -39,29 +46,65 @@ const Founder = () => {
         >
           <div className="max-w-full sm:max-w-[443px]">
             <p data-anchor  className="text-[16px] sm:text-[18px] xl:text-[20px] text-black capitalize">
-              Over Mij
+              Over ons
             </p>
             <h2 className="font-bold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[34px] sm:leading-[40px] xl:leading-[46px] mt-[1vh]">
-              Het gezicht achter Mirada Agency
+              Hoi, ik ben Virgil
             </h2>
           </div>
 
           <div className="max-w-full sm:max-w-[607px] mt-[2.5vh]">
             <p className="text-[14px] sm:text-[16px] xl:text-[18px] leading-[129%] text-black font-normal">
-              Achter Mirada Agency sta ik, Virgil Ippel. Vanuit mijn jarenlange
-              ervaring met het leiden van complexe IT-omgevingen,
-              systeemtransities en procesoptimalisaties combineer ik het beste
-              van twee werelden voor lokale ondernemers: een sterke IT-structuur
-              en resultaatgerichte online marketing.
+              Ik help lokale ondernemers hun online zichtbaarheid en processen op
+              orde te krijgen. Samen met mijn team van specialisten in websites,
+              advertenties en automatisering bouwen we systemen die werken, met
+              cijfers die je zelf kunt controleren.
             </p>
             <p className="text-[14px] sm:text-[16px] xl:text-[18px] leading-[129%] text-black font-normal mt-[3.5vh]">
-              Bij Mirada Agency geloof ik niet in ingewikkelde marketingtermen,
-              maar in transparantie, korte lijnen en meetbare resultaten in de
-              regio. Daarom introduceer ik tijdelijk exclusieve
-              AI-pilotprojecten voor een geselecteerd aantal ambitieuze lokale
-              bedrijven. Zo wil ik laten zien welke concrete resultaten mijn
-              geautomatiseerde workflows kunnen opleveren.
+              Zelf werk ik al ruim 15 jaar in IT: complexe omgevingen beheren,
+              systemen migreren en processen stroomlijnen. Die ervaring zet ik in
+              voor ondernemers door heel Nederland. Het team doet het werk, ik blijf
+              jouw vaste aanspreekpunt. Geen doorverwijzingen, geen account managers.
             </p>
+            <p className="text-[14px] sm:text-[16px] xl:text-[18px] leading-[129%] text-black font-normal mt-[3.5vh]">
+              Op dit moment werk ik met een beperkt aantal ondernemers aan een
+              AI-pilotproject tegen een gereduceerd tarief.
+            </p>
+
+
+            
+            <Link
+              href="/#contact"
+              onClick={handleContactClick}
+              className="group relative overflow-hidden inline-flex justify-center items-center gap-3 sm:gap-4 font-semibold text-[13px] sm:text-[14px] xl:text-[16px] text-white bg-[#0CC1FA] border-2 border-[#0CC1FA] w-full sm:w-[280px] xl:w-[300px] min-h-[50px] sm:min-h-[52px] xl:min-h-[56px] px-4 rounded-[319px] mt-6 transition-all duration-500 ease-out"
+            >
+              <span className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+
+              <span className="relative z-10 text-center transition-colors duration-300 group-hover:text-[#0CC1FA]">
+                Plan gratis kennismaking
+              </span>
+
+              <span className="relative z-10 bg-white rounded-full w-[26px] h-[26px] sm:w-[30px] sm:h-[30px] flex justify-center items-center shrink-0 transition-colors duration-500 group-hover:bg-[#0CC1FA]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="10"
+                  viewBox="0 0 10 10"
+                  fill="none"
+                  className="transition-transform duration-500 group-hover:rotate-[45deg]"
+                >
+                  <path
+                    d="M9.28 0.75H1.78M9.28 0.75V8.25M9.28 0.75L0.53 9.28"
+                    stroke="#0CC1FA"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="transition-colors duration-500 group-hover:stroke-white"
+                  />
+                </svg>
+              </span>
+            </Link>
+
           </div>
         </div>
 

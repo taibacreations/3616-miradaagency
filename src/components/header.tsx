@@ -12,7 +12,7 @@ const sectionLinks = [
   { label: "Waarom wij", href: "/#waarom-wij" },
   { label: "Automatisering", href: "/#automatisering" },
   { label: "Werkwijze", href: "/#werkwijze" },
-  { label: "Over mij", href: "/#over" },
+  { label: "Over ons", href: "/#over" },
   { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/#contact" },
 ];

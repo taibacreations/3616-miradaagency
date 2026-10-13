@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { scrollToSectionId } from "@/lib/scroll";
 
+
 import { useEffect, useRef, useState } from "react";
 
 const faqs = [
