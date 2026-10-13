@@ -76,12 +76,12 @@ const Founder = () => {
             <Link
               href="/#contact"
               onClick={handleContactClick}
-              className="group relative overflow-hidden inline-flex justify-center items-center gap-3 sm:gap-4 font-semibold text-[13px] sm:text-[14px] xl:text-[16px] text-white bg-[#0CC1FA] border-2 border-[#0CC1FA] w-full sm:w-[280px] xl:w-[300px] min-h-[50px] sm:min-h-[52px] xl:min-h-[56px] px-4 rounded-[319px] mt-6 transition-all duration-500 ease-out"
+              className="group relative overflow-hidden inline-flex justify-center items-center gap-3 sm:gap-4 md:gap-2 font-semibold text-[13px] sm:text-[14px] xl:text-[16px] text-white bg-[#0CC1FA] border-2 border-[#0CC1FA] w-full md:w-[380px] lg:w-[400px] min-h-[50px] sm:min-h-[52px] xl:min-h-[56px] px-4 rounded-[319px] mt-6 transition-all duration-500 ease-out"
             >
               <span className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
 
               <span className="relative z-10 text-center transition-colors duration-300 group-hover:text-[#0CC1FA]">
-                Plan gratis kennismaking
+                Plan een gratis kennismaking van 30 minuten
               </span>
 
               <span className="relative z-10 bg-white rounded-full w-[26px] h-[26px] sm:w-[30px] sm:h-[30px] flex justify-center items-center shrink-0 transition-colors duration-500 group-hover:bg-[#0CC1FA]">
