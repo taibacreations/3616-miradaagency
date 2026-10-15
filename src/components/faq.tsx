@@ -34,7 +34,7 @@ const faqs = [
   {
     question: "Wat is een AI-pilotproject?",
     answer:
-      "Omdat we geloven in het bewijzen van waarde aan ondernemers in de regio, starten we met een aantal geselecteerde bedrijven een kortstondig pilotproject. Hierin automatiseren we één specifiek knelpunt in je organisatie (bijvoorbeeld de automatische opvolging van lokale leads) tegen een gereduceerd tarief, zodat je direct de ROI ervaart.",
+      "Omdat we geloven in het bewijzen van waarde voor bedrijven in heel Nederland, starten we met een aantal geselecteerde bedrijven een kortstondig pilotproject. Hierin automatiseren we één specifiek knelpunt in je organisatie (bijvoorbeeld de automatische opvolging van nieuwe leads) tegen een gereduceerd tarief, zodat je direct de ROI ervaart.",
   },
 
   // Doelgroep en samenwerking
@@ -51,7 +51,7 @@ const faqs = [
   {
     question: "Werken jullie voor specifieke branches?",
     answer:
-      "Mirada Agency helpt lokale ondernemers, high-ticket dienstverleners en regionale bedrijven die willen opschalen. Of je nu een exclusieve praktijk runt, een high-end servicebedrijf of een lokaal autobedrijf, onze systemen en AI-workflows zijn flexibel en worden volledig op maat ingericht voor jouw specifieke bedrijfsproces.",
+      "Mirada Agency helpt ondernemers, high-ticket dienstverleners en bedrijven die willen opschalen. Of je nu een exclusieve praktijk runt, een high-end servicebedrijf of een autobedrijf, onze systemen en AI-workflows zijn flexibel en worden volledig op maat ingericht voor jouw specifieke bedrijfsproces.",
   },
 ];
 
