@@ -59,7 +59,7 @@ const trustStats = [
 // Wrapper <svg> render ke waqt lagta hai — nested <svg> nahi.
 const analysisPoints = [
   {
-    text: "Aanwezigheid & correcte installatie van tracking-pixels (Meta Pixel, GA4)",
+    text: "Aanwezigheid & correcte installatie van tracking pixels (Meta Pixel, GA4)",
     icon: (
       <>
         <circle cx="60" cy="60" r="57" fill="white" />
@@ -108,7 +108,7 @@ const analysisPoints = [
     ),
   },
   {
-    text: "Technische lead-lekken (SSL, laadsnelheid, conversie-blokkades)",
+    text: "Technische lead lekken (SSL, laadsnelheid, conversie-blokkades)",
     icon: (
       <>
         <circle cx="60" cy="60" r="57" fill="white" />
@@ -222,9 +222,9 @@ export default function ScanPage() {
               </h1>
 
               <p className="w-full md:max-w-[950px] text-center mx-auto font-normal text-[16px] leading-relaxed text-white/80 xl:text-[18px]">
-                Ontdek binnen 24 uur waar de digitale lead-lekken van jouw lokale onderneming zitten.
+                Ontdek binnen 24 uur waar de digitale lead lekken van jouw onderneming zitten.
                 Vul je gegevens in en ons systeem start direct de analyse van je website,
-                tracking-pixels en mobiele conversie.
+                tracking pixels en mobiele conversie.
               </p>
             </div>
 

@@ -24,32 +24,25 @@ const handleServiceClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
 
 
   return (
-    <section id="home" className='relative w-full min-h-screen bg-cover md:bg-center bg-no-repeat bg-[url("/banner2.png")] bg-position-[70%] pb-[5vh]'>
+    <section id="home" className='relative w-full min-h-screen bg-cover md:bg-center bg-no-repeat bg-[url("/banner3.png")] bg-position-[70%] pb-[5vh]'>
   {/* Dark overlay — mobile only, so text stays readable over the image */}
-  <div className="absolute inset-0 bg-black/30 pointer-events-none" />
+  <div className="absolute inset-0 bg-black/50 lg:bg-black/30 pointer-events-none" />
       <div className="max-w-[1560px] mx-auto xl:px-10 md:px-6 px-4 pt-[22vh] sm:pt-[25vh] xl:pt-[28vh]">
-        <div className="max-w-full sm:max-w-[520px] xl:max-w-[653px]">
+        <div className="max-w-full sm:max-w-[500px] xl:max-w-[550px]">
           <div
             className={`border-white border-l-4 pl-4 xl:pl-[20px] transition-all duration-700 ease-out ${
               mounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"
             }`}
           >
             <h4 className="text-[14px] sm:text-[17px] xl:text-[20px] text-white">
-              Slimme AI-workflows & converterende websites
+             Slimme AI oplossingen en marketing voor bedrijven
             </h4>
             <h1 className="font-extrabold text-[30px] leading-[34px] sm:text-[44px] sm:leading-[48px] md:text-[52px] md:leading-[56px] 2xl:text-[60px] xl:leading-[64px] text-white tracking-[0.05em] mt-[1.3vh] h1">
               Van bezoeker naar klant.
             </h1>
           </div>
 
-          <h4
-            className={`text-[14px] sm:text-[17px] xl:text-[20px] text-white mt-[2.5vh] transition-all duration-700 ease-out ${
-              mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
-            style={{ transitionDelay: mounted ? "150ms" : "0ms" }}
-          >
-            AI & marketing voor lokale ondernemers
-          </h4>
+          
 
           <p
             className={`text-white text-[14px] sm:text-[16px] xl:text-[18px] mt-[2vh] transition-all duration-700 ease-out ${
@@ -57,9 +50,7 @@ const handleServiceClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
             }`}
             style={{ transitionDelay: mounted ? "280ms" : "0ms" }}
           >
-            Wij dichten de online lead-lekken van ambitieuze bedrijven,
-            automatiseren handmatig werk en transformeren websiteverkeer in
-            loyale klanten uit de regio.
+           Wij helpen ambitieuze bedrijven handmatig werk te verminderen en websitebezoekers om te zetten in klanten uit heel Nederland.
           </p>
 
           <div

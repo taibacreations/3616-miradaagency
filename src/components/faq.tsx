@@ -44,9 +44,9 @@ const faqs = [
       "Nee, helemaal niet. Wij regelen alles technisch. Jij hoeft alleen te vertellen wat je wil bereiken, en wij zorgen dat het werkt. We leggen alles uit in gewone taal, zonder jargon.",
   },
   {
-    question: "Werken jullie alleen lokaal of ook nationaal?",
+    question: "Werken jullie door heel Nederland?",
     answer:
-      "Onze focus ligt op lokale en regionale ondernemers in Nederland. Maar we helpen ook bedrijven die nationaal actief zijn. Zolang je ambitieus bent en meetbaar wil groeien, kunnen we samenwerken.",
+      "Ja, we helpen bedrijven in heel Nederland met strategische marketing en meetbare groei. Of je nu lokaal of nationaal actief bent, we ontwikkelen een aanpak die past bij jouw bedrijf en doelgroep.",
   },
   {
     question: "Werken jullie voor specifieke branches?",

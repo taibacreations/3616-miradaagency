@@ -71,12 +71,12 @@ const services2 = [
 
   {
     image: "/services3-2.0.png",
-    title: "Regionale Marketing & Retargeting",
+    title: "Nationale Marketing & Retargeting",
     description: "Wij brengen gericht verkeer naar je bedrijf via...",
     fullDescription:
-      "Wij brengen gericht verkeer naar je bedrijf via strategische, lokale campagnes (Meta & Google) op jouw verzorgingsgebied. Met de juiste tracking zorgen we dat misgelopen bezoekers uit de regio alsnog converteren.",
+      "Wij brengen gericht verkeer naar je bedrijf via strategische campagnes op Meta en Google, gericht op jouw doelgroep in heel Nederland. Met de juiste tracking zorgen we dat misgelopen bezoekers alsnog converteren.",
     bullets: [
-      "Lokale Google & Meta campagnes",
+      "Google & Meta campagnes voor heel Nederland",
       "Meta Pixel correct geïnstalleerd",
       "Retargeting van website-bezoekers",
       "Maandelijkse rapportage in helder Nederlands",
@@ -220,8 +220,8 @@ const Services = () => {
               Waar we jouw bedrijf mee laten groeien
             </h2>
             <h4 className="font-normal text-[16px] xl:text-[18px] max-w-[546px] leading-[22.8px]">
-              Geen vage marketingpraat, wel keiharde systemen die voor regionaal
-              rendement werken.
+              Geen vage marketingpraat, wel keiharde systemen die voor meer rendement
+  werken.
             </h4>
           </div>
 

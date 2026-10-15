@@ -45,7 +45,7 @@ const Founder = () => {
           }`}
         >
           <div className="max-w-full sm:max-w-[443px]">
-            <p data-anchor  className="text-[16px] sm:text-[18px] xl:text-[20px] text-black capitalize">
+            <p data-anchor  className="text-[16px] sm:text-[18px] xl:text-[20px] text-black ">
               Over ons
             </p>
             <h2 className="font-bold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[34px] sm:leading-[40px] xl:leading-[46px] mt-[1vh]">
@@ -55,7 +55,7 @@ const Founder = () => {
 
           <div className="max-w-full sm:max-w-[607px] mt-[2.5vh]">
             <p className="text-[14px] sm:text-[16px] xl:text-[18px] leading-[129%] text-black font-normal">
-              Ik help lokale ondernemers hun online zichtbaarheid en processen op
+              Ik help ondernemers hun online zichtbaarheid en processen op
               orde te krijgen. Samen met mijn team van specialisten in websites,
               advertenties en automatisering bouwen we systemen die werken, met
               cijfers die je zelf kunt controleren.

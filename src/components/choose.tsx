@@ -37,7 +37,7 @@ const Choose = () => {
   const cards = [
     {
       title: "Snelle implementatie",
-      text: "Websites live in 2 tot 4 weken, AI-workflows operationeel binnen 1 tot 2 weken. Geen maanden wachten.",
+      text: "Websites live in 2 tot 4 weken, AI workflows operationeel binnen 1 tot 2 weken. Geen maanden wachten.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@ const Choose = () => {
 
     {
       title: "Technisch waterdicht",
-      text: "15+ jaar ervaring in complexe IT-omgevingen. Je systemen draaien stabiel, veilig en schaalbaar.",
+      text: "15+ jaar ervaring in complexe IT omgevingen. Je systemen draaien stabiel, veilig en schaalbaar.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -144,11 +144,11 @@ const Choose = () => {
             }`}
           >
             <h2 className="font-bold text-[26px] sm:text-[32px] xl:text-[40px] text-[#012549] tracking-[0.02em] leading-[32px] sm:leading-[38px] xl:leading-[46px] max-w-full xl:max-w-[499px]">
-              Waarom lokale ondernemers ons kiezen
+              Waarom ondernemers ons kiezen
             </h2>
 
             <p className="w-full text-[14px] sm:text-[16px] xl:text-[18px] leading-[20px] sm:leading-[22px] text-black mt-[2.2vh]">
-              15+ jaar IT-expertise, vertaald naar concrete groei voor jouw
+              15+ jaar IT expertise, vertaald naar concrete groei voor jouw
               bedrijf. Zonder jargon, met meetbare resultaten.
             </p>
 
@@ -199,7 +199,7 @@ const Choose = () => {
   <span className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
 
   <span className="relative z-10 text-center px-2 transition-transform duration-300 ease-out group-hover:text-[#0CC1FA]">
-    Ontdek jouw lead-lekken met een gratis scan
+    Ontdek jouw lead lekken met een gratis scan
   </span>
 
   <div className="relative z-10 bg-white group-hover:bg-[#0CC1FA] rounded-full w-[26px] h-[26px] sm:w-[30px] sm:h-[30px] flex justify-center items-center shrink-0 transition-colors duration-500 ease-out">

@@ -49,7 +49,7 @@ const Points = () => {
             Van handmatig naar automatisch
           </h2>
           <p className="text-[14px] sm:text-[16px] xl:text-[18px] text-white mt-[1.5vh] leading-[22px]">
-            De meeste lokale ondernemers besteden uren per week aan taken die
+            De meeste ondernemers besteden uren per week aan taken die
 een computer ook kan doen. Laten we dat veranderen, zodat jij tijd
 overhoudt voor wat écht telt.
           </p>
