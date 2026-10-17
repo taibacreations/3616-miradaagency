@@ -38,7 +38,7 @@ const handleServiceClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
              Slimme AI oplossingen en marketing voor bedrijven
             </h4>
             <h1 className="font-extrabold text-[30px] leading-[34px] sm:text-[44px] sm:leading-[48px] md:text-[52px] md:leading-[56px] 2xl:text-[60px] xl:leading-[64px] text-white tracking-[0.05em] mt-[1.3vh] h1">
-              Van bezoeker naar klant.
+              Van bezoeker naar klant
             </h1>
           </div>
 
